@@ -12,21 +12,51 @@
       margin: 0;
       padding: 0;
     }
+
+    /* ---------- HEADER ---------- */
     header {
       text-align: center;
-      padding: 40px 20px 20px 20px;
+      padding: 60px 20px 40px 20px;
       background: linear-gradient(to right, #003366, #336699);
       color: #ffffff;
       position: relative;
+      overflow: hidden;
     }
     header h1 {
-      font-size: 2.5em;
-      margin: 0.2em 0;
+      font-size: 2.8em;
+      margin: 0.3em 0;
     }
     header p {
-      font-size: 1.2em;
+      font-size: 1.3em;
       margin: 0.5em 0 1em 0;
     }
+    .logo-container {
+      margin-bottom: 20px;
+    }
+    .logo {
+      max-width: 100px;
+      height: auto;
+      display: inline-block;
+    }
+    /* Stars Effect */
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px);
+      background-size: 20px 20px;
+      animation: twinkle 5s linear infinite;
+    }
+    @keyframes twinkle {
+      0% { background-position: 0 0; }
+      50% { background-position: 10px 10px; }
+      100% { background-position: 0 0; }
+    }
+
+    /* ---------- MAIN ---------- */
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -54,6 +84,8 @@
       text-decoration: none;
       border-radius: 8px;
     }
+
+    /* ---------- GRAPH SECTIONS ---------- */
     .cycle-graph {
       margin-top: 30px;
       text-align: center;
@@ -65,6 +97,8 @@
       border-radius: 8px;
       box-shadow: 0 0 20px rgba(0,85,204,0.4);
     }
+
+    /* ---------- FOOTER ---------- */
     .footer {
       text-align: center;
       padding: 20px;
@@ -77,13 +111,22 @@
 <body>
 
 <header>
-  <!-- Logo placeholder -->
+  <!-- Logo / Fibonacci placeholder -->
+  <div class="logo-container">
+    <img src="fibonacci-logo.png" alt="TBB Framework Logo" class="logo">
+  </div>
+  
+  <!-- Header Text -->
   <h1>TBB Framework</h1>
   <p>Your system for disciplined positioning and structured growth</p>
+  
+  <!-- Optional Star Effect -->
+  <div class="stars"></div>
 </header>
 
 <main>
 
+<!-- Welcome / Introduction -->
 <section class="welcome">
   <p>Welcome to the <span class="highlight">TBB Framework</span>. This is a <span class="highlight">disciplined system for structured positioning</span>, designed to track cycles, manage stakes, and maximize outcomes.</p>
   <p>It is <span class="highlight">not based on guesswork or random chance</span> — every step follows a <span class="highlight">proven progression</span>, building toward optimal positioning over time.</p>
@@ -94,9 +137,15 @@
 <!-- Cycle Graph Section -->
 <section id="content" class="cycle-graph">
   <h2>Cycle Depth Progression</h2>
-  <!-- Placeholder for cycle graph -->
   <img src="cycle-graph-placeholder.png" alt="Cycle Depth Graph Placeholder">
   <p>Visual representation of cycle progression from initial build to deepest level.</p>
+</section>
+
+<!-- SMPS Graph Section -->
+<section id="smps" class="cycle-graph">
+  <h2>Smart Money Positioning System (SMPS)</h2>
+  <img src="smps-graph-placeholder.png" alt="SMPS Graph Placeholder">
+  <p>This visual illustrates stake vs expected gross across progression levels, showing how disciplined positioning amplifies outcomes over time.</p>
 </section>
 
 </main>
