@@ -4,118 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TBB Framework</title>
-
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(to bottom, #ffffff, #eef4ff);
-      color: #1d1d1d;
+      background-color: #ffffff;
+      color: #003366;
       margin: 0;
       padding: 0;
     }
-
-    /* LOGO SECTION */
-    .logo-container {
+    header {
       text-align: center;
-      margin-top: 20px;
+      padding: 40px 20px 20px 20px;
+      background: linear-gradient(to right, #003366, #336699);
+      color: #ffffff;
       position: relative;
     }
-
-    .logo {
-      max-width: 150px;
-      border-radius: 50%;
-      padding: 10px;
-      background: linear-gradient(135deg, #3b82f6, #60a5fa);
-      box-shadow: 0 0 20px #60a5fa, 0 0 40px #3b82f6;
+    header h1 {
+      font-size: 2.5em;
+      margin: 0.2em 0;
     }
-
-    /* Shining star effect */
-    .logo-container::after {
-      content: "✨";
-      position: absolute;
-      top: -10px;
-      right: 35%;
-      font-size: 22px;
-      animation: twinkle 2s infinite alternate;
+    header p {
+      font-size: 1.2em;
+      margin: 0.5em 0 1em 0;
     }
-
-    @keyframes twinkle {
-      0% { opacity: 0.3; transform: scale(0.8); }
-      100% { opacity: 1; transform: scale(1.2); }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-
-    header {
-      background: linear-gradient(to right, #2563eb, #3b82f6);
+    section {
+      margin-bottom: 40px;
+    }
+    .welcome {
+      font-size: 1.2em;
+      line-height: 1.6em;
+      color: #003366;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #0055cc;
+    }
+    .cta {
+      font-size: 1.1em;
+      margin-top: 20px;
+      padding: 10px 20px;
+      display: inline-block;
+      background-color: #0055cc;
       color: #ffffff;
-      padding: 40px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .cycle-graph {
+      margin-top: 30px;
       text-align: center;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 34px;
-    }
-
-    header p {
-      margin: 10px 0 0 0;
-      font-size: 18px;
-    }
-
-    .section {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 30px auto;
-      max-width: 800px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-
-    .section h2 {
-      color: #2563eb;
-      margin-top: 0;
-    }
-
-    .section img {
+    .cycle-graph img {
       max-width: 100%;
-      border-radius: 12px;
-      margin-top: 10px;
+      height: auto;
+      border: 2px solid #003366;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,85,204,0.4);
     }
-
-    .section p {
-      margin: 10px 0;
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666666;
+      border-top: 1px solid #cccccc;
     }
-
   </style>
 </head>
-
 <body>
 
-<!-- LOGO -->
-<div class="logo-container">
-  <img src="PASTE-YOUR-LOGO-HERE" alt="TBB Framework Logo" class="logo">
-</div>
-
-<!-- HEADER -->
 <header>
-  <h1>WE DON’T PREDICT. WE POSITION.</h1>
-  <p><em>A Structured System for Disciplined Number Positioning</em></p>
+  <!-- Logo placeholder -->
+  <h1>TBB Framework</h1>
+  <p>Your system for disciplined positioning and structured growth</p>
 </header>
 
-<!-- SYSTEM FLOW -->
-<div class="section">
-  <h2>System Flow</h2>
-  <p><strong>Input Panel → Engine Input → Engine Output → Log Table → SMPS → Dashboard</strong></p>
-  <p>This flow represents the structured progression of the TBB Framework. Each stage is connected, ensuring clarity, discipline, and consistency throughout the entire cycle.</p>
-</div>
+<main>
 
-<!-- INPUT PANEL -->
-<div class="section">
-  <h2>Input Panel</h2>
-  <p>The Input Panel is where the system receives all incoming numbers. This is your first point of interaction with the TBB Framework.</p>
-  <img src="PASTE-YOUR-BASE64-OR-IMAGE-HERE" alt="TBB Framework Input Panel">
-  <p><em>Enter your numbers here, and the framework begins its structured progression.</em></p>
-</div>
+<section class="welcome">
+  <p>Welcome to the <span class="highlight">TBB Framework</span>. This is a <span class="highlight">disciplined system for structured positioning</span>, designed to track cycles, manage stakes, and maximize outcomes.</p>
+  <p>It is <span class="highlight">not based on guesswork or random chance</span> — every step follows a <span class="highlight">proven progression</span>, building toward optimal positioning over time.</p>
+  <p>Observe the system, follow the cycles, and see how <span class="highlight">strategic deployment creates results</span>. <strong>We don’t predict. We position.</strong></p>
+  <a href="#content" class="cta">Explore the System</a>
+</section>
+
+<!-- Cycle Graph Section -->
+<section id="content" class="cycle-graph">
+  <h2>Cycle Depth Progression</h2>
+  <!-- Placeholder for cycle graph -->
+  <img src="cycle-graph-placeholder.png" alt="Cycle Depth Graph Placeholder">
+  <p>Visual representation of cycle progression from initial build to deepest level.</p>
+</section>
+
+</main>
+
+<footer class="footer">
+  © 2026 TBB Framework. All rights reserved.
+</footer>
 
 </body>
 </html>
