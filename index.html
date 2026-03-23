@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+o<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -195,24 +195,28 @@
   </div>
 
   <script>
-    const container = document.getElementById('floating-container');
-    for (let i = 0; i < 20; i++) {
-      const ball = document.createElement('div');
-      ball.classList.add('ball');
-      // Random depth factor 0.5 (far) to 1.5 (near)
-      const depth = Math.random() + 0.5;
-      const size = (20 + Math.random() * 30) * depth;
-      ball.style.width = size + 'px';
-      ball.style.height = size + 'px';
-      ball.style.top = Math.random() * 90 + '%';
-      ball.style.left = -50 - Math.random() * 200 + 'px';
-      ball.style.fontSize = (size/2.5) + 'px';
-      // horizontal speed scales with depth
-      const horizSpeed = (15 / depth) + Math.random() * 5;
-      const rotSpeed = (4 + Math.random() * 6) / depth;
-      ball.style.animationDuration = horizSpeed + 's, ' + rotSpeed + 's';
-      ball.textContent = Math.floor(Math.random() * 49) + 1;
-      container.appendChild(ball);
+    <script>
+  const container = document.getElementById('floating-container');
+  for (let i = 0; i < 20; i++) {
+    const ball = document.createElement('div');
+    ball.classList.add('ball');
+    const depth = Math.random() + 0.5; // 0.5 (far) to 1.5 (near)
+    const size = (20 + Math.random() * 30) * depth;
+    ball.style.width = size + 'px';
+    ball.style.height = size + 'px';
+    ball.style.top = Math.random() * 90 + '%';
+    ball.style.left = -50 - Math.random() * 200 + 'px';
+    ball.style.fontSize = (size/2.5) + 'px';
+    // glow behind ball
+    ball.style.boxShadow = `0 0 ${10*depth}px ${5*depth}px rgba(255,215,0,0.7)`;
+    // horizontal and rotation speeds
+    const horizSpeed = (15 / depth) + Math.random() * 5;
+    const rotSpeed = (4 + Math.random() * 6) / depth;
+    ball.style.animationDuration = horizSpeed + 's, ' + rotSpeed + 's';
+    ball.textContent = Math.floor(Math.random() * 49) + 1;
+    container.appendChild(ball);
+  }
+</script>
     }
   </script>
 </body>
