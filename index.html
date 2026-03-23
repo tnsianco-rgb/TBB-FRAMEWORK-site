@@ -5,340 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TBB Framework</title>
   <style>
+    /* Body & Background */
     body {
-    <!-- Floating Balls + Stars Container -->
-<div class="floating-container">
-  <!-- Numbered Balls -->
-  <div class="ball" style="--i:0;">6</div>
-  <div class="ball" style="--i:1;">10</div>
-  <div class="ball" style="--i:2;">31</div>
-  <div class="ball" style="--i:3;">36</div>
-  <div class="ball" style="--i:4;">37</div>
-  <div class="ball" style="--i:5;">38</div>
-  <div class="ball" style="--i:6;">8</div>
-  <div class="ball" style="--i:7;">12</div>
-  <div class="ball" style="--i:8;">33</div>
-  <div class="ball" style="--i:9;">38</div>
-  <div class="ball" style="--i:10;">39</div>
-  <div class="ball" style="--i:11;">40</div>
-
-  <!-- Floating Stars -->
-  <div class="star" style="--x:5vw; --y:10vh;"></div>
-  <div class="star" style="--x:20vw; --y:30vh;"></div>
-  <div class="star" style="--x:50vw; --y:15vh;"></div>
-  <div class="star" style="--x:70vw; --y:50vh;"></div>
-  <div class="star" style="--x:90vw; --y:25vh;"></div>
-</div>
-
-<style>
-.floating-container {
-  position: relative;
-  width: 100%;
-  height: 400px; /* Adjust as needed */
-  overflow: hidden;
-  background: #0a1f40; /* Dark blue background */
-}
-
-/* Floating Balls */
-.ball {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #0055ff, #00aaff);
-  border-radius: 50%;
-  color: gold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2em;
-  top: calc(20% + var(--i) * 5%);
-  left: -60px; /* Start outside screen */
-  animation: floatHorizontal 12s linear infinite;
-}
-
-/* Horizontal float animation */
-@keyframes floatHorizontal {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  25% {
-    transform: translateX(25vw) translateY(-15px);
-  }
-  50% {
-    transform: translateX(50vw) translateY(10px);
-  }
-  75% {
-    transform: translateX(75vw) translateY(-10px);
-  }
-  100% {
-    transform: translateX(120vw) translateY(0); /* Goes past screen */
-  }
-}
-
-/* Floating Stars */
-.star {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: white;
-  border-radius: 50%;
-  top: var(--y);
-  left: var(--x);
-  box-shadow: 0 0 6px white;
-  animation: twinkle 2s ease-in-out infinite alternate;
-}
-
-@keyframes twinkle {
-  0% { opacity: 0.2; transform: scale(0.5); }
-  50% { opacity: 1; transform: scale(1.2); }
-  100% { opacity: 0.2; transform: scale(0.5); }
-}
-</style>
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #003366;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #0a1f40; /* Dark blue */
+      color: white;
+      overflow-x: hidden;
     }
 
-    /* ---------- HEADER ---------- */
-    header {
+    /* Header / Logo */
+    .header {
       text-align: center;
-      padding: 60px 20px 40px 20px;
-      background: linear-gradient(to right, #001f4d, #003366); /* darker blue gradient */
-      color: #ffffff;
+      padding: 40px 10px 20px 10px;
       position: relative;
-      overflow: hidden;
+      z-index: 5;
     }
 
-    header h1 {
-      font-size: 2.8em;
-      margin: 0.3em 0;
+    /* Fibonacci symbol */
+    .fibonacci {
+      font-size: 3.5em;
+      color: #ffd700; /* gold */
+      text-shadow: 0 0 15px #ffd700, 0 0 30px #ffea00;
+      margin-bottom: 10px;
+      animation: glow 2s ease-in-out infinite alternate;
     }
 
-    /* GOLDEN TEXT EFFECT */
-    .gold-text {
-      font-weight: bold;
-      background: linear-gradient(90deg, #FFD700, #FFC300);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 8px rgba(255,215,0,0.7), 0 0 15px rgba(255,215,0,0.4);
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffea00; }
+      50% { text-shadow: 0 0 15px #ffd700, 0 0 35px #ffea00; }
+      100% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffea00; }
     }
 
-    header p {
-      font-size: 1.3em;
-      margin: 0.5em 0 1em 0;
-    }
-
-    .logo-container {
-      margin-bottom: 20px;
-    }
     .logo {
-      max-width: 100px;
-      height: auto;
-      display: inline-block;
+      font-size: 3em;
+      font-weight: bold;
+      color: gold;
+      text-shadow: 0 0 10px gold;
     }
 
-    /* Stars Canvas */
-    #star-canvas {
+    .intro {
+      font-size: 1.2em;
+      margin-top: 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5em;
+    }
+
+    /* Dashboard placeholder */
+    .dashboard {
+      width: 90%;
+      max-width: 800px;
+      height: 300px;
+      margin: 40px auto;
+      background: #142d5c;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      color: #00aaff;
+      box-shadow: 0 0 20px #0055ff;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Floating Balls + Stars Container */
+    .floating-container {
       position: absolute;
+      width: 100%;
+      height: 400px;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
       pointer-events: none;
+      z-index: 10;
     }
 
-    /* ---------- MAIN ---------- */
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    .welcome {
-      font-size: 1.2em;
-      line-height: 1.6em;
-      color: #003366;
-    }
-    .highlight {
+    /* Balls */
+    .ball {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #0055ff, #00aaff);
+      border-radius: 50%;
+      color: gold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-weight: bold;
-      color: #0055cc;
+      font-size: 1.2em;
+      top: calc(20% + var(--i) * 5%);
+      left: -60px;
+      animation: floatHorizontal 12s linear infinite;
     }
 
-    /* CTA Button with Hover Animation */
-    .cta {
-      font-size: 1.1em;
-      margin-top: 20px;
-      padding: 12px 25px;
-      display: inline-block;
-      background-color: #0055cc;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,85,204,0.3);
-    }
-    .cta:hover {
-      background-color: #0077ff;
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 8px 25px rgba(0,85,204,0.5);
+    @keyframes floatHorizontal {
+      0% { transform: translateX(0) translateY(0); }
+      25% { transform: translateX(25vw) translateY(-15px); }
+      50% { transform: translateX(50vw) translateY(10px); }
+      75% { transform: translateX(75vw) translateY(-10px); }
+      100% { transform: translateX(120vw) translateY(0); }
     }
 
-    /* ---------- GRAPH SECTIONS ---------- */
-    .cycle-graph {
-      margin-top: 30px;
-      text-align: center;
-    }
-    .cycle-graph img {
-      max-width: 100%;
-      height: auto;
-      border: 2px solid #003366;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0,85,204,0.4);
+    /* Stars */
+    .star {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      top: var(--y);
+      left: var(--x);
+      box-shadow: 0 0 6px white;
+      animation: twinkle 2s ease-in-out infinite alternate;
     }
 
-    /* ---------- FOOTER ---------- */
-    .footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #666666;
-      border-top: 1px solid #cccccc;
+    @keyframes twinkle {
+      0% { opacity: 0.2; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0.2; transform: scale(0.5); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .fibonacci { font-size: 2.5em; }
+      .logo { font-size: 2em; }
+      .dashboard { height: 250px; font-size: 1.2em; }
+      .ball { width: 40px; height: 40px; font-size: 1em; }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <!-- Logo / Fibonacci placeholder -->
-  <div class="logo-container">
-    <img src="fibonacci-logo.png" alt="TBB Framework Logo" class="logo">
+  <!-- Header -->
+  <div class="header">
+    <div class="fibonacci">Φ</div>
+    <div class="logo">TBB Framework</div>
+    <div class="intro">
+      Welcome to the TBB Framework – our **unique Bonus Ball system**.  
+      This is a plug-and-play platform integrating **Google Sheets and Excel**, giving you a clear view of how numbers position over time.  
+      We don’t predict. We **position**.
+    </div>
   </div>
-  
-  <!-- Header Text -->
-  <h1 class="gold-text">TBB Framework</h1>
-  <p>Your system for disciplined positioning and structured growth</p>
-  
-  <!-- Stars Canvas -->
-  <canvas id="star-canvas"></canvas>
-</header>
 
-<main>
+  <!-- Floating Balls + Stars -->
+  <div class="floating-container">
+    <!-- Numbered Balls -->
+    <div class="ball" style="--i:0;">6</div>
+    <div class="ball" style="--i:1;">10</div>
+    <div class="ball" style="--i:2;">31</div>
+    <div class="ball" style="--i:3;">36</div>
+    <div class="ball" style="--i:4;">37</div>
+    <div class="ball" style="--i:5;">38</div>
+    <div class="ball" style="--i:6;">8</div>
+    <div class="ball" style="--i:7;">12</div>
+    <div class="ball" style="--i:8;">33</div>
+    <div class="ball" style="--i:9;">38</div>
+    <div class="ball" style="--i:10;">39</div>
+    <div class="ball" style="--i:11;">40</div>
 
-<!-- Welcome / Introduction -->
-<section class="welcome">
-  <p>Welcome to the <span class="highlight">TBB Framework</span>. This is a <span class="highlight">disciplined system for structured positioning</span>, designed to track cycles, manage stakes, and maximize outcomes.</p>
-  <p>It is <span class="highlight">not based on guesswork or random chance</span> — every step follows a <span class="highlight">proven progression</span>, building toward optimal positioning over time.</p>
-  <p>Observe the system, follow the cycles, and see how <span class="highlight">strategic deployment creates results</span>. <strong>We don’t predict. We position.</strong></p>
-  <a href="#content" class="cta">Explore the System</a>
-</section>
-<section class="welcome">
-  <h2>Our Core Focus: Bonus Ball Positioning</h2>
+    <!-- Stars -->
+    <div class="star" style="--x:5vw; --y:10vh;"></div>
+    <div class="star" style="--x:20vw; --y:30vh;"></div>
+    <div class="star" style="--x:50vw; --y:15vh;"></div>
+    <div class="star" style="--x:70vw; --y:50vh;"></div>
+    <div class="star" style="--x:90vw; --y:25vh;"></div>
+  </div>
 
-  <p>The <span class="highlight">TBB Framework</span> is built around a clear and defined purpose — 
-  <span class="highlight">the strategic positioning of the Bonus Ball</span>.</p>
-
-  <p>This is our greatest discovery and our unique specialty. Rather than approaching the full number set without structure, the framework focuses on a disciplined system designed specifically for Bonus Ball deployment.</p>
-
-  <p>Every cycle, every stage, and every progression is aligned toward one objective: 
-  <strong>consistent and structured positioning over time.</strong></p>
-
-  <p>This is not guesswork. This is a controlled approach to a specific component of the system — executed with clarity and precision.</p>
-
-  <hr style="margin:30px 0;">
-
-  <h2>Plug & Play System</h2>
-
-  <p>The TBB Framework operates on a <span class="highlight">plug-and-play platform</span>, built using familiar and accessible tools:</p>
-
-  <ul>
-    <li>Google Sheets</li>
-    <li>Microsoft Excel</li>
-  </ul>
-
-  <p>This allows users to:</p>
-  <ul>
-    <li>Track cycles in real time</li>
-    <li>Monitor progression levels</li>
-    <li>Execute structured positioning with clarity</li>
-  </ul>
-
-  <p>What you are seeing on this platform — from the dashboard to the progression visuals — is a live representation of the framework in action.</p>
-
-  <p>Everything is designed to be simple, structured, and repeatable.</p>
-
-  <p><strong>We don’t predict. We position.</strong></p>
-</section>
-<!-- Cycle Graph Section -->
-<section id="content" class="cycle-graph">
-  <h2>Cycle Depth Progression</h2>
-  <img src="cycle-graph-placeholder.png" alt="Cycle Depth Graph Placeholder">
-  <p>Visual representation of cycle progression from initial build to deepest level.</p>
-</section>
-
-<!-- SMPS Graph Section -->
-<section id="smps" class="cycle-graph">
-  <h2>Smart Money Positioning System (SMPS)</h2>
-  <img src="smps-graph-placeholder.png" alt="SMPS Graph Placeholder">
-  <p>This visual illustrates stake vs expected gross across progression levels, showing how disciplined positioning amplifies outcomes over time.</p>
-</section>
-
-</main>
-
-<footer class="footer">
-  © 2026 TBB Framework. All rights reserved.
-</footer>
-
-<!-- ---------- STAR SPARKLE SCRIPT ---------- -->
-<script>
-// Sparkle stars animation
-const canvas = document.getElementById('star-canvas');
-const ctx = canvas.getContext('2d');
-let stars = [];
-const header = document.querySelector('header');
-
-function resizeCanvas() {
-  canvas.width = header.offsetWidth;
-  canvas.height = header.offsetHeight;
-}
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-
-class Star {
-  constructor() { this.reset(); }
-  reset() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
-    this.speed = Math.random() * 0.5 + 0.1;
-    this.opacity = Math.random();
-  }
-  update() {
-    this.y -= this.speed;
-    this.opacity += (Math.random() - 0.5) * 0.05;
-    if (this.y < 0 || this.opacity <= 0 || this.opacity > 1) this.reset();
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255,255,255,${this.opacity})`;
-    ctx.fill();
-  }
-}
-
-for (let i = 0; i < 80; i++) stars.push(new Star());
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  stars.forEach(star => { star.update(); star.draw(); });
-  requestAnimationFrame(animate);
-}
-animate();
-</script>
-
+  <!-- Dashboard placeholder -->
+  <div class="dashboard">
+    Dashboard will display live Bonus Ball cycles here
+  </div>
 </body>
 </html>
