@@ -1,140 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TBB Framework</title>
-  <style>
-    /* Body & Background */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0a1f40; /* Dark blue */
-      color: white;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TBB Framework</title>
+<style>
+  /* Body & Background */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a1f40; /* Dark blue */
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+  }
 
-    /* Header / Logo */
-    .header {
-      text-align: center;
-      padding: 40px 10px 20px 10px;
-      position: relative;
-      z-index: 10;
-    }
+  /* Header / Logo */
+  .header {
+    text-align: center;
+    padding: 40px 10px 20px 10px;
+    position: relative;
+    z-index: 10;
+  }
 
-    /* Fibonacci Image */
-    .fibonacci-img {
-      width: 80px;
-      display: block;
-      margin: 0 auto 10px auto;
-      filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 20px #ffea00);
-      animation: glow 2s ease-in-out infinite alternate;
-    }
+  /* Fibonacci Image */
+  .fibonacci-img {
+    width: 80px;
+    display: block;
+    margin: 0 auto 10px auto;
+    filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 20px #ffea00);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
 
-    @keyframes glow {
-      0% { filter: drop-shadow(0 0 5px gold) drop-shadow(0 0 10px #ffea00); }
-      50% { filter: drop-shadow(0 0 15px gold) drop-shadow(0 0 30px #ffea00); }
-      100% { filter: drop-shadow(0 0 5px gold) drop-shadow(0 0 10px #ffea00); }
-    }
+  @keyframes glow {
+    0% { filter: drop-shadow(0 0 5px gold) drop-shadow(0 0 10px #ffea00); }
+    50% { filter: drop-shadow(0 0 15px gold) drop-shadow(0 0 30px #ffea00); }
+    100% { filter: drop-shadow(0 0 5px gold) drop-shadow(0 0 10px #ffea00); }
+  }
 
-    .logo {
-      font-size: 3em;
-      font-weight: bold;
-      color: gold;
-      text-shadow: 0 0 10px gold;
-    }
+  .logo {
+    font-size: 3em;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 0 0 10px gold;
+  }
 
-    .intro {
-      font-size: 1.2em;
-      margin-top: 10px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.5em;
-    }
+  .intro {
+    font-size: 1.2em;
+    margin-top: 10px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
+  }
 
-    /* Dashboard placeholder */
-    .dashboard {
-      width: 90%;
-      max-width: 800px;
-      height: 300px;
-      margin: 40px auto;
-      background: #142d5c;
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5em;
-      color: #00aaff;
-      box-shadow: 0 0 20px #0055ff;
-      position: relative;
-      z-index: 10;
-    }
+  /* Dashboard placeholder */
+  .dashboard {
+    width: 90%;
+    max-width: 800px;
+    height: 300px;
+    margin: 40px auto;
+    background: #142d5c;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #00aaff;
+    box-shadow: 0 0 20px #0055ff;
+    position: relative;
+    z-index: 10;
+  }
 
-    /* Floating Balls + Stars Container */
-    .floating-container {
-      position: absolute;
-      width: 100%;
-      height: 400px; /* adjust height if needed */
-      top: 0;
-      left: 0;
-      pointer-events: none; /* allows clicks through */
-      z-index: 5; /* behind header & dashboard */
-    }
+  /* Floating Balls + Stars Container */
+  .floating-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 5;
+    overflow: hidden;
+  }
 
-    /* Balls */
-    .ball {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, #0055ff, #00aaff);
-      border-radius: 50%;
-      color: gold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 1.2em;
-      top: calc(20% + var(--i) * 5%);
-      left: -60px;
-      animation: floatHorizontal 12s linear infinite;
-    }
+  /* Balls */
+  .ball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #0055ff, #00aaff);
+    border-radius: 50%;
+    color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1em;
+    animation: floatHorizontal linear infinite;
+  }
 
-    @keyframes floatHorizontal {
-      0% { transform: translateX(0) translateY(0); }
-      25% { transform: translateX(25vw) translateY(-15px); }
-      50% { transform: translateX(50vw) translateY(10px); }
-      75% { transform: translateX(75vw) translateY(-10px); }
-      100% { transform: translateX(120vw) translateY(0); }
-    }
+  /* Each ball has its own speed & vertical start position */
+  .ball:nth-child(1) { top: 10%; animation-duration: 14s; left: -50px; }
+  .ball:nth-child(2) { top: 25%; animation-duration: 10s; left: -80px; }
+  .ball:nth-child(3) { top: 40%; animation-duration: 18s; left: -60px; }
+  .ball:nth-child(4) { top: 55%; animation-duration: 12s; left: -100px; }
+  .ball:nth-child(5) { top: 70%; animation-duration: 16s; left: -70px; }
+  .ball:nth-child(6) { top: 85%; animation-duration: 20s; left: -90px; }
 
-    /* Stars */
-    .star {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      background: white;
-      border-radius: 50%;
-      top: var(--y);
-      left: var(--x);
-      box-shadow: 0 0 6px white;
-      animation: twinkle 2s ease-in-out infinite alternate;
-    }
+  @keyframes floatHorizontal {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(120vw); }
+  }
 
-    @keyframes twinkle {
-      0% { opacity: 0.2; transform: scale(0.5); }
-      50% { opacity: 1; transform: scale(1.2); }
-      100% { opacity: 0.2; transform: scale(0.5); }
-    }
+  /* Stars */
+  .star {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 6px white;
+    animation: twinkle 2s ease-in-out infinite alternate;
+  }
 
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      .fibonacci-img { width: 60px; }
-      .logo { font-size: 2em; }
-      .dashboard { height: 250px; font-size: 1.2em; }
-      .ball { width: 40px; height: 40px; font-size: 1em; }
-    }
-  </style>
+  @keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.2; transform: scale(0.5); }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .fibonacci-img { width: 60px; }
+    .logo { font-size: 2em; }
+    .dashboard { height: 250px; font-size: 1.2em; }
+    .ball { width: 30px; height: 30px; font-size: 0.9em; }
+  }
+</style>
 </head>
 <body>
   <!-- Header -->
@@ -150,26 +154,20 @@
 
   <!-- Floating Balls + Stars -->
   <div class="floating-container">
-    <!-- Numbered Balls -->
-    <div class="ball" style="--i:0;">6</div>
-    <div class="ball" style="--i:1;">10</div>
-    <div class="ball" style="--i:2;">31</div>
-    <div class="ball" style="--i:3;">36</div>
-    <div class="ball" style="--i:4;">37</div>
-    <div class="ball" style="--i:5;">38</div>
-    <div class="ball" style="--i:6;">8</div>
-    <div class="ball" style="--i:7;">12</div>
-    <div class="ball" style="--i:8;">33</div>
-    <div class="ball" style="--i:9;">38</div>
-    <div class="ball" style="--i:10;">39</div>
-    <div class="ball" style="--i:11;">40</div>
+    <!-- Decorative floating balls -->
+    <div class="ball">1</div>
+    <div class="ball">2</div>
+    <div class="ball">3</div>
+    <div class="ball">4</div>
+    <div class="ball">5</div>
+    <div class="ball">6</div>
 
     <!-- Stars -->
-    <div class="star" style="--x:5vw; --y:10vh;"></div>
-    <div class="star" style="--x:20vw; --y:30vh;"></div>
-    <div class="star" style="--x:50vw; --y:15vh;"></div>
-    <div class="star" style="--x:70vw; --y:50vh;"></div>
-    <div class="star" style="--x:90vw; --y:25vh;"></div>
+    <div class="star" style="top:5%; left:10%;"></div>
+    <div class="star" style="top:20%; left:30%;"></div>
+    <div class="star" style="top:50%; left:50%;"></div>
+    <div class="star" style="top:70%; left:70%;"></div>
+    <div class="star" style="top:40%; left:80%;"></div>
   </div>
 
   <!-- Dashboard placeholder -->
