@@ -5,18 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TBB Framework</title>
 <style>
-  /* Body & Background */
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0a1f40; /* Dark blue */
+    background: #0a1f40;
     color: white;
-    overflow-x: hidden;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
   }
 
-  /* Header / Logo */
   .header {
     text-align: center;
     padding: 40px 10px 20px 10px;
@@ -24,7 +22,6 @@
     z-index: 10;
   }
 
-  /* Fibonacci Image */
   .fibonacci-img {
     width: 80px;
     display: block;
@@ -55,7 +52,6 @@
     line-height: 1.5em;
   }
 
-  /* Dashboard placeholder */
   .dashboard {
     width: 90%;
     max-width: 800px;
@@ -73,7 +69,17 @@
     z-index: 10;
   }
 
-  /* Floating Balls + Stars Container */
+  .section {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #0f2a55;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #001f40;
+    line-height: 1.6em;
+  }
+
   .floating-container {
     position: absolute;
     width: 100%;
@@ -85,36 +91,30 @@
     overflow: hidden;
   }
 
-  /* Balls */
   .ball {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #0055ff, #00aaff);
     border-radius: 50%;
     color: gold;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1em;
-    animation: floatHorizontal linear infinite;
+    animation-name: floatHorizontal, rotate3d;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
   }
-
-  /* Each ball has its own speed & vertical start position */
-  .ball:nth-child(1) { top: 10%; animation-duration: 14s; left: -50px; }
-  .ball:nth-child(2) { top: 25%; animation-duration: 10s; left: -80px; }
-  .ball:nth-child(3) { top: 40%; animation-duration: 18s; left: -60px; }
-  .ball:nth-child(4) { top: 55%; animation-duration: 12s; left: -100px; }
-  .ball:nth-child(5) { top: 70%; animation-duration: 16s; left: -70px; }
-  .ball:nth-child(6) { top: 85%; animation-duration: 20s; left: -90px; }
 
   @keyframes floatHorizontal {
     0% { transform: translateX(0); }
     100% { transform: translateX(120vw); }
   }
 
-  /* Stars */
+  @keyframes rotate3d {
+    0% { transform: rotateY(0deg) rotateX(0deg); }
+    50% { transform: rotateY(180deg) rotateX(180deg); }
+    100% { transform: rotateY(360deg) rotateX(360deg); }
+  }
+
   .star {
     position: absolute;
     width: 6px;
@@ -131,17 +131,14 @@
     100% { opacity: 0.2; transform: scale(0.5); }
   }
 
-  /* Responsive adjustments */
   @media (max-width: 600px) {
     .fibonacci-img { width: 60px; }
     .logo { font-size: 2em; }
     .dashboard { height: 250px; font-size: 1.2em; }
-    .ball { width: 30px; height: 30px; font-size: 0.9em; }
   }
 </style>
 </head>
 <body>
-  <!-- Header -->
   <div class="header">
     <img src="fibonacci.png" alt="Fibonacci Symbol" class="fibonacci-img">
     <div class="logo">TBB Framework</div>
@@ -152,16 +149,7 @@
     </div>
   </div>
 
-  <!-- Floating Balls + Stars -->
-  <div class="floating-container">
-    <!-- Decorative floating balls -->
-    <div class="ball">1</div>
-    <div class="ball">2</div>
-    <div class="ball">3</div>
-    <div class="ball">4</div>
-    <div class="ball">5</div>
-    <div class="ball">6</div>
-
+  <div class="floating-container" id="floating-container">
     <!-- Stars -->
     <div class="star" style="top:5%; left:10%;"></div>
     <div class="star" style="top:20%; left:30%;"></div>
@@ -170,9 +158,62 @@
     <div class="star" style="top:40%; left:80%;"></div>
   </div>
 
-  <!-- Dashboard placeholder -->
   <div class="dashboard">
     Dashboard will display live Bonus Ball cycles here
   </div>
+
+  <div class="section">
+    <h2>Bonus Ball Play</h2>
+    <p>
+      Our greatest discovery is the <strong>Bonus Ball system</strong>. This is the live demonstration of our unique specialty.
+      Every step is calculated, every deployment structured. You can track cycles, steps, and expected Gross through our plug-and-play platform.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Next Pool</h2>
+    <p>
+      The next Bonus Ball pool for upcoming draws is prepared and displayed within the dashboard.
+      Numbers will cycle according to the TBB Framework rules, showing expected hits, Fibonacci steps, and stake progressions.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Series & Cycles</h2>
+    <p>
+      Every cycle is logged in our system. The page demonstrates how steps increase, resets occur after hits, and the framework positions consistently.
+      Observe the high and low progressions, noting how the system builds over time.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Positioning Principle</h2>
+    <p>
+      We don’t watch chaos. We don’t chase random numbers. We <strong>position</strong> our selections according to the TBB Framework.
+      This ensures maximum efficiency and clarity in tracking Bonus Ball cycles.
+    </p>
+  </div>
+
+  <script>
+    const container = document.getElementById('floating-container');
+    for (let i = 0; i < 20; i++) {
+      const ball = document.createElement('div');
+      ball.classList.add('ball');
+      // Random depth factor 0.5 (far) to 1.5 (near)
+      const depth = Math.random() + 0.5;
+      const size = (20 + Math.random() * 30) * depth;
+      ball.style.width = size + 'px';
+      ball.style.height = size + 'px';
+      ball.style.top = Math.random() * 90 + '%';
+      ball.style.left = -50 - Math.random() * 200 + 'px';
+      ball.style.fontSize = (size/2.5) + 'px';
+      // horizontal speed scales with depth
+      const horizSpeed = (15 / depth) + Math.random() * 5;
+      const rotSpeed = (4 + Math.random() * 6) / depth;
+      ball.style.animationDuration = horizSpeed + 's, ' + rotSpeed + 's';
+      ball.textContent = Math.floor(Math.random() * 49) + 1;
+      container.appendChild(ball);
+    }
+  </script>
 </body>
 </html>
