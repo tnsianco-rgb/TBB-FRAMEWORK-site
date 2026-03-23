@@ -19,22 +19,22 @@
       text-align: center;
       padding: 40px 10px 20px 10px;
       position: relative;
-      z-index: 5;
+      z-index: 10;
     }
 
-    /* Fibonacci symbol */
-    .fibonacci {
-      font-size: 3.5em;
-      color: #ffd700; /* gold */
-      text-shadow: 0 0 15px #ffd700, 0 0 30px #ffea00;
-      margin-bottom: 10px;
+    /* Fibonacci Image */
+    .fibonacci-img {
+      width: 80px;
+      display: block;
+      margin: 0 auto 10px auto;
+      filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 20px #ffea00);
       animation: glow 2s ease-in-out infinite alternate;
     }
 
     @keyframes glow {
-      0% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffea00; }
-      50% { text-shadow: 0 0 15px #ffd700, 0 0 35px #ffea00; }
-      100% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffea00; }
+      0% { filter: drop-shadow(0 0 5px gold) drop-shadow(0 0 10px #ffea00); }
+      50% { filter: drop-shadow(0 0 15px gold) drop-shadow(0 0 30px #ffea00); }
+      100% { filter: drop-shadow(0 0 5px gold) drop-shadow(0 0 10px #ffea00); }
     }
 
     .logo {
@@ -68,18 +68,18 @@
       color: #00aaff;
       box-shadow: 0 0 20px #0055ff;
       position: relative;
-      z-index: 5;
+      z-index: 10;
     }
 
     /* Floating Balls + Stars Container */
     .floating-container {
       position: absolute;
       width: 100%;
-      height: 400px;
+      height: 400px; /* adjust height if needed */
       top: 0;
       left: 0;
-      pointer-events: none;
-      z-index: 10;
+      pointer-events: none; /* allows clicks through */
+      z-index: 5; /* behind header & dashboard */
     }
 
     /* Balls */
@@ -129,7 +129,7 @@
 
     /* Responsive adjustments */
     @media (max-width: 600px) {
-      .fibonacci { font-size: 2.5em; }
+      .fibonacci-img { width: 60px; }
       .logo { font-size: 2em; }
       .dashboard { height: 250px; font-size: 1.2em; }
       .ball { width: 40px; height: 40px; font-size: 1em; }
@@ -139,12 +139,12 @@
 <body>
   <!-- Header -->
   <div class="header">
-    <div class="fibonacci">Φ</div>
+    <img src="fibonacci.png" alt="Fibonacci Symbol" class="fibonacci-img">
     <div class="logo">TBB Framework</div>
     <div class="intro">
-      Welcome to the TBB Framework – our **unique Bonus Ball system**.  
-      This is a plug-and-play platform integrating **Google Sheets and Excel**, giving you a clear view of how numbers position over time.  
-      We don’t predict. We **position**.
+      Welcome to the TBB Framework – our <strong>unique Bonus Ball system</strong>.<br>
+      This is a plug-and-play platform integrating <strong>Google Sheets and Excel</strong>, giving you a clear view of how numbers position over time.<br>
+      We don’t predict. We <strong>position</strong>.
     </div>
   </div>
 
