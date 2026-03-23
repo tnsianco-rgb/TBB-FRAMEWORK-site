@@ -6,6 +6,95 @@
   <title>TBB Framework</title>
   <style>
     body {
+    <!-- Floating Balls + Stars Container -->
+<div class="floating-container">
+  <!-- Numbered Balls -->
+  <div class="ball" style="--i:0;">6</div>
+  <div class="ball" style="--i:1;">10</div>
+  <div class="ball" style="--i:2;">31</div>
+  <div class="ball" style="--i:3;">36</div>
+  <div class="ball" style="--i:4;">37</div>
+  <div class="ball" style="--i:5;">38</div>
+  <div class="ball" style="--i:6;">8</div>
+  <div class="ball" style="--i:7;">12</div>
+  <div class="ball" style="--i:8;">33</div>
+  <div class="ball" style="--i:9;">38</div>
+  <div class="ball" style="--i:10;">39</div>
+  <div class="ball" style="--i:11;">40</div>
+
+  <!-- Floating Stars -->
+  <div class="star" style="--x:5vw; --y:10vh;"></div>
+  <div class="star" style="--x:20vw; --y:30vh;"></div>
+  <div class="star" style="--x:50vw; --y:15vh;"></div>
+  <div class="star" style="--x:70vw; --y:50vh;"></div>
+  <div class="star" style="--x:90vw; --y:25vh;"></div>
+</div>
+
+<style>
+.floating-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  overflow: hidden;
+  background: #0a1f40; /* Dark blue background */
+}
+
+/* Floating Balls */
+.ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #0055ff, #00aaff);
+  border-radius: 50%;
+  color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  top: calc(20% + var(--i) * 5%);
+  left: -60px; /* Start outside screen */
+  animation: floatHorizontal 12s linear infinite;
+}
+
+/* Horizontal float animation */
+@keyframes floatHorizontal {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-15px);
+  }
+  50% {
+    transform: translateX(50vw) translateY(10px);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-10px);
+  }
+  100% {
+    transform: translateX(120vw) translateY(0); /* Goes past screen */
+  }
+}
+
+/* Floating Stars */
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  top: var(--y);
+  left: var(--x);
+  box-shadow: 0 0 6px white;
+  animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.2; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.2; transform: scale(0.5); }
+}
+</style>
       font-family: Arial, sans-serif;
       background-color: #ffffff;
       color: #003366;
