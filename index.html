@@ -4,19 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TBB Framework</title>
-7
+
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #0a1f40;
   color: white;
-  overflow-x: hidden;
-}.dash-grid {
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.logo {
+  font-size: 2.5em;
+  color: gold;
+}
+
+/* SIGNATURE */
+.signature {
+  text-align: center;
+  color: gold;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* DASHBOARD */
+.dashboard {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  background: #142d5c;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* GRID */
+.dash-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 .dash-box {
@@ -24,92 +54,50 @@ body {
   padding: 15px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 0 10px #001f40;
 }
 
 .dash-box span {
-  display: block;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #00aaff;
-  margin-bottom: 5px;
 }
 
 .dash-box strong {
-  font-size: 1.4em;
-  color: white;
+  display: block;
+  font-size: 1.3em;
 }
 
-.dash-box.full {
+.full {
   grid-column: span 2;
-}
-
-/* HEADER */
-.header {
-  text-align: center;
-  padding: 40px 10px;
-  position: relative;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 2.5em;
-  color: gold;
-  text-shadow: 0 0 10px gold;
-}
-
-.intro {
-  max-width: 700px;
-  margin: auto;
-}
-
-/* DASHBOARD */
-.dashboard {
-  width: 90%;
-  max-width: 800px;
-  height: 250px;
-  margin: 30px auto;
-  background: #142d5c;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #00aaff;
-  position: relative;
-  z-index: 10;
 }
 
 /* SECTIONS */
 .section {
   width: 90%;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
   background: #0f2a55;
   border-radius: 10px;
 }
 
-/* FLOATING BACKGROUND */
+/* FLOATING */
 .floating-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
+  z-index: -1;
 }
 
-/* BALLS */
 .ball {
   position: absolute;
   border-radius: 50%;
+  background: radial-gradient(circle, #00aaff, #0033aa);
+  color: gold;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: gold;
-  font-weight: bold;
-  background: radial-gradient(circle at 30% 30%, #00aaff, #0033aa);
   animation: move linear infinite;
 }
 
@@ -117,48 +105,25 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(120vw); }
 }
-
-/* STARS */
-.star {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background: white;
-  border-radius: 50%;
-  animation: twinkle 2s infinite alternate;
-}
-
-@keyframes twinkle {
-  from { opacity: 0.3; }
-  to { opacity: 1; }
-}
 </style>
 </head>
 
 <body>
 
-<!-- FLOATING BACKGROUND -->
-<div class="floating-container" id="floating-container">
-  <div class="star" style="top:10%; left:20%"></div>
-  <div class="star" style="top:30%; left:70%"></div>
-  <div class="star" style="top:60%; left:40%"></div>
-  <div class="star" style="top:80%; left:80%"></div>
-</div>
+<div class="floating-container" id="floating"></div>
 
-<!-- HEADER -->
 <div class="header">
   <div class="logo">TBB Framework</div>
-  <p class="intro">
-    We don’t predict. We <strong>position</strong>.<br>
-    Structured Bonus Ball framework powered by discipline and consistency.
-  </p>
 </div>
 
-<!-- DASHBOARD -->
+<div class="signature">
+  We don’t predict outcomes.<br>
+  We position within structure.
+</div>
+
 <div class="dashboard">
-  <div class="dashboard">
   <div class="dash-grid">
-    
+
     <div class="dash-box">
       <span>Stage</span>
       <strong>5</strong>
@@ -183,50 +148,42 @@ body {
       <span>Status</span>
       <strong>Observation</strong>
     </div>
-</div>
-  
-</div>
-<!-- CONTENT -->
-<div class="section">
-  <h2>Bonus Ball System</h2>
-  <p>Our system focuses on structured positioning rather than random prediction.</p>
+
+  </div>
 </div>
 
 <div class="section">
-  <h2>Next Pool</h2>
-  <p>Upcoming number set will be displayed here.</p>
+  <h3>How It Works</h3>
+  <p>
+    1. Select 12-number unit<br>
+    2. Deploy consistently<br>
+    3. Follow Fibonacci progression<br>
+    4. Position toward outcome
+  </p>
 </div>
 
 <div class="section">
-  <h2>Cycles</h2>
-  <p>Track progression, Fibonacci steps, and system flow.</p>
+  <h3>Bonus Ball System</h3>
+  <p>
+    Structured positioning removes randomness and builds progression over time.
+  </p>
 </div>
 
-<!-- SCRIPT (FIXED) -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const container = document.getElementById("floating-container");
+  const container = document.getElementById("floating");
 
-  for (let i = 0; i < 20; i++) {
-    const ball = document.createElement("div");
+  for (let i = 0; i < 15; i++) {
+    let ball = document.createElement("div");
+    let size = Math.random() * 30 + 20;
+
     ball.className = "ball";
-
-    const size = Math.random() * 30 + 20;
-    const depth = Math.random() + 0.5;
-
     ball.style.width = size + "px";
     ball.style.height = size + "px";
     ball.style.top = Math.random() * 100 + "%";
-    ball.style.left = -100 + "px";
-
-    ball.style.fontSize = (size / 2.5) + "px";
-
-    // glow
-    ball.style.boxShadow = `0 0 ${10*depth}px rgba(255,215,0,0.7)`;
-
-    // speed
-    ball.style.animationDuration = (10 + Math.random() * 15) + "s";
-
+    ball.style.left = "-100px";
+    ball.style.fontSize = size / 2.5 + "px";
+    ball.style.animationDuration = (10 + Math.random() * 10) + "s";
     ball.innerText = Math.floor(Math.random() * 49) + 1;
 
     container.appendChild(ball);
