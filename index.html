@@ -4,218 +4,179 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TBB Framework</title>
+
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0a1f40;
-    color: white;
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-  }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a1f40;
+  color: white;
+  overflow-x: hidden;
+}
 
-  .header {
-    text-align: center;
-    padding: 40px 10px 20px 10px;
-    position: relative;
-    z-index: 10;
-  }
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 10px;
+  position: relative;
+  z-index: 10;
+}
 
-  .fibonacci-img {
-    width: 80px;
-    display: block;
-    margin: 0 auto 10px auto;
-    filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 20px #ffea00);
-    animation: glow 2s ease-in-out infinite alternate;
-  }
+.logo {
+  font-size: 2.5em;
+  color: gold;
+  text-shadow: 0 0 10px gold;
+}
 
-  @keyframes glow {
-    0% { filter: drop-shadow(0 0 5px gold) drop-shadow(0 0 10px #ffea00); }
-    50% { filter: drop-shadow(0 0 15px gold) drop-shadow(0 0 30px #ffea00); }
-    100% { filter: drop-shadow(0 0 5px gold) drop-shadow(0 0 10px #ffea00); }
-  }
+.intro {
+  max-width: 700px;
+  margin: auto;
+}
 
-  .logo {
-    font-size: 3em;
-    font-weight: bold;
-    color: gold;
-    text-shadow: 0 0 10px gold;
-  }
+/* DASHBOARD */
+.dashboard {
+  width: 90%;
+  max-width: 800px;
+  height: 250px;
+  margin: 30px auto;
+  background: #142d5c;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00aaff;
+  position: relative;
+  z-index: 10;
+}
 
-  .intro {
-    font-size: 1.2em;
-    margin-top: 10px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.5em;
-  }
+/* SECTIONS */
+.section {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #0f2a55;
+  border-radius: 10px;
+}
 
-  .dashboard {
-    width: 90%;
-    max-width: 800px;
-    height: 300px;
-    margin: 40px auto;
-    background: #142d5c;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    color: #00aaff;
-    box-shadow: 0 0 20px #0055ff;
-    position: relative;
-    z-index: 10;
-  }
+/* FLOATING BACKGROUND */
+.floating-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
 
-  .section {
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #0f2a55;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #001f40;
-    line-height: 1.6em;
-  }
+/* BALLS */
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gold;
+  font-weight: bold;
+  background: radial-gradient(circle at 30% 30%, #00aaff, #0033aa);
+  animation: move linear infinite;
+}
 
-  .floating-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 5;
-    overflow: hidden;
-  }
+@keyframes move {
+  from { transform: translateX(0); }
+  to { transform: translateX(120vw); }
+}
 
-  .ball {
-    position: absolute;
-    border-radius: 50%;
-    color: gold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    animation-name: floatHorizontal, rotate3d;
-    animation-timing-function: linear, ease-in-out;
-    animation-iteration-count: infinite, infinite;
-  }
+/* STARS */
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite alternate;
+}
 
-  @keyframes floatHorizontal {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(120vw); }
-  }
-
-  @keyframes rotate3d {
-    0% { transform: rotateY(0deg) rotateX(0deg); }
-    50% { transform: rotateY(180deg) rotateX(180deg); }
-    100% { transform: rotateY(360deg) rotateX(360deg); }
-  }
-
-  .star {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 0 6px white;
-    animation: twinkle 2s ease-in-out infinite alternate;
-  }
-
-  @keyframes twinkle {
-    0% { opacity: 0.2; transform: scale(0.5); }
-    50% { opacity: 1; transform: scale(1.2); }
-    100% { opacity: 0.2; transform: scale(0.5); }
-  }
-
-  @media (max-width: 600px) {
-    .fibonacci-img { width: 60px; }
-    .logo { font-size: 2em; }
-    .dashboard { height: 250px; font-size: 1.2em; }
-  }
+@keyframes twinkle {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
 </style>
 </head>
+
 <body>
-  <div class="header">
-    <img src="fibonacci.png" alt="Fibonacci Symbol" class="fibonacci-img">
-    <div class="logo">TBB Framework</div>
-    <div class="intro">
-      Welcome to the TBB Framework – our <strong>unique Bonus Ball system</strong>.<br>
-      This is a plug-and-play platform integrating <strong>Google Sheets and Excel</strong>, giving you a clear view of how numbers position over time.<br>
-      We don’t predict. We <strong>position</strong>.
-    </div>
-  </div>
 
-  <div class="floating-container" id="floating-container">
-    <!-- Stars -->
-    <div class="star" style="top:5%; left:10%;"></div>
-    <div class="star" style="top:20%; left:30%;"></div>
-    <div class="star" style="top:50%; left:50%;"></div>
-    <div class="star" style="top:70%; left:70%;"></div>
-    <div class="star" style="top:40%; left:80%;"></div>
-  </div>
+<!-- FLOATING BACKGROUND -->
+<div class="floating-container" id="floating-container">
+  <div class="star" style="top:10%; left:20%"></div>
+  <div class="star" style="top:30%; left:70%"></div>
+  <div class="star" style="top:60%; left:40%"></div>
+  <div class="star" style="top:80%; left:80%"></div>
+</div>
 
-  <div class="dashboard">
-    Dashboard will display live Bonus Ball cycles here
-  </div>
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">TBB Framework</div>
+  <p class="intro">
+    We don’t predict. We <strong>position</strong>.<br>
+    Structured Bonus Ball framework powered by discipline and consistency.
+  </p>
+</div>
 
-  <div class="section">
-    <h2>Bonus Ball Play</h2>
-    <p>
-      Our greatest discovery is the <strong>Bonus Ball system</strong>. This is the live demonstration of our unique specialty.
-      Every step is calculated, every deployment structured. You can track cycles, steps, and expected Gross through our plug-and-play platform.
-    </p>
-  </div>
+<!-- DASHBOARD -->
+<div class="dashboard">
+  Live Dashboard Area
+</div>
 
-  <div class="section">
-    <h2>Next Pool</h2>
-    <p>
-      The next Bonus Ball pool for upcoming draws is prepared and displayed within the dashboard.
-      Numbers will cycle according to the TBB Framework rules, showing expected hits, Fibonacci steps, and stake progressions.
-    </p>
-  </div>
+<!-- CONTENT -->
+<div class="section">
+  <h2>Bonus Ball System</h2>
+  <p>Our system focuses on structured positioning rather than random prediction.</p>
+</div>
 
-  <div class="section">
-    <h2>Series & Cycles</h2>
-    <p>
-      Every cycle is logged in our system. The page demonstrates how steps increase, resets occur after hits, and the framework positions consistently.
-      Observe the high and low progressions, noting how the system builds over time.
-    </p>
-  </div>
+<div class="section">
+  <h2>Next Pool</h2>
+  <p>Upcoming number set will be displayed here.</p>
+</div>
 
-  <div class="section">
-    <h2>Positioning Principle</h2>
-    <p>
-      We don’t watch chaos. We don’t chase random numbers. We <strong>position</strong> our selections according to the TBB Framework.
-      This ensures maximum efficiency and clarity in tracking Bonus Ball cycles.
-    </p>
-  </div>
+<div class="section">
+  <h2>Cycles</h2>
+  <p>Track progression, Fibonacci steps, and system flow.</p>
+</div>
 
-  <script>
-    const container = document.getElementById('floating-container');
-    for (let i = 0; i < 20; i++) {
-      const ball = document.createElement('div');
-      ball.classList.add('ball');
-      // Random depth factor 0.5 (far) to 1.5 (near)
-      const depth = Math.random() + 0.5;
-      const size = (20 + Math.random() * 30) * depth;
-      ball.style.width = size + 'px';
-      ball.style.height = size + 'px';
-      ball.style.top = Math.random() * 90 + '%';
-      ball.style.left = -50 - Math.random() * 200 + 'px';
-      ball.style.fontSize = (size/2.5) + 'px';
-      // Glow behind ball
-      ball.style.boxShadow = `0 0 ${10*depth}px ${5*depth}px rgba(255,215,0,0.7)`;
-      // horizontal and rotation speeds
-      const horizSpeed = (15 / depth) + Math.random() * 5;
-      const rotSpeed = (4 + Math.random() * 6) / depth;
-      ball.style.animationDuration = horizSpeed + 's, ' + rotSpeed + 's';
-      ball.textContent = Math.floor(Math.random() * 49) + 1;
-      container.appendChild(ball);
-    }
-  </script>
+<!-- SCRIPT (FIXED) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("floating-container");
+
+  for (let i = 0; i < 20; i++) {
+    const ball = document.createElement("div");
+    ball.className = "ball";
+
+    const size = Math.random() * 30 + 20;
+    const depth = Math.random() + 0.5;
+
+    ball.style.width = size + "px";
+    ball.style.height = size + "px";
+    ball.style.top = Math.random() * 100 + "%";
+    ball.style.left = -100 + "px";
+
+    ball.style.fontSize = (size / 2.5) + "px";
+
+    // glow
+    ball.style.boxShadow = `0 0 ${10*depth}px rgba(255,215,0,0.7)`;
+
+    // speed
+    ball.style.animationDuration = (10 + Math.random() * 15) + "s";
+
+    ball.innerText = Math.floor(Math.random() * 49) + 1;
+
+    container.appendChild(ball);
+  }
+});
+</script>
+
 </body>
 </html>
