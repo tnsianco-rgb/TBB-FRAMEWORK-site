@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TBB Framework</title>
-
+7
 <style>
 body {
   margin: 0;
@@ -12,6 +12,35 @@ body {
   background: #0a1f40;
   color: white;
   overflow-x: hidden;
+}.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.dash-box {
+  background: #0f2a55;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #001f40;
+}
+
+.dash-box span {
+  display: block;
+  font-size: 0.9em;
+  color: #00aaff;
+  margin-bottom: 5px;
+}
+
+.dash-box strong {
+  font-size: 1.4em;
+  color: white;
+}
+
+.dash-box.full {
+  grid-column: span 2;
 }
 
 /* HEADER */
@@ -127,15 +156,33 @@ body {
 
 <!-- DASHBOARD -->
 <div class="dashboard">
-  style="font-size:1.1em; line-height:1.8em; text-align:center;">
-    overflow: hidden;
-padding: 20px;
-  <strong>Stage:</strong> 5<br>
-    <strong>Fibonacci Step:</strong> 5<br>
-    <strong>Stake:</strong> 600<br>
-    <strong>Expected Gross:</strong> 2300<br>
-    <strong>Status:</strong> Observation
-  </div>
+  <div class="dashboard">
+  <div class="dash-grid">
+    
+    <div class="dash-box">
+      <span>Stage</span>
+      <strong>5</strong>
+    </div>
+
+    <div class="dash-box">
+      <span>Fibonacci</span>
+      <strong>5</strong>
+    </div>
+
+    <div class="dash-box">
+      <span>Stake</span>
+      <strong>600</strong>
+    </div>
+
+    <div class="dash-box">
+      <span>Gross</span>
+      <strong>2300</strong>
+    </div>
+
+    <div class="dash-box full">
+      <span>Status</span>
+      <strong>Observation</strong>
+    </div>
 </div>
   
 </div>
