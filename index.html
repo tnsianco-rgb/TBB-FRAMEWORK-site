@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, 8initial-scale=1.0">
 <title>TBB Framework</title>
 
 <style>
@@ -109,33 +109,6 @@ body {
 
 <!-- HERO -->
 <div class="hero">
-  <!-- Bundle Section 
-
-<!-- Bundle Section End -->
-
-<style>
-  /* Image Hover Effect */
-  #bundle-section img:hover {
-    transform: scale(1.05);
-  }
-
-  /* Button Hover Effect */
-  #bundle-section a:hover {
-    background: #dc2626;
-  }
-
-  /* Responsive Text */
-  @media (max-width: 600px) {
-    #bundle-section h2 {
-      font-size: 2rem;
-    }
-    #bundle-section p {
-      font-size: 1rem;
-    }
-    #bundle-section a {
-      font-size: 1rem;
-      padding: 12px 25px;
-    }
   }
 </style>
   <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Fibonacci_spiral_34.svg">
@@ -236,4 +209,114 @@ document.head.appendChild(style);
 </script>
 
 </body>
+<!-- Floating Bundle Button -->
+<a href="javascript:void(0);" id="bundle-button">Get the Bundle</a>
+
+<!-- Popup Modal -->
+<div id="bundle-modal">
+  <div id="bundle-modal-content">
+    <span id="bundle-close">&times;</span>
+    <h2>Your Complete System – Plug & Play!</h2>
+    <img src="your-bundle-image.jpg" alt="Bundle Package" style="max-width:100%; border-radius:12px; margin:20px 0;">
+    <p>Get everything you need in one powerful package. Ready to use, perfectly structured, and designed to grow your results instantly.</p>
+    <a href="/bundle-page.html" id="bundle-buy-button">Buy Now</a>
+  </div>
+</div>
+
+<style>
+/* Floating Button */
+#bundle-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ef4444;
+  color: #fff;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, background 0.3s;
+  z-index: 9999;
+}
+#bundle-button:hover { background-color: #dc2626; transform: scale(1.1); }
+
+/* Modal Overlay */
+#bundle-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex; justify-content: center; align-items: flex-end; /* start from bottom */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Modal Content */
+#bundle-modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px 12px 0 0; /* rounded top only */
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  transform: translateY(100%); /* start hidden at bottom */
+  transition: transform 0.5s ease;
+}
+
+/* Active modal (visible) */
+#bundle-modal.show {
+  opacity: 1;
+}
+#bundle-modal.show #bundle-modal-content {
+  transform: translateY(0); /* slide up */
+}
+
+/* Close Button */
+#bundle-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Buy Button */
+#bundle-buy-button {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 15px;
+  background: #ef4444;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+#bundle-buy-button:hover { background: #dc2626; }
+
+/* Responsive */
+@media (max-width:600px){
+  #bundle-button { padding: 12px 20px; font-size: 1rem; bottom:20px; right:20px; }
+  #bundle-modal-content { padding:20px; }
+}
+</style>
+
+<script>
+  const bundleBtn = document.getElementById('bundle-button');
+  const bundleModal = document.getElementById('bundle-modal');
+  const bundleClose = document.getElementById('bundle-close');
+
+  // Open modal
+  bundleBtn.onclick = () => { bundleModal.classList.add('show'); }
+
+  // Close modal
+  bundleClose.onclick = () => { bundleModal.classList.remove('show'); }
+
+  // Close if clicked outside content
+  window.onclick = (e) => {
+    if(e.target === bundleModal) { bundleModal.classList.remove('show'); }
+  }
+</script>
 </html>
