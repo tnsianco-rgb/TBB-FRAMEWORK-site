@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, 8initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TBB Framework</title>
 
 <style>
@@ -103,11 +102,12 @@ body {
 </style>
 </head>
 
-g"></div>
+<body>
+
+<div class="floating" id="floating"></div>
 
 <!-- HERO -->
 <div class="hero">
-</style>
   <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Fibonacci_spiral_34.svg">
   <div class="logo">TBB Framework</div>
   <p class="welcome">
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ball.innerText = Math.floor(Math.random() * 49) + 1;
 
     container.appendChild(ball);
-  
+  }
 });
 
 // animation
@@ -205,4 +205,5 @@ style.innerHTML = `
 document.head.appendChild(style);
 </script>
 
+</body>
 </html>
