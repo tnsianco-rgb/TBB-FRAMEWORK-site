@@ -13,212 +13,196 @@ body {
   color: white;
 }
 
-/* HEADER */
-.header {
+/* HERO */
+.hero {
   text-align: center;
-  padding: 30px 10px;
+  padding: 80px 20px 40px;
 }
 
-.logo {
-  font-size: 2.5em;
-  color: gold;
-}
-
-/* SIGNATURE */
-.signature {
-  text-align: center;
-  color: gold;
-  font-size: 1.2em;
+.hero img {
+  width: 80px;
   margin-bottom: 20px;
 }
 
-/* DASHBOARD */
-.dashboard {
-  width: 90%;
+.logo {
+  font-size: 2.8em;
+  color: gold;
+}
+
+.welcome {
   max-width: 600px;
-  margin: 20px auto;
-  background: #142d5c;
-  border-radius: 15px;
-  padding: 20px;
+  margin: 15px auto;
+  color: #ccc;
 }
 
-/* GRID */
-.dash-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.dash-box {
-  background: #0f2a55;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.dash-box span {
-  font-size: 0.8em;
-  color: #00aaff;
-}
-
-.dash-box strong {
-  display: block;
-  font-size: 1.3em;
-}
-
-.full {
-  grid-column: span 2;
+.signature {
+  margin-top: 20px;
+  color: gold;
 }
 
 /* SECTIONS */
 .section {
   width: 90%;
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 15px;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
   background: #0f2a55;
   border-radius: 10px;
 }
 
-/* FLOATING */
-.floating-container {
+/* FLOATING BACKGROUND */
+.floating {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
-.ball {
-  position: absolute;
+/* FLOATING BUTTON */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: gold;
+  color: black;
+  padding: 15px;
   border-radius: 50%;
-  background: radial-gradient(circle, #00aaff, #0033aa);
-  color: gold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: move linear infinite;
+  cursor: pointer;
 }
 
-@keyframes move {
-  from { transform: translateX(0); }
-  to { transform: translateX(120vw); }
+/* DASHBOARD PANEL */
+.panel {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 280px;
+  background: #142d5c;
+  padding: 15px;
+  border-radius: 10px;
+  display: none;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.box {
+  background: #0f2a55;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.full {
+  grid-column: span 2;
 }
 </style>
 </head>
 
 <body>
 
-<div class="floating-container" id="floating"></div>
+<div class="floating" id="floating"></div>
 
-<div class="header">
-  <img src="fibonacci.png" class="fib-logo">
+<!-- HERO -->
+<div class="hero">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Fibonacci_spiral_34.svg">
   <div class="logo">TBB Framework</div>
   <p class="welcome">
-    Welcome to the TBB Framework.<br>
-    A structured Bonus Ball positioning system built on discipline and progression.
+    A structured Bonus Ball positioning system designed for the 🇬🇧 UK49s Lunch Time and Tea Time draws.
   </p>
-</div>
-</div>
-
-<div class="signature">
-  We don’t predict outcomes.<br>
-  We position within structure.
+  <div class="signature">
+    We don’t predict outcomes.<br>
+    We position within structure.
+  </div>
 </div>
 
-<div class="dashboard">
-  <div class="dash-grid">
-
-    <div class="dash-box">
-      <span>Stage</span>
-      <strong>5</strong>
-    </div>
-
-    <div class="dash-box">
-      <span>Fibonacci</span>
-      <strong>5</strong>
-    </div>
-
-    <div class="dash-box">
-      <span>Stake</span>
-      <strong>600</strong>
-    </div>
-
-    <div class="dash-box">
-      <span>Gross</span>
-      <strong>2300</strong>
-    </div>
-
-    <div class="dash-box full">
-      <span>Status</span>
-      <strong>Observation</strong>
-    </div>
-
+<!-- PURPOSE -->
 <div class="section">
-  <div class="section">
-  <h2>Our Definiteness of Purpose</h2>
-
+  <h2>Definiteness of Purpose</h2>
   <p>
-    The TBB Framework is a structured system designed specifically for the 🇬🇧 UK49s Lunch Time and Tea Time Bonus Ball draws.
+    The TBB Framework is a working system built on intelligence, structure, and disciplined progression.
   </p>
-
   <p>
-    Its purpose is not to chase numbers, but to apply <strong>intelligence, structure, and disciplined progression</strong> within a defined environment.
+    Delivered through a plug-and-play platform using Google Sheets and Excel, it is accessible on both mobile and computer.
   </p>
-
   <p>
-    This is a working system delivered through a <strong>plug-and-play platform</strong> using Google Sheets and Excel, accessible on both mobile devices and computers.
-  </p>
-
-  <p>
-    Every stage, every Fibonacci step, and every deployment is part of a calculated framework that operates with clarity and consistency.
-  </p>
-
-  <p>
-    The focus is not on isolated outcomes, but on how the system positions itself over time to interact with the draw cycle.
-  </p>
-
-  <p>
-    This is what makes the TBB Framework different.
-  </p>
-
-  <p>
-    It is not guesswork.<br>
-    It is not randomness.<br>
-    It is a <strong>structured and accessible system for the UK49s Bonus Ball</strong>.
-  </p>
-</div>
+    The focus is not on individual numbers, but on structured positioning within the UK49s Bonus Ball cycle.
   </p>
 </div>
 
+<!-- HOW IT WORKS -->
 <div class="section">
-  <h3>Bonus Ball System</h3>
+  <h2>How It Works</h2>
   <p>
-    Structured positioning removes randomness and builds progression over time.
+    1. Deploy structured 12-number units<br>
+    2. Advance through Fibonacci progression<br>
+    3. Build position over time<br>
+    4. Interact with the draw cycle
   </p>
+</div>
+
+<!-- FLOAT BUTTON -->
+<div class="floating-btn" onclick="togglePanel()">📊</div>
+
+<!-- DASHBOARD PANEL -->
+<div id="panel" class="panel">
+  <div class="grid">
+
+    <div class="box">Stage<br><strong>6</strong></div>
+    <div class="box">Fib<br><strong>8</strong></div>
+
+    <div class="box">Stake<br><strong>960</strong></div>
+    <div class="box">Gross<br><strong>3680</strong></div>
+
+    <div class="box full">Status<br><strong>Observation</strong></div>
+
+  </div>
 </div>
 
 <script>
+function togglePanel() {
+  let panel = document.getElementById("panel");
+  panel.style.display = panel.style.display === "block" ? "none" : "block";
+}
+
+// Floating balls
 document.addEventListener("DOMContentLoaded", function () {
-  const container = document.getElementById("floating");
+  let container = document.getElementById("floating");
 
   for (let i = 0; i < 15; i++) {
     let ball = document.createElement("div");
-    let size = Math.random() * 30 + 20;
+    let size = Math.random() * 25 + 15;
 
-    ball.className = "ball";
+    ball.style.position = "absolute";
     ball.style.width = size + "px";
     ball.style.height = size + "px";
+    ball.style.borderRadius = "50%";
+    ball.style.background = "#0033aa";
+    ball.style.color = "gold";
+    ball.style.display = "flex";
+    ball.style.alignItems = "center";
+    ball.style.justifyContent = "center";
     ball.style.top = Math.random() * 100 + "%";
-    ball.style.left = "-100px";
-    ball.style.fontSize = size / 2.5 + "px";
-    ball.style.animationDuration = (10 + Math.random() * 10) + "s";
+    ball.style.left = "-50px";
+    ball.style.animation = `move ${10 + Math.random()*10}s linear infinite`;
+
     ball.innerText = Math.floor(Math.random() * 49) + 1;
 
     container.appendChild(ball);
   }
 });
+
+// animation
+let style = document.createElement('style');
+style.innerHTML = `
+@keyframes move {
+  from { transform: translateX(0); }
+  to { transform: translateX(120vw); }
+}`;
+document.head.appendChild(style);
 </script>
 
 </body>
