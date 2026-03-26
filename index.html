@@ -283,16 +283,18 @@ document.head.appendChild(style);
 </script>
 
 </body>
+
 <!-- Clickable Bundle Image -->
 <div style="text-align:center; margin: 20px 0;">
-  <img src="https://i.imgur.com/3y0Rz5p.png" alt="TBB Bundle Package" id="bundle-image" style="max-width:100%; border-radius:12px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); cursor:pointer;">
+  <img src="https://i.postimg.cc/3xQmP9mK/bundle.png" alt="TBB Bundle Package" id="bundle-image" style="max-width:100%; border-radius:12px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); cursor:pointer;">
 </div>
 
 <!-- Bundle Modal -->
 <div id="bundle-modal">
   <div id="bundle-content">
     <span id="bundle-close">&times;</span>
-    <h2>🎁"https://i.postimg.cc/G2CnzyBZ/file-00000000cb3071f5ae4d2ea46f9c8b71.png alt="TBB Bundle" style="max-width:100%; border-radius:12px; margin-bottom:15px;">
+    <h2>🎁 TBB Bundle Package</h2>
+    <img src="https://i.postimg.cc/3xQmP9mK/bundle.png" alt="TBB Bundle" style="max-width:100%; border-radius:12px; margin-bottom:15px;">
     <p>Discover the complete TBB system – step-by-step guides, tools, and frameworks to optimize your results.</p>
     <button id="bundle-action">Access the Bundle</button>
   </div>
@@ -303,7 +305,6 @@ document.head.appendChild(style);
 
 <!-- CSS -->
 <style>
-  /* Floating button with pulse & arrow */
   #bundle-button {
     position: fixed;
     bottom: 20px;
@@ -316,7 +317,6 @@ document.head.appendChild(style);
     font-weight: bold;
     cursor: pointer;
     animation: pulse 2s infinite;
-    transition: transform 0.3s, box-shadow 0.3s;
     display: inline-flex;
     align-items: center;
   }
@@ -331,66 +331,53 @@ document.head.appendChild(style);
     50% { transform: scale(1.08); box-shadow: 0 0 15px rgba(255,215,0,0.7); }
     100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,215,0,0.7); }
   }
-  #arrow {
-    display: inline-block;
-    margin-left: 6px;
-    animation: slideArrow 1s infinite alternate;
-  }
-  @keyframes slideArrow {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(4px); }
-  }
+  #arrow { display:inline-block; margin-left:6px; animation:slideArrow 1s infinite alternate; }
+  @keyframes slideArrow { 0%{transform:translateX(0);} 100%{transform:translateX(4px);} }
 
-  /* Modal overlay */
   #bundle-modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    display:none;
+    position:fixed;
+    z-index:10000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
     background-color: rgba(0,0,0,0.6);
   }
 
-  /* Modal content */
   #bundle-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 30px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    background-color:#fff;
+    margin:10% auto;
+    padding:30px;
+    border-radius:12px;
+    width:90%;
+    max-width:500px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
   }
 
-  /* Close button */
   #bundle-close {
-    position: absolute;
-    top: 12px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+    position:absolute;
+    top:12px;
+    right:20px;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
   }
 
-  /* Bundle action button */
   #bundle-action {
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #FFD700;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top:20px;
+    padding:12px 24px;
+    background-color:#FFD700;
+    color:#000;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:background-color 0.3s;
   }
-  #bundle-action:hover {
-    background-color: #FFC700;
-  }
+  #bundle-action:hover { background-color:#FFC700; }
 </style>
 
 <!-- JavaScript -->
@@ -400,17 +387,9 @@ document.head.appendChild(style);
   const bundleModal = document.getElementById('bundle-modal');
   const bundleClose = document.getElementById('bundle-close');
 
-  // Open modal for both button and image
   bundleBtn.onclick = () => { bundleModal.style.display = 'block'; }
   bundleImage.onclick = () => { bundleModal.style.display = 'block'; }
-
-  // Close modal
   bundleClose.onclick = () => { bundleModal.style.display = 'none'; }
-
-  // Close if click outside content
-  window.onclick = (e) => {
-    if(e.target === bundleModal) { bundleModal.style.display = 'none'; }
-  }
+  window.onclick = (e) => { if(e.target===bundleModal){bundleModal.style.display='none';} }
 </script>
-
 </html>
