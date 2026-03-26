@@ -284,7 +284,7 @@ document.head.appendChild(style);
 
 </body>
 <!-- Floating Bundle Button -->
-<a href="javascript:void(0);" id="bundle-button">Access TBB</a>
+<a href="javascript:void(0);" id="bundle-button">Access TBB <span id="arrow">→</span></a>
 
 <!-- Bundle Modal -->
 <div id="bundle-modal">
@@ -298,23 +298,25 @@ document.head.appendChild(style);
 
 <!-- CSS -->
 <style>
-  /* Floating button - yellow theme with pulse */
+  /* Floating button - yellow theme with pulse and sliding arrow */
   #bundle-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 9999;
-    background-color: #FFD700; /* yellow */
-    color: #000; /* black text */
+    background-color: #FFD700;
+    color: #000;
     padding: 12px 18px;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
     animation: pulse 2s infinite;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-flex;
+    align-items: center;
   }
   #bundle-button:hover {
-    background-color: #FFC700; /* brighter yellow */
+    background-color: #FFC700;
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255,215,0,0.8);
     animation: none; /* stop pulse on hover */
@@ -325,6 +327,17 @@ document.head.appendChild(style);
     0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,215,0,0.7); }
     50% { transform: scale(1.08); box-shadow: 0 0 15px rgba(255,215,0,0.7); }
     100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,215,0,0.7); }
+  }
+
+  /* Sliding arrow animation */
+  #arrow {
+    display: inline-block;
+    margin-left: 6px;
+    animation: slideArrow 1s infinite alternate;
+  }
+  @keyframes slideArrow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(4px); }
   }
 
   /* Modal overlay */
@@ -395,5 +408,6 @@ document.head.appendChild(style);
   window.onclick = (e) => {
     if(e.target === bundleModal) { bundleModal.style.display = 'none'; }
   }
+</script>
 </script>
 </html>
