@@ -283,22 +283,28 @@ document.head.appendChild(style);
 </script>
 
 </body>
-<!-- Floating Bundle Button -->
-<a href="javascript:void(0);" id="bundle-button">Access TBB <span id="arrow">→</span></a>
+<!-- Bundle Image (clickable) -->
+<div style="text-align:center; margin: 20px 0;">
+  <img src="YOUR_IMAGE_LINK_HERE" alt="TBB Bundle Package" id="bundle-image" style="max-width:100%; border-radius:12px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); cursor:pointer;">
+</div>
 
-<!-- Bundle Modal -->
+<!-- Bundle Modal (same as floating button) -->
 <div id="bundle-modal">
   <div id="bundle-content">
     <span id="bundle-close">&times;</span>
     <h2>🎁 TBB Bundle Package</h2>
+    <img src="https://imgur.com/a/0G5ewMH alt="TBB Bundle" style="max-width:100%; border-radius:12px; margin-bottom:15px;">
     <p>Discover the complete TBB system – step-by-step guides, tools, and frameworks to optimize your results.</p>
     <button id="bundle-action">Access the Bundle</button>
   </div>
 </div>
 
-<!-- CSS -->
+<!-- Floating Button (already pulsing) -->
+<a href="javascript:void(0);" id="bundle-button">Access TBB <span id="arrow">→</span></a>
+
+<!-- CSS (same as before for pulsing button + modal) -->
 <style>
-  /* Floating button - yellow theme with pulse and sliding arrow */
+  /* Floating button with pulse & arrow */
   #bundle-button {
     position: fixed;
     bottom: 20px;
@@ -319,17 +325,13 @@ document.head.appendChild(style);
     background-color: #FFC700;
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255,215,0,0.8);
-    animation: none; /* stop pulse on hover */
+    animation: none;
   }
-
-  /* Pulse animation */
   @keyframes pulse {
     0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,215,0,0.7); }
     50% { transform: scale(1.08); box-shadow: 0 0 15px rgba(255,215,0,0.7); }
     100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,215,0,0.7); }
   }
-
-  /* Sliding arrow animation */
   #arrow {
     display: inline-block;
     margin-left: 6px;
@@ -395,11 +397,13 @@ document.head.appendChild(style);
 <!-- JavaScript -->
 <script>
   const bundleBtn = document.getElementById('bundle-button');
+  const bundleImage = document.getElementById('bundle-image');
   const bundleModal = document.getElementById('bundle-modal');
   const bundleClose = document.getElementById('bundle-close');
 
-  // Open modal
+  // Open modal for both button and image
   bundleBtn.onclick = () => { bundleModal.style.display = 'block'; }
+  bundleImage.onclick = () => { bundleModal.style.display = 'block'; }
 
   // Close modal
   bundleClose.onclick = () => { bundleModal.style.display = 'none'; }
@@ -408,6 +412,5 @@ document.head.appendChild(style);
   window.onclick = (e) => {
     if(e.target === bundleModal) { bundleModal.style.display = 'none'; }
   }
-</script>
 </script>
 </html>
