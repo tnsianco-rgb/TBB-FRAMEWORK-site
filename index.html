@@ -283,4 +283,107 @@ document.head.appendChild(style);
 </script>
 
 </body>
+<!-- Floating Bundle Button -->
+<a href="javascript:void(0);" id="bundle-button">Get the Bundle</a>
+
+<!-- Bundle Modal -->
+<div id="bundle-modal">
+  <div id="bundle-content">
+    <span id="bundle-close">&times;</span>
+    <h2>🎁 TBB Bundle Package</h2>
+    <p>Discover the complete TBB system – step-by-step guides, tools, and frameworks to optimize your results.</p>
+    <button id="bundle-action">Access the Bundle</button>
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+  /* Button */
+  #bundle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #ef4444;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  #bundle-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(239,68,68,0.8);
+  }
+
+  /* Modal overlay */
+  #bundle-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  /* Modal content */
+  #bundle-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  }
+
+  /* Close button */
+  #bundle-close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Bundle action button */
+  #bundle-action {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #bundle-action:hover {
+    background-color: #dc2626;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  const bundleBtn = document.getElementById('bundle-button');
+  const bundleModal = document.getElementById('bundle-modal');
+  const bundleClose = document.getElementById('bundle-close');
+
+  // Open modal
+  bundleBtn.onclick = () => { bundleModal.style.display = 'block'; }
+
+  // Close modal
+  bundleClose.onclick = () => { bundleModal.style.display = 'none'; }
+
+  // Close if click outside content
+  window.onclick = (e) => {
+    if(e.target === bundleModal) { bundleModal.style.display = 'none'; }
+  }
+</script>
 </html>
