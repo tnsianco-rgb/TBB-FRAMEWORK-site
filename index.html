@@ -198,67 +198,44 @@ body {
 <div id="panel" class="panel">
   <div class="grid">
 <!-- TBB Framework Live Integrated Section -->
-<section id="tbb-framework" style="<section id="tbb-framework" style
-  <h2>TBB Framework Test Section</h2>
-    <h2 style="font-size: 2.2rem; color: #0047ab; margin-bottom: 1rem;">TBB Framework: Discipline Meets Precision</h2>
-    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
-      The <strong>TBB Framework</strong> is a structured system designed to <strong>optimize outcomes, predict patterns, and manage resources efficiently</strong>. Built on rhythm, networked progression, and Fibonacci scaling, it transforms uncertainty into calculated growth.
-    </p>
+<section id="tbb-framework" 
+style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; border-radius: 12px; text-align: center; color: #0047ab;">
+  <h2 style="font-size: 2rem; margin-bottom: 10px;">TBB Framework: Discipline Meets Precision</h2>
+  <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 20px;">
+    The <strong>TBB Framework</strong> optimizes outcomes, predicts patterns, and manages resources efficiently using rhythmic, networked progression and Fibonacci scaling.
+  </p>
 
-    <!-- Animated Live Fibonacci Flow -->
-    <div class="flow-container">
-      <div class="flow-box">Step<br><span id="step" class="fib-number">0</span></div>
-      <div class="flow-box">Stake<br><span id="stake" class="fib-number">0</span></div>
-      <div class="flow-box">Expected Gross<br><span id="gross" class="fib-number">0</span></div>
-      <div class="flow-box">Outcome Influence<br><span id="noMatch" class="fib-number">0</span></div>
-      <div class="flow-box">Next Step<br><span id="nextStep" class="fib-number">0</span></div>
+  <!-- Animated Live Fibonacci Flow -->
+  <div class="flow-container" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:20px;">
+    <div class="flow-box" style="background:#99c2ff; padding:10px 15px; border-radius:8px; min-width:100px; font-weight:bold; animation:pulse 2s infinite alternate;">
+      Step<br><span id="step" class="fib-number" style="display:block; font-size:1.5rem; animation:grow 2s infinite alternate;">0</span>
     </div>
-
-    <!-- Tagline -->
-    <p style="font-size: 1.3rem; font-weight: bold; color: #0047ab; margin-top: 2rem;">
-      “We don’t predict — we <strong>position</strong>.”
-    </p>
+    <div class="flow-box" style="background:#99c2ff; padding:10px 15px; border-radius:8px; min-width:100px; font-weight:bold; animation:pulse 2s infinite alternate;">
+      Stake<br><span id="stake" class="fib-number" style="display:block; font-size:1.5rem; animation:grow 2s infinite alternate;">0</span>
+    </div>
+    <div class="flow-box" style="background:#99c2ff; padding:10px 15px; border-radius:8px; min-width:100px; font-weight:bold; animation:pulse 2s infinite alternate;">
+      Expected Gross<br><span id="gross" class="fib-number" style="display:block; font-size:1.5rem; animation:grow 2s infinite alternate;">0</span>
+    </div>
+    <div class="flow-box" style="background:#99c2ff; padding:10px 15px; border-radius:8px; min-width:100px; font-weight:bold; animation:pulse 2s infinite alternate;">
+      Outcome Influence<br><span id="noMatch" class="fib-number" style="display:block; font-size:1.5rem; animation:grow 2s infinite alternate;">0</span>
+    </div>
+    <div class="flow-box" style="background:#99c2ff; padding:10px 15px; border-radius:8px; min-width:100px; font-weight:bold; animation:pulse 2s infinite alternate;">
+      Next Step<br><span id="nextStep" class="fib-number" style="display:block; font-size:1.5rem; animation:grow 2s infinite alternate;">0</span>
+    </div>
   </div>
+
+  <p style="font-size: 1.2rem; font-weight:bold; color: #0047ab; margin-top: 10px;">
+    “We don’t predict — we <strong>position</strong>.”
+  </p>
 </section>
 
 <style>
-  .flow-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin: 2rem 0;
-  }
-  .flow-box {
-    background: #cce0ff;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    min-width: 120px;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #0047ab;
-    text-align: center;
-    animation: pulse 2s infinite alternate;
-  }
-  .fib-number {
-    display: block;
-    font-size: 1.5rem;
-    color: #002f6c;
-    animation: grow 2s infinite alternate;
-  }
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.05); }
-  }
-  @keyframes grow {
-    0% { color: #002f6c; transform: scale(1); }
-    100% { color: #0047ab; transform: scale(1.2); }
-  }
+@keyframes pulse { 0%{transform:scale(1);} 100%{transform:scale(1.05);} }
+@keyframes grow { 0%{color:#002f6c; transform:scale(1);} 100%{color:#0047ab; transform:scale(1.2);} }
 </style>
 
 <script>
-  // Example: Replace with your real backend endpoint
-  const API_URL = "/api/tbb-dashboard"; // <- your API endpoint here
+  const API_URL = "/api/tbb-dashboard"; // <- Replace with your real endpoint
 
   function updateDashboard(data) {
     document.getElementById('step').textContent = data.currentStep;
@@ -279,64 +256,11 @@ body {
     }
   }
 
-  // Initial fetch
+  // Initial load
   fetchDashboardData();
 
-  // Refresh every 5 seconds to keep live
+  // Refresh every 5 seconds
   setInterval(fetchDashboardData, 5000);
-</script>
-    <div class="box">Stage<br><strong>6</strong></div>
-    <div class="box">Fib<br><strong>8</strong></div>
-
-    <div class="box">Stake<br><strong>960</strong></div>
-    <div class="box">Gross<br><strong>3680</strong></div>
-
-    <div class="box full">Status<br><strong>Observation</strong></div>
-
-  </div>
-</div>
-
-<script>
-function togglePanel() {
-  let panel = document.getElementById("panel");
-  panel.style.display = panel.style.display === "block" ? "none" : "block";
-}
-
-// Floating balls
-document.addEventListener("DOMContentLoaded", function () {
-  let container = document.getElementById("floating");
-
-  for (let i = 0; i < 15; i++) {
-    let ball = document.createElement("div");
-    let size = Math.random() * 25 + 15;
-
-    ball.style.position = "absolute";
-    ball.style.width = size + "px";
-    ball.style.height = size + "px";
-    ball.style.borderRadius = "50%";
-    ball.style.background = "#0033aa";
-    ball.style.color = "gold";
-    ball.style.display = "flex";
-    ball.style.alignItems = "center";
-    ball.style.justifyContent = "center";
-    ball.style.top = Math.random() * 100 + "%";
-    ball.style.left = "-50px";
-    ball.style.animation = `move ${10 + Math.random()*10}s linear infinite`;
-
-    ball.innerText = Math.floor(Math.random() * 49) + 1;
-
-    container.appendChild(ball);
-  }
-});
-
-// animation
-let style = document.createElement('style');
-style.innerHTML = `
-@keyframes move {
-  from { transform: translateX(0); }
-  to { transform: translateX(120vw); }
-}`;
-document.head.appendChild(style);
 </script>
 
 </body>
