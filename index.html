@@ -227,7 +227,94 @@ body {
 <!-- DASHBOARD PANEL -->
 <div id="panel" class="panel">
   <div class="grid">
+<!-- TBB Framework Live Integrated Section -->
+<section id="tbb-framework" style="padding: 2rem; background: #f5f9ff; color: #1a1a1a; font-family: Arial, sans-serif;">
+  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2.2rem; color: #0047ab; margin-bottom: 1rem;">TBB Framework: Discipline Meets Precision</h2>
+    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+      The <strong>TBB Framework</strong> is a structured system designed to <strong>optimize outcomes, predict patterns, and manage resources efficiently</strong>. Built on rhythm, networked progression, and Fibonacci scaling, it transforms uncertainty into calculated growth.
+    </p>
 
+    <!-- Animated Live Fibonacci Flow -->
+    <div class="flow-container">
+      <div class="flow-box">Step<br><span id="step" class="fib-number">0</span></div>
+      <div class="flow-box">Stake<br><span id="stake" class="fib-number">0</span></div>
+      <div class="flow-box">Expected Gross<br><span id="gross" class="fib-number">0</span></div>
+      <div class="flow-box">Outcome Influence<br><span id="noMatch" class="fib-number">0</span></div>
+      <div class="flow-box">Next Step<br><span id="nextStep" class="fib-number">0</span></div>
+    </div>
+
+    <!-- Tagline -->
+    <p style="font-size: 1.3rem; font-weight: bold; color: #0047ab; margin-top: 2rem;">
+      “We don’t predict — we <strong>position</strong>.”
+    </p>
+  </div>
+</section>
+
+<style>
+  .flow-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+  }
+  .flow-box {
+    background: #cce0ff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    min-width: 120px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #0047ab;
+    text-align: center;
+    animation: pulse 2s infinite alternate;
+  }
+  .fib-number {
+    display: block;
+    font-size: 1.5rem;
+    color: #002f6c;
+    animation: grow 2s infinite alternate;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+  }
+  @keyframes grow {
+    0% { color: #002f6c; transform: scale(1); }
+    100% { color: #0047ab; transform: scale(1.2); }
+  }
+</style>
+
+<script>
+  // Example: Replace with your real backend endpoint
+  const API_URL = "/api/tbb-dashboard"; // <- your API endpoint here
+
+  function updateDashboard(data) {
+    document.getElementById('step').textContent = data.currentStep;
+    document.getElementById('stake').textContent = data.currentStake;
+    document.getElementById('gross').textContent = data.expectedGross;
+    document.getElementById('noMatch').textContent = data.noMatchCount;
+    document.getElementById('nextStep').textContent = data.currentStep + 1;
+  }
+
+  async function fetchDashboardData() {
+    try {
+      const response = await fetch(API_URL);
+      if (!response.ok) throw new Error("Network response was not ok");
+      const data = await response.json();
+      updateDashboard(data);
+    } catch (err) {
+      console.error("Failed to fetch TBB dashboard data:", err);
+    }
+  }
+
+  // Initial fetch
+  fetchDashboardData();
+
+  // Refresh every 5 seconds to keep live
+  setInterval(fetchDashboardData, 5000);
+</script>
     <div class="box">Stage<br><strong>6</strong></div>
     <div class="box">Fib<br><strong>8</strong></div>
 
