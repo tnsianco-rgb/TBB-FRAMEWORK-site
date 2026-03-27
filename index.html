@@ -411,7 +411,7 @@ style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; bo
   bundleImage.onclick = () => { bundleModal.style.display = 'block'; }
   bundleClose.onclick = () => { bundleModal.style.display = 'none'; }
   window.onclick = (e) => { if(e.target===bundleModal){bundleModal.style.display='none';} }
-<style>
+<style><style>
   .floating-ball {
     position: absolute;
     width: 40px;
@@ -427,6 +427,7 @@ style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; bo
     pointer-events: none;
     user-select: none;
     animation: floatY 2s ease-in-out infinite alternate, pulse 1.5s ease-in-out infinite alternate;
+    z-index: 9999;
   }
 
   @keyframes floatY {
@@ -442,29 +443,32 @@ style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; bo
 </style>
 
 <script>
-const ballCount = 10; // Number of floating balls
-const balls = [];
+window.onload = function() {
+  const ballCount = 10;
+  const balls = [];
 
-for(let i=0; i<ballCount; i++){
-  const ball = document.createElement('div');
-  ball.className = 'floating-ball';
-  ball.textContent = 'BB';
-  ball.style.left = Math.random() * (window.innerWidth - 50) + 'px';
-  ball.style.top = Math.random() * (window.innerHeight - 50) + 'px';
-  ball.style.animationDuration = `${2 + Math.random()*2}s, ${1 + Math.random()}s`;
-  document.body.appendChild(ball);
-  balls.push(ball);
+  for(let i=0; i<ballCount; i++){
+    const ball = document.createElement('div');
+    ball.className = 'floating-ball';
+    ball.textContent = 'BB';
+    ball.style.left = Math.random() * (window.innerWidth - 50) + 'px';
+    ball.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+    ball.style.animationDuration = `${2 + Math.random()*2}s, ${1 + Math.random()}s`;
+    document.body.appendChild(ball);
+    balls.push(ball);
+  }
+
+  // Horizontal drift
+  setInterval(() => {
+    balls.forEach(ball => {
+      const x = parseFloat(ball.style.left);
+      const newX = x + (Math.random() - 0.5) * 2;
+      ball.style.left = Math.max(0, Math.min(window.innerWidth - 50, newX)) + 'px';
+    });
+  }, 50);
 }
-
-// Horizontal drift for natural movement
-setInterval(() => {
-  balls.forEach(ball => {
-    const x = parseFloat(ball.style.left);
-    const newX = x + (Math.random() - 0.5) * 2; // small horizontal drift
-    ball.style.left = Math.max(0, Math.min(window.innerWidth - 50, newX)) + 'px';
-  });
-}, 50);
 </script>
+  
 
 </script>
    </html>
