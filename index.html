@@ -459,6 +459,39 @@ style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; bo
     0% { transform: scale(1); box-shadow: 0 0 10px rgba(0,71,171,0.5); }
     100% { transform: scale(1.2); box-shadow: 0 0 20px rgba(0,71,171,0.9); }
   }
+<style>
+body {
+  background: #eef5ff;
+  position: relative;
+}
+
+.star {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  background: #0047ab;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: twinkle 3s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.6; }
+}
+</style>
+
+<script>
+for(let i = 0; i < 40; i++){
+  const star = document.createElement('div');
+  star.className = 'star';
+  star.style.top = Math.random() * window.innerHeight + 'px';
+  star.style.left = Math.random() * window.innerWidth + 'px';
+  star.style.animationDuration = (2 + Math.random()*3) + 's';
+  document.body.appendChild(star);
+}
+</script>
 </style>
 </head>
 <body>
