@@ -580,19 +580,7 @@ for (let i = 0; i < starCount; i++) {
   // Random animation duration for float
   const floatDuration = 5 + Math.random() * 5;
   star.style.animationDuration = floatDuration + 's, 2s';
-  
-  starField.appendChild(star);
-}
-</script>
-  const bundleBtn = document.getElementById('bundle-button');
-  const bundleImage = document.getElementById('bundle-image');
-  const bundleModal = document.getElementById('bundle-modal');
-  const bundleClose = document.getElementById('bundle-close');
-
-  bundleBtn.onclick = () => { bundleModal.style.display = 'block'; }
-  bundleImage.onclick = () => { bundleModal.style.display = 'block'; }
-  bundleClose.onclick = () => { bundleModal.style.display = 'none'; }
-  window.onclick = (e) => { if(e.target===bundleModal){bundleModal.style.display='none';} }
+    starField.appendChild(star);
 }
 </script>
 o</html>
