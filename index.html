@@ -593,7 +593,38 @@ style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; bo
   color: #FFD700; /* golden/yellow color for links */
   text-decoration: none;
 }
+/* Mobile Optimization for text and footer */
+@media screen and (max-width: 768px) {
+  
+  /* General body text */
+  body {
+    font-size: 18px;       /* readable on mobile */
+    line-height: 1.6;      /* better spacing */
+  }
 
+  /* Headings scaling */
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 20px; }
+  h4 { font-size: 18px; }
+  
+  /* Paragraphs */
+  p {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  /* Links and buttons */
+  a, button {
+    font-size: 18px;
+    padding: 10px 15px;    /* easier to tap */
+  }
+  
+  /* Footer contact info */
+  #fixed-footer p {
+    font-size: 18px;        /* scales number/email for mobile */
+  }
+}
 .contact-info a:hover {
   text-decoration: underline;
   }
