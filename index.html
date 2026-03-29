@@ -556,7 +556,22 @@ style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; bo
 @keyframes pulse {
   0%, 100% { opacity: 0.8; transform: scale(1); }
   50%      { opacity: 0.3; transform: scale(1.5); }
+}.contact-info {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: white; /* change based on your site color */
+  text-align: center; /* center in header/footer */
+  margin: 10px 0;
 }
+
+.contact-info a {
+  color: #FFD700; /* golden/yellow color for links */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  }
 </style>
 
 <!-- JavaScript -->
@@ -581,7 +596,10 @@ for (let i = 0; i < starCount; i++) {
   const floatDuration = 5 + Math.random() * 5;
   star.style.animationDuration = floatDuration + 's, 2s';
     starField.appendChild(star);
-}
+}<div class="contact-info">
+  <p>📱 <a href="tel:+27684864474">+27 12 345 6789</a></p>
+  <p>✉️ <a href="mailto:tnsianco@gmail.com.com">info@example.com</a></p>
+</div>
 </script>
 o</html>
   
