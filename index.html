@@ -496,7 +496,37 @@ style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; bo
 @keyframes pulseStars {
   0%, 100% { opacity: 0.8; transform: scale(1); }
   50% { opacity: 0.4; transform: scale(1.5); }
+}.star-container {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  overflow: hidden;
 }
+
+/* Star style */
+.star-container .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: floatStars 5s linear infinite, pulseStars 2s ease-in-out infinite;
+}
+
+@keyframes floatStars {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(10px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes pulseStars {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.5); }
+  }
 </style>
 
 <!-- JavaScript -->
@@ -517,5 +547,29 @@ style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; bo
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Floating BB Balls Test</title>
 <style>
+    <script>
+const container = document.querySelector('.star-container');
+const starCount = 50; // Number of stars
+
+for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('span');
+    star.classList.add('star');
+    
+    // Random position
+    star.style.top = Math.random() * 100 + '%';
+    star.style.left = Math.random() * 100 + '%';
+    
+    // Random size
+    const size = Math.random() * 2 + 1; // 1px to 3px
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    
+    // Random animation duration
+    const floatDuration = 5 + Math.random() * 5; // 5s to 10s
+    star.style.animationDuration = floatDuration + 's, 2s';
+    
+    container.appendChild(star);
+}
+</script>
 o</html>
   
