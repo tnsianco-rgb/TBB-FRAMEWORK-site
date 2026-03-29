@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<div id="star-field"></div>
 <html lang="en">
 <head>
 <style>
@@ -526,11 +527,63 @@ style="<section id="tbb-framework" style="background: #cce0ff; padding: 20px; bo
 @keyframes pulseStars {
   0%, 100% { opacity: 0.8; transform: scale(1); }
   50% { opacity: 0.4; transform: scale(1.5); }
-  }
+  }#star-field {
+  position: fixed;        /* covers the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;   /* clicks go through */
+  z-index: 9999;          /* on top of everything */
+  background: transparent;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: float 6s linear infinite, pulse 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translate(0,0); }
+  50%  { transform: translate(10px,-20px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50%      { opacity: 0.3; transform: scale(1.5); }
+}
 </style>
 
 <!-- JavaScript -->
-<script>
+<script><script>
+const starField = document.getElementById('star-field');
+const starCount = 50; // number of stars
+
+for (let i = 0; i < starCount; i++) {
+  const star = document.createElement('div');
+  star.className = 'star';
+  
+  // Random position
+  star.style.top = Math.random() * 100 + 'vh';
+  star.style.left = Math.random() * 100 + 'vw';
+  
+  // Random size
+  const size = Math.random() * 3 + 1; // 1px to 4px
+  star.style.width = size + 'px';
+  star.style.height = size + 'px';
+  
+  // Random animation duration for float
+  const floatDuration = 5 + Math.random() * 5;
+  star.style.animationDuration = floatDuration + 's, 2s';
+  
+  starField.appendChild(star);
+}
+</script>
   const bundleBtn = document.getElementById('bundle-button');
   const bundleImage = document.getElementById('bundle-image');
   const bundleModal = document.getElementById('bundle-modal');
