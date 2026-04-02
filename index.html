@@ -45,13 +45,12 @@ header::after {
 }
 
 .logo {
-    max-height: 150px;       
-    width: auto;             
+    max-height: 120px;   /* reduces size */
+    width: auto;         
     display: block;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
-    filter: drop-shadow(0 0 20px #64ffda);
+    object-fit: contain; /* keeps proportions */
+}
 }
 
 /* BANNER LINE */
