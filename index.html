@@ -45,7 +45,10 @@ header::after {
 }
 
 .logo {
-    height: 150px;
+    max-height: 150px;       /* Logo fills more of header */
+    width: auto;             /* keep aspect ratio */
+    display: block;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
     filter: drop-shadow(0 0 20px #64ffda);
@@ -68,7 +71,9 @@ header::after {
 .hero h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #64ffda; /* accent for UK49S */
+    background: linear-gradient(90deg, #64ffda, #ff57a1, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -77,12 +82,13 @@ header::after {
     line-height: 1.5;
 }
 
-/* FOUNDER SECTION */
-.section {
-    padding: 40px 20px;
-    text-align: center;
+/* SECTION HEADERS */
+.section h2 {
+    color: #ff57a1;
+    text-shadow: 0 0 10px #64ffda;
 }
 
+/* FOUNDER SECTION */
 .founder {
     background: #112240;
     padding: 30px;
@@ -92,16 +98,17 @@ header::after {
 }
 
 .founder h3 {
+    color: #ffd700;
+    text-shadow: 0 0 5px #64ffda;
     margin: 10px 0;
     font-size: 22px;
-    color: #64ffda;
 }
 
 .founder p {
     margin: 10px 0;
 }
 
-/* HOW IT WORKS SECTION */
+/* HOW IT WORKS LIST */
 ul {
     text-align: left;
     display: inline-block;
@@ -114,16 +121,16 @@ ul {
     display: inline-block;
     margin: 10px;
     padding: 12px 20px;
-    background: #64ffda;
+    background: linear-gradient(90deg, #64ffda, #ff57a1);
     color: black;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
     transition: 0.2s;
 }
 
 .contact a:hover {
-    background: white;
+    background: linear-gradient(90deg, #ff57a1, #ffd700);
 }
 
 /* FOOTER */
@@ -143,7 +150,7 @@ footer {
         font-size: 14px;
     }
     .logo {
-        height: 120px;
+        max-height: 120px;
     }
 }
 </style>
@@ -152,7 +159,7 @@ footer {
 
 <!-- HEADER -->
 <header>
-    <img src=" https://i.postimg.cc/L4DCQpM1/logo.png" class="logo">
+    <img src="logo.png" class="logo" alt="UK49S System Logo">
 </header>
 <div class="banner-line"></div>
 
@@ -197,7 +204,7 @@ footer {
 <div class="section contact">
     <h2>Get In Touch</h2>
     <a href="tel:+27684864474">📞 Call</a>
-    <a href="mailto:tnsianco@gmail.com">📧 Email</a>
+    <a href="mailto:tnsianco@gmail.com.com">📧 Email</a>
     <a href="https://wa.me/27684864474">💬 WhatsApp</a>
 </div>
 
