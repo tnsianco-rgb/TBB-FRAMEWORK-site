@@ -1,186 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The TBB Framework — UK49S</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f0f8ff;
-            color: #111;
-        }
-        header {
-            background: #1e90ff;
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        header img {
-            max-width: 250px;
-            height: auto;
-            display: block;
-            margin: 0 auto 20px auto;
-        }
-        header h1 {
-            font-size: 2rem;
-            margin: 0;
-        }
-        .intro {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-        .section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .section h2 {
-            color: #1e90ff;
-            margin-bottom: 20px;
-        }
-        .info-box {
-            background: #e6f2ff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        .info-box p {
-            margin: 8px 0;
-        }
-        .bundle-banner {
-            background: linear-gradient(90deg, #1e90ff, #63b3ff);
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-            border-radius: 10px;
-            margin: 40px 20px;
-        }
-        .bundle-banner h3 {
-            font-size: 1.8rem;
-            margin: 10px 0 20px 0;
-        }
-        .bundle-banner ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 auto;
-            max-width: 700px;
-        }
-        .bundle-banner li {
-            background: rgba(255,255,255,0.2);
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .bundle-banner li::before {
-            content: "✔️";
-        }
-        .cta-buttons {
-            text-align: center;
-            margin: 30px 0;
-        }
-        .cta-buttons a {
-            background: #1e90ff;
-            color: #fff;
-            text-decoration: none;
-            padding: 15px 25px;
-            margin: 10px;
-            border-radius: 8px;
-            display: inline-block;
-            font-weight: bold;
-        }
-        .founder-banner {
-            background: linear-gradient(90deg, #1e90ff, #63b3ff);
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-            border-radius: 10px;
-            margin: 40px 20px;
-        }
-        .founder-banner img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 4px solid #fff;
-        }
-        .founder-banner h3 {
-            font-size: 1.8rem;
-            margin: 10px 0 5px 0;
-        }
-        .founder-banner p {
-            font-size: 1.1rem;
-            margin: 5px 0;
-        }
-        footer {
-            background: #111;
-            color: #fff;
-            text-align: center;
-            padding: 25px 20px;
-        }
-        footer a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK49S System</title>
+<style>
+/* GENERAL STYLES */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a192f;
+    color: white;
+}
+
+/* HEADER BANNER */
+header {
+    position: relative;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #020c1b, #0a192f);
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(100,255,218,0.1) 0%, transparent 60%);
+    top: -50%;
+    left: -50%;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.logo {
+    max-height: 150px;       
+    width: auto;             
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 20px #64ffda);
+}
+
+/* BANNER LINE */
+.banner-line {
+    height: 3px;
+    width: 100%;
+    background: #64ffda;
+    box-shadow: 0 0 15px #64ffda;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #64ffda, #ff57a1, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 16px;
+    opacity: 0.85;
+    line-height: 1.5;
+}
+
+/* PLUG & PLAY SECTION */
+.plug-play h2 {
+    color: #64ffda;
+    text-shadow: 0 0 8px #ff57a1;
+}
+
+.plug-play p {
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* SECTION HEADERS */
+.section h2 {
+    color: #ff57a1;
+    text-shadow: 0 0 10px #64ffda;
+}
+
+/* FOUNDER SECTION */
+.founder {
+    background: #112240;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.founder h3 {
+    color: #ffd700;
+    text-shadow: 0 0 5px #64ffda;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.founder p {
+    margin: 10px 0;
+}
+
+/* HOW IT WORKS LIST */
+ul {
+    text-align: left;
+    display: inline-block;
+    margin: 10px auto;
+    padding-left: 20px;
+}
+
+/* CONTACT SECTION */
+.contact a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #64ffda, #ff57a1);
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.contact a:hover {
+    background: linear-gradient(90deg, #ff57a1, #ffd700);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 22px;
+    }
+    .hero p {
+        font-size: 14px;
+    }
+    .logo {
+        max-height: 120px;
+    }
+}
+</style>
 </head>
 <body>
 
-    <!-- HERO / HEADER -->
-    <header>
-        <img src="https://i.postimg.cc/hP887KPc/logo.png " alt="Brand Logo">
-        <h1>The TBB Framework — UK49S Update</h1>
-        <p class="intro">🔥 Your Edge Starts Here! 🔥</p>
-    </header>
+<!-- HEADER -->
+<header>
+    <img src="https://i.postimg.cc/hP887KPc/logo.png " class="logo" alt="">
+</header>
+<div class="banner-line"></div>
 
-    <!-- SYSTEM INFO -->
-    <div class="section">
-        <h2>Plug-and-Play System</h2>
-        <div class="info-box">
-            <p>UK49S proven system ready for use in Google Sheets, Excel, or manual tracking.</p>
-            <p>Structured approach with precision — follow the numbers and watch your edge grow.</p>
-            <p>Designed for simplicity and clarity. Copy, paste, and start tracking immediately.</p>
-        </div>
+<!-- HERO SECTION -->
+<div class="hero">
+    <h2>UK49S — Our Focus, Your Edge 🇬🇧</h2>
+    <p>We don’t predict. We position. Our system is built on <strong>structure, flow, and precision</strong>, designed specifically for UK49S. Every move is calculated, every level has purpose — this is where we have the edge others don’t.</p>
+</div>
+
+<!-- PLUG & PLAY SECTION -->
+<div class="section plug-play">
+    <h2>Plug & Play Application</h2>
+    <p><strong>Use it instantly on Google Sheets, Excel, or any platform — everything is ready to go. No setup, no guesswork, just results.</strong></p>
+</div>
+
+<!-- FOUNDER SECTION -->
+<div class="section">
+    <h2>Founder & System Architect</h2>
+    <div class="founder">
+        <h3>Your Name</h3>
+        <p>I created this framework to remove emotion from decision-making and replace it with <strong>structured precision</strong>. Using the Fibonacci-based progression, every stake, level, and expected gross is calculated in advance.</p>
+        <p>UK49S is our focus — this is where the system is optimized. The framework tracks levels, positions, and expected outcomes so every move is <strong>strategic, not guesswork</strong>.</p>
+        <p>This is more than a system — it’s a <strong>disciplined approach that positions you to succeed</strong>.</p>
     </div>
+</div>
 
-    <!-- TBB FRAMEWORK BUNDLE MINI BANNER -->
-    <div class="bundle-banner">
-        <h3>The TBB Framework — Complete Bundle</h3>
-        <ul>
-            <li>Dashboard — track results & visualize performance</li>
-            <li>Input Engine — enter & manage your numbers efficiently</li>
-            <li>Plug-and-Play Sheets — Google Sheets & Excel ready</li>
-            <li>Daily Updates — email & WhatsApp notifications</li>
-            <li>Founder Insights — tips & guidance from Tony Sianco</li>
-            <li>Customer Support — setup & usage help</li>
-        </ul>
-        <p>Access your tools instantly via secure download, email, and WhatsApp notifications.</p>
-    </div>
+<!-- HOW IT WORKS SECTION -->
+<div class="section">
+    <h2>How It Works</h2>
+    <p>Our approach uses a <strong>networked progression framework</strong> where:</p>
+    <ul>
+        <li>Each level follows a <strong>Fibonacci step</strong></li>
+        <li>Expected gross at any stage = current Fibonacci step × base gross amount</li>
+        <li>Stake at each level = Fibonacci step × base stake</li>
+        <li>The system is <strong>discipline-driven</strong> — no guesswork, no emotion</li>
+    </ul>
+    <p>This method allows precise control over your bankroll while <strong>leveraging the UK49S system</strong> for consistent positioning.</p>
+</div>
 
-    <!-- CTA / CONTACT -->
-    <div class="section cta-buttons">
-        <a href="mailto:tnsianco@gmail.com.com">Email Us</a>
-        <a href="https://wa.me/27 684 864 474">WhatsApp</a>
-    </div>
+<!-- WHY UK49S SECTION -->
+<div class="section">
+    <h2>Why UK49S?</h2>
+    <p>UK49S is our specialization because it allows <strong>structured positioning</strong>. Unlike other systems, our framework is optimized to work exclusively with UK49S, giving us an advantage that others can’t replicate.</p>
+    <p>We track numbers, levels, and Fibonacci steps to maximize precision, minimize risk, and ensure the system works as intended — consistently.</p>
+</div>
 
-    <!-- FOUNDERS MINI BANNER -->
-    <div class="founder-banner">
-        <img src="FOUNDER_IMAGE.png" alt="Founder Photo">
-        <h3>Tony S Munkombwe — Founder</h3>
-        <p>Visionary behind The TBB Framework</p>
-        <p>Creating structured strategies that give users a precision edge over randomness.</p>
-    </div>
+<!-- CONTACT SECTION -->
+<div class="section contact">
+    <h2>Get In Touch</h2>
+    <a href="tel:+27 684 864 474">📞 Call</a>
+    <a href="mailto:tnsianco@gmail.com.com">📧 Email</a>
+    <a href="https://wa.me/27 684 864 474">💬 WhatsApp</a>
+</div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 The TBB Framework — UK49S. All Rights Reserved.</p>
-        <p>Visit us: <a href="#">www.yourwebsite.com</a></p>
-    </footer>
+<!-- FOOTER -->
+<footer>
+    © 2026 UK49S System | Built on Discipline & Structure
+</footer>
 
 </body>
 </html>
