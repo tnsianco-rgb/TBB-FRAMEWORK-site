@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+i<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -179,24 +179,35 @@ footer {
 </header>
 <head>
     <!-- Your existing head content -->
+/* Header container */
+header {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
 
-    <style>
-    header {
-        width: 100%;
-        max-width: 1200px;
-        padding: 20px;
-        box-sizing: border-box;
-        text-align: center;
-    }
+/* Header text with auto-shrink */
+header h1 {
+    font-size: 3rem;               /* default big size */
+    line-height: 1.2;
+    white-space: nowrap;           /* keep text on one line */
+    overflow: hidden;
+    text-overflow: ellipsis;       /* adds "..." if still too long */
+}
 
+/* Auto shrink with clamp for responsive */
+@media (max-width: 1200px) {
     header h1 {
-        font-size: clamp(1.5rem, 5vw, 3rem);
-        line-height: 1.2;
-        white-space: normal;
+        font-size: clamp(1.5rem, 5vw, 3rem); /* shrink as needed */
+        white-space: normal;                  /* allow wrapping on smaller screens */
         overflow-wrap: break-word;
-        margin: 0;
     }
-    </style>
+    <style>
+    
+    }
+    
 </head>
     <!-- Main Title -->
     <h1 style="font-size: 2rem; margin-top: 15px; line-height: 1.2;">
