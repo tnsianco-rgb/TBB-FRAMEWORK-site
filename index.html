@@ -1,350 +1,163 @@
-069i<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UK49S System</title>
-<head>
-    <!-- existing head content, like meta tags, title, etc. -->
 
-    <style>
-    /* Safe header CSS */
-    header {
-        display: block;
-        width: 100%;
-        padding: 10px 20px;
-        box-sizing: border-box;
-        text-align: center;
-    }
+<title>The TBB Framework</title>
 
-    header h1 {
-        font-size: clamp(16px, 2vw, 36px);
-        line-height: 1.2;
-        margin: 0;
-        word-wrap: break-word;
-    }
+<style>
 
-    /* Ensure page content shows */
-    body, html, main {
-        overflow: visible !important;
-        height: auto !important;
-    }
-    </style>
-</head>
-    <style>
-/* GENERAL STYLES */
+/* BODY */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: #0a192f;
-    color: white;
+    margin: 0;
+    background: #071426;
+    color: #ffffff;
 }
 
-/* HEADER BANNER */
-header {
-    position: relative;
-    height: 260px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(180deg, #020c1b, #0a192f);
-    overflow: hidden;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(100,255,218,0.1) 0%, transparent 60%);
-    top: -50%;
-    left: -50%;
-}
-
-header::after {
-    content: "";
-    position: absolute;
+/* HEADER */
+header img {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-}
-
-.logo {
-    max-height: 150px;       
-    width: auto;             
     display: block;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-    filter: drop-shadow(0 0 20px #64ffda);
 }
 
-/* BANNER LINE */
-.banner-line {
-    height: 3px;
+/* SECTIONS */
+.section {
+    background: #0b1f3a;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 1000px;
+}
+
+/* TEXT */
+h1, h2 {
+    color: #63b3ff;
+    text-align: center;
+}
+
+p {
+    color: #e6f2ff;
+    line-height: 1.6;
+}
+
+/* IMAGES */
+img {
     width: 100%;
-    background: #64ffda;
-    box-shadow: 0 0 15px #64ffda;
-}
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.hero h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    background: linear-gradient(90deg, #64ffda, #ff57a1, #ffd700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    font-size: 16px;
-    opacity: 0.85;
-    line-height: 1.5;
-}
-
-/* PLUG & PLAY SECTION */
-.plug-play h2 {
-    color: #64ffda;
-    text-shadow: 0 0 8px #ff57a1;
-}
-
-.plug-play p {
-    font-size: 16px;
-    opacity: 0.9;
-    line-height: 1.5;
-    text-align: center;
-}
-
-/* SECTION HEADERS */
-.section h2 {
-    color: #ff57a1;
-    text-shadow: 0 0 10px #64ffda;
-}
-
-/* FOUNDER SECTION */
-.founder {
-    background: #112240;
-    padding: 30px;
+    max-width: 700px;
+    margin: 15px auto;
+    display: block;
     border-radius: 10px;
-    max-width: 500px;
-    margin: auto;
 }
 
-.founder h3 {
-    color: #ffd700;
-    text-shadow: 0 0 5px #64ffda;
-    margin: 10px 0;
-    font-size: m22px;
-}
-
-.founder p {
-    margin: 10px 0;
-}
-
-/* HOW IT WORKS LIST */
-ul {
-    text-align: left;
+/* BUTTON */
+.cta a {
     display: inline-block;
-    margin: 10px auto;
-    padding-left: 20px;
-}
-
-/* CONTACT SECTION */
-.contact a {
-    display: inline-block;
+    background: #1e90ff;
+    color: white;
+    padding: 15px 25px;
     margin: 10px;
-    padding: 12px 20px;
-    background: linear-gradient(90deg, #64ffda, #ff57a1);
-    color: black;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 6px;
     font-weight: bold;
-    transition: 0.2s;
 }
 
-.contact a:hover {
-    background: linear-gradient(90deg, #ff57a1, #ffd700);
-}
-
-/* FOOTER */
-footer {
+.cta {
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    opacity: 0.6;
 }
 
-/* MOBILE ADJUSTMENTS */
-@media (max-width: 480px) {
-    .hero h2 {
-        font-size: 22px;
-    }
-    .hero p {
-        font-size: 14px;
-    }
-    .logo {
-        max-height: 120px;
-    }
-}
 </style>
 </head>
+
 <body>
 
 <!-- HEADER -->
-
-   <!-- HEADER START -->
 <header>
-<img src="https://i.postimg.cc/pr6XqBwp/TBB Framework Banner.png" alt="">  
-
-
-    <!-- Your existing head content -->
-  <style>
-
-    }
-    </style>
-</head>
-    }
-
-    <style>
-    
-    }
-    
-</head>
-    <!-- Main Title -->
-    <h1 style="font-size: 2rem; margin-top: 15px; line-height: 1.2;">
-    
-    </h1>
-
-    <!-- Intro / Catchphrase -->
-    <p style="font-size: 1.2rem; margin-top: 5px;">
-             🔥 Your Edge Starts Here! 🔥
-    </p>
+    <img src="banner.png" alt="TBB Framework Banner">
 </header>
-<!-- HEADER END --> 
 
-<!-- HERO SECTION -->
-<div class="hero">
-    <h2>UK49S — Our Focus, Your Edge 🇬🇧</h2>
-    <p>We don’t predict. We position. Our system is built on <strong>structure, flow, and precision</strong>, designed specifically for UK49S. Every move is calculated, every level has purpose — this is where we have the edge others don’t.</p>
-</div>
-
-<!-- PLUG & PLAY SECTION -->
-<div class="section plug-play">
-    <h2>Plug & Play Application</h2>
-    <p><strong>Use it instantly on Google Sheets, Excel, or any platform — everything is ready to go. No setup, no guesswork, just results.</strong></p>
-</div>
-
-<!-- FOUNDER SECTION -->
+<!-- INTRO -->
 <div class="section">
-    <h2>Founder & System Architect</h2>
-    <div class="founder">Tony S Munkombwe</h3>
-        <p>I created this framework to remove emotion from decision-making and replace it with <strong>structured precision</strong>. Using the Fibonacci-based progression, every stake, level, and expected gross is calculated in advance.</p>
-        <p>UK49S is our focus — this is where the system is optimized. The framework tracks levels, positions, and expected outcomes so every move is <strong>strategic, not guesswork</strong>.</p>
-        <p>This is more than a system — it’s a <strong>disciplined approach that positions you to succeed</strong>.</p>
-    </div>
+    <h2>We Don’t Predict — We Position</h2>
+    <p>
+        The TBB Framework is a structured system designed to give you a positioning edge
+        through discipline, precision, and controlled execution.
+    </p>
 </div>
 
-<!-- HOW IT WORKS SECTION -->
+<!-- BUNDLE -->
 <div class="section">
-   <div class="section">
-    <h2>Inside The TBB Framework</h2>
-
-    <div class="info-box" style="text-align: center;">
-
-        <p>Explore the full system powering structured positioning:</p>
-
-        <!-- Dashboard -->
-        <img src="https://i.postimg.cc/G387kSqZ/Dashboard.png " alt="Dashboard"
-        style="width: 100%; max-width: 700px; margin: 15px auto; display: block; border-radius: 10px;">
-        <p><strong>📊 Dashboard:</strong> Track performance and monitor your system in real-time</p>
-
-        <!-- Engine Input -->
-        <img src="https://i.postimg.cc/JnZGcLgP/Engine Input.png " alt="Engine Input"
-        style="width: 100%; max-width: 700px; margin: 15px auto; display: block; border-radius: 10px;">
-        <p><strong>🛠 Engine Input:</strong> Enter and manage your numbers with structured precision</p>
-
-        <!-- Engine Output -->
-        <img src="https://i.postimg.cc/T1vQCT3H/Engine Output.png " alt="Engine Output"
-        style="width: 100%; max-width: 700px; margin: 15px auto; display: block; border-radius: 10px;">
-        <p><strong>📈 Engine Output:</strong> View calculated outcomes and structured results</p>
-
-        <!-- Log History -->
-        <img src="https://i.postimg.cc/Dy8mBLtZ/Log History.png alt="Log History"
-        style="width: 100%; max-width: 700px; margin: 15px auto; display: block; border-radius: 10px;">
-        <p><strong>📜 Log History:</strong> Keep track of previous results and system performance</p>
-
-        <!-- Smart Money Positioning System -->
-        <img src="https://i.postimg.cc/90T9g9nN/SMPS.png" alt="SMPS"
-        style="width: 100%; max-width: 700px; margin: 15px auto; display: block; border-radius: 10px;">
-        <p><strong>💎 Smart Money Positioning System:</strong> Strategic positioning for maximum efficiency</p>
-
-        <!-- Progression Tracker -->
-        <img src="https://i.postimg.cc/8cDkDr5S/Progression Tracker.png" alt="Progression Tracker"
-        style="width: 100%; max-width: 700px; margin: 15px auto; display: block; border-radius: 10px;">
-        <p><strong>📊 Progression Tracker:</strong> Follow stages, Fibonacci flow, and structured growth</p>
-
-    </div>
+    <h2>What You Get</h2>
+    <p>
+        📊 Dashboard<br>
+        🛠 Input Engine<br>
+        📈 Output Engine<br>
+        📜 Log History<br>
+        💎 Smart Money Positioning System<br>
+        📊 Progression Tracker
+    </p>
 </div>
+
+<!-- SYSTEM PREVIEW -->
+<div class="section">
+    <h2>Inside The Framework</h2>
+
+    <img src="dashboard.png">
+    <p>📊 Dashboard</p>
+
+    <img src="input.png">
+    <p>🛠 Engine Input</p>
+
+    <img src="output.png">
+    <p>📈 Engine Output</p>
+
+    <img src="log.png">
+    <p>📜 Log History</p>
+
+    <img src="smps.png">
+    <p>💎 Smart Money Positioning System</p>
+
+    <img src="progression.png">
+    <p>📊 Progression Tracker</p>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section">
     <h2>How It Works</h2>
-    <p>Our approach uses a <strong>networked progression framework</strong> where:</p>
-    <ul>
-        <li>Each level follows a <strong>Fibonacci step</strong></li>
-        <li>Expected gross at any stage = current Fibonacci step × base gross amount</li>
-        <li>Stake at each level = Fibonacci step × base stake</li>
-        <li>The system is <strong>discipline-driven</strong> — no guesswork, no emotion</li>
-    </ul>
-    <p>This method allows precise control over your bankroll while <strong>leveraging the UK49S system</strong> for consistent positioning.</p>
+    <p>
+        1. Input your numbers<br>
+        2. System processes structure<br>
+        3. Output is generated<br>
+        4. Positioning is applied<br>
+        5. Results are tracked
+    </p>
 </div>
 
-<!-- WHY UK49S SECTION -->
+<!-- RESULTS (ONLY PART YOU UPDATE) -->
 <div class="section">
-    <h2>Why UK49S?</h2>
-    <p>UK49S is our specialization because it allows <strong>structured positioning</strong>. Unlike other systems, our framework is optimized to work exclusively with UK49S, giving us an advantage that others can’t replicate.</p>
-    <p>We track numbers, levels, and Fibonacci steps to maximize precision, minimize risk, and ensure the system works as intended — consistently.</p>
+    <h2>Latest Results</h2>
+    <p>
+        Latest Result: ✅ HIT<br>
+        Stage: Reset<br>
+        Stake: 100 → Gross: 460
+    </p>
 </div>
+
+<!-- CTA -->
+<div class="section cta">
+    <h2>Get Access</h2>
+    <a href="YOUR_PAYPAL_LINK">Buy Now</a>
+</div>
+
+<!-- CONTACT -->
 <div class="section">
-    <h2>The TBB Framework — Bundle Package</h2>
-    <div class="info-box">
-
-        <p>This is a complete, structured UK49S system designed to give you a disciplined edge through data, positioning, and consistency.</p>
-
-        <p><strong>What you get:</strong></p>
-        <p>📊 Dashboard — Track performance and monitor results clearly</p>
-        <p>🛠 Input Engine — Enter and manage your numbers with ease</p>
-        <p>📑 Plug-and-Play Sheets — Works on Google Sheets and Excel</p>
-        <p>🔢 10-Number Strategy — Focused and precise number selection</p>
-        <p>📩 Daily Updates — UK49S updates via WhatsApp and email</p>
-        <p>💡 Structured Framework — Built on discipline and consistency</p>
-        <p>💎 <strong>Smart Money Positioning System:</strong> Our unique Money Management trading platform — designed to give you an edge by positioning your Stakes strategically for maximum efficiency and precise outcomes 
-        <p><strong>Access:</strong> After purchase, your personalized framework will be prepared and delivered directly to your email.</p>
-
-    </div>
+    <h2>Contact</h2>
+    <p>
+        📱 WhatsApp: Your Number<br>
+        📧 Email: Your Email
+    </p>
 </div>
-<!-- CONTACT SECTION -->
-<div class="section contact">
-   <div class="section">
-    <h2>Framework Dashboard Preview</h2>
-    
-    <div class="info-box" style="text-align: center;">
-        
-
-</div>
-    <h2>Get In Touch</h2>
-    <a href="tel:+27 684 864 474">📞 Call</a>
-    <a href="mailto:tnsianco@gmail.com.com">📧 Email</a>
-    <a href=" https://www.paypal.com/ncp/payment/QPG2E4ZWH6EDSnn target="_blank">💳 Buy Now — Get Access</a>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 UK49S System | Built on Discipline & Structure
-</footer>
 
 </body>
 </html>
