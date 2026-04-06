@@ -4,7 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UK49S System</title>
-<style>
+<head>
+    <!-- existing head content, like meta tags, title, etc. -->
+
+    <style>
+    /* Safe header CSS */
+    header {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: clamp(16px, 2vw, 36px);
+        line-height: 1.2;
+        margin: 0;
+        word-wrap: break-word;
+    }
+
+    /* Ensure page content shows */
+    body, html, main {
+        overflow: visible !important;
+        height: auto !important;
+    }
+    </style>
+</head>
+    <style>
 /* GENERAL STYLES */
 body {
     margin: 0;
@@ -174,21 +201,9 @@ footer {
 
    <!-- HEADER START -->
 <header>
-<img src="https://i.postimg.cc/pr6XqBwp/TBB Framework Banner.png" alt="">
-        header {
-    width: 100%;
-    padding: 10px 20px;    /* space inside the box */
-    box-sizing: border-box;
-    text-align: center;
-}
+<img src="https://i.postimg.cc/pr6XqBwp/TBB Framework Banner.png" alt="">  
 
-header h1 {
-    font-size: 1.8rem;     /* safe, fixed size */
-    line-height: 1.2;
-    margin: 0;
-    word-wrap: break-word;  /* breaks long words safely */
-}
-}
+
     <!-- Your existing head content -->
   <style>
 
