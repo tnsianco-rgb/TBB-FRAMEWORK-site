@@ -6,54 +6,86 @@
 <title>Execution & Winning - YourBrand</title>
 <style>
 /* GLOBAL STYLES */
-body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; overflow-x: hidden; position: relative; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #ffffff); /* subtle gradient */
+  overflow-x: hidden;
+  position: relative;
+}
 section { padding: 60px 20px; text-align: center; position: relative; }
 h2 { margin-bottom: 20px; }
 
 /* HEADER */
-.header { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; }
+.header { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; background:#ffffff; box-shadow:0 2px 6px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; }
 .header .logo { font-size:24px; font-weight:bold; color:#222; text-decoration:none; }
 .nav-links { display:flex; gap:20px; }
 .nav-links a { text-decoration:none; color:#222; font-weight:500; }
-.nav-links a:hover { color:#007BFF; }
+.nav-links a:hover { color:#FF9800; }
 .menu-toggle { display:none; font-size:28px; background:none; border:none; cursor:pointer; color:#222; }
 
 /* HERO */
-.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; height:400px; background:url('your-hero-image.jpg') center/cover no-repeat; color:#fff; text-shadow:1px 1px 4px #000; position:relative; overflow:hidden; }
+.hero {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:400px;
+  background:url('your-hero-image.jpg') center/cover no-repeat;
+  color:#fff;
+  text-shadow:1px 1px 4px #000;
+  position:relative;
+  overflow:hidden;
+}
 .hero h1 { font-size:36px; margin-bottom:15px; }
 .hero p { font-size:20px; max-width:700px; }
 .hero button { margin-top:20px; padding:12px 25px; font-size:16px; background:#FF9800; color:#fff; border:none; border-radius:5px; cursor:pointer; }
 .hero button:hover { background:#e68a00; }
 
 /* FLOATING NUMBERS */
-.floating-number { position:absolute; font-size:20px; font-weight:bold; color:rgba(255,255,255,0.7); animation:floatUp linear infinite; }
+.floating-number {
+  position:absolute;
+  font-size:20px;
+  font-weight:bold;
+  color:rgba(255,255,255,0.7);
+  animation:floatUp linear infinite;
+}
 @keyframes floatUp { 0%{ transform:translateY(100%); opacity:0; } 50%{ opacity:1; } 100%{ transform:translateY(-100%); opacity:0; } }
 
-/* ABOUT & STRATEGY */
+/* ABOUT */
+.about { background-color:#f4f6f9; }
 .about p { font-size:18px; max-width:700px; margin:0 auto; }
 
 /* ADVANTAGES / PLATFORMS */
+.advantages-section { background-color:#ffffff; }
 .advantages { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; margin-top:40px; }
 .adv-card { background:#fff; padding:20px; border-radius:10px; width:220px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
 .adv-card h3 { margin-top:0; font-size:20px; }
 .adv-card p { font-size:16px; }
 
-/* BUNDLE SECTION */
-.bundle { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:40px; }
-.bundle-card { background:#fff; padding:20px; border-radius:10px; width:200px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:left; }
-.bundle-card h3 { margin:0 0 10px 0; font-size:18px; }
-.bundle-card p { margin:5px 0; font-size:16px; }
+/* BUNDLE SHOWCASE */
+.bundle-section { background-color:#f4f6f9; }
+.bundle-banner img { max-width:100%; height:auto; border-radius:10px; margin-bottom:30px; }
+.bundle-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.bundle-item { width:220px; text-align:center; background:#fff; padding:15px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+.bundle-item img { width:100%; border-radius:10px; }
+.bundle-item h3 { margin:10px 0 5px 0; font-size:18px; }
+.bundle-item p { font-size:15px; }
 
-/* AUTHOR / FOUNDER */
+/* AUTHOR */
+.author { background-color:#ffffff; }
 .author img { width:120px; border-radius:50%; margin-bottom:15px; }
 .author p { max-width:600px; margin:0 auto; }
+
+/* CONTACT */
+#contact { background-color:#f4f6f9; }
 
 /* RESPONSIVE */
 @media(max-width:768px) {
 .menu-toggle { display:block; }
 .nav-links { display:none; flex-direction:column; gap:15px; background:#fff; position:absolute; top:60px; right:20px; padding:10px 20px; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
 .nav-links.active { display:flex; }
-.advantages, .bundle { flex-direction:column; align-items:center; }
+.advantages, .bundle-grid { flex-direction:column; align-items:center; }
 }
 </style>
 </head>
@@ -61,67 +93,89 @@ h2 { margin-bottom: 20px; }
 
 <!-- HEADER -->
 <header class="header">
-<a href="#" class="logo">YourBrand</a>
-<button class="menu-toggle" aria-label="Open Menu">☰</button>
-<nav class="nav-links">
-<a href="#about">About</a>
-<a href="#advantages">Execution</a>
-<a href="#bundle">Bundles</a>
-<a href="#author">Author</a>
-<a href="#contact">Contact</a>
-</nav>
+  <a href="#" class="logo">YourBrand</a>
+  <button class="menu-toggle" aria-label="Open Menu">☰</button>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#advantages">Execution</a>
+    <a href="#bundle">Bundles</a>
+    <a href="#author">Author</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-<h1>Master Execution. Win Consistently.</h1>
-<p>Specializing in UK49S Bonus Ball execution with plug-and-play systems for Google Sheets, Excel, and other platforms.</p>
-<button>Start Winning</button>
-<!-- Floating numbers -->
-<div class="floating-number" style="left:10%; animation-duration:6s;">5</div>
-<div class="floating-number" style="left:25%; animation-duration:8s;">12</div>
-<div class="floating-number" style="left:40%; animation-duration:7s;">23</div>
-<div class="floating-number" style="left:60%; animation-duration:9s;">31</div>
-<div class="floating-number" style="left:80%; animation-duration:6.5s;">38</div>
+  <h1>Master Execution. Win Consistently.</h1>
+  <p>Specializing in UK49S Bonus Ball execution with plug-and-play systems for Google Sheets, Excel, and other platforms.</p>
+  <button>Start Winning</button>
+  <!-- Floating numbers -->
+  <div class="floating-number" style="left:10%; animation-duration:6s;">5</div>
+  <div class="floating-number" style="left:25%; animation-duration:8s;">12</div>
+  <div class="floating-number" style="left:40%; animation-duration:7s;">23</div>
+  <div class="floating-number" style="left:60%; animation-duration:9s;">31</div>
+  <div class="floating-number" style="left:80%; animation-duration:6.5s;">38</div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="about">
-<h2>About Our Execution</h2>
-<p>We focus on strategy, timing, and precision. Using structured methods and plug-and-play platforms, we help you execute your moves with confidence and maximize your winning potential.</p>
+  <h2>About Our Execution</h2>
+  <p>We focus on strategy, timing, and precision. Using structured methods and plug-and-play platforms, we help you execute your moves with confidence and maximize your winning potential.</p>
 </section>
 
-<!-- ADVANTAGES / PLATFORMS -->
+<!-- ADVANTAGES -->
 <section id="advantages" class="advantages-section">
-<h2>Plug & Play Platforms</h2>
-<div class="advantages">
-<div class="adv-card"><h3>Google Sheets</h3><p>Ready-to-use templates for instant execution and tracking.</p></div>
-<div class="adv-card"><h3>Excel</h3><p>Downloadable spreadsheets designed for smart decision-making and Bonus Ball strategy.</p></div>
-<div class="adv-card"><h3>Other Platforms</h3><p>Flexible systems that integrate with your preferred tools for seamless execution.</p></div>
-</div>
+  <h2>Plug & Play Platforms</h2>
+  <div class="advantages">
+    <div class="adv-card"><h3>Google Sheets</h3><p>Ready-to-use templates for instant execution and tracking.</p></div>
+    <div class="adv-card"><h3>Excel</h3><p>Downloadable spreadsheets designed for smart decision-making and Bonus Ball strategy.</p></div>
+    <div class="adv-card"><h3>Other Platforms</h3><p>Flexible systems that integrate with your preferred tools for seamless execution.</p></div>
+  </div>
 </section>
 
-<!-- BUNDLE SECTION -->
+<!-- BUNDLE SHOWCASE -->
 <section id="bundle" class="bundle-section">
-<h2>Our Winning Bundles</h2>
-<div class="bundle">
-<div class="bundle-card"><h3>Stage 1</h3><p>Stake: 200</p><p>Gross: 920</p><p>Next Pool: 4,6,13,15,17,23,25,38,40</p></div>
-<div class="bundle-card"><h3>Stage 2</h3><p>Stake: 300</p><p>Gross: 1350</p><p>Next Pool: 1,5,9,12,19,22,29,33,41</p></div>
-<div class="bundle-card"><h3>Stage 3</h3><p>Stake: 500</p><p>Gross: 2500</p><p>Next Pool: 2,6,14,15,20,25,31,37,44</p></div>
-</div>
+  <h2>Our Execution Bundle</h2>
+  <!-- TBB Banner -->
+  <div class="bundle-banner">
+    <img src="tbb-banner.jpg" alt="TBB Banner">
+  </div>
+  <!-- Bundle Components -->
+  <div class="bundle-grid">
+    <div class="bundle-item">
+      <img src="dashboard.jpg" alt="Dashboard">
+      <h3>Dashboard</h3>
+      <p>Interactive panel to control all execution strategies in real time.</p>
+    </div>
+    <div class="bundle-item">
+      <img src="logs.jpg" alt="Input/Output Logs">
+      <h3>Input / Output Logs</h3>
+      <p>Track your entries, results, and outputs efficiently.</p>
+    </div>
+    <div class="bundle-item">
+      <img src="history-smps.jpg" alt="History & SMPS">
+      <h3>History & SMPS</h3>
+      <p>Comprehensive history and bonus ball strategy planning tools.</p>
+    </div>
+    <div class="bundle-item">
+      <img src="tools.jpg" alt="Plug & Play Tools">
+      <h3>Plug & Play Tools</h3>
+      <p>Compatible with Google Sheets, Excel, and other platforms.</p>
+    </div>
+  </div>
 </section>
 
-<!-- AUTHOR / FOUNDER -->
+<!-- AUTHOR -->
 <section id="author" class="author">
-<img src="your-photo.jpg" alt="Author Photo">
-<h2>Meet the Founder</h2>
-<p>Our founder combines years of strategy, execution expertise, and proven UK49S success to guide users toward consistent wins. Credibility, transparency, and results matter here.</p>
+  <img src="your-photo.jpg" alt="Author Photo">
+  <h2>Meet the Founder</h2>
+  <p>Our founder combines years of strategy, execution expertise, and proven UK49S success to guide users toward consistent wins. Credibility, transparency, and results matter here.</p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2>
-<p>Mobile: +123456789 | Email: example@yourbrand.com | WhatsApp: +123456789</p>
+  <h2>Contact</h2>
+  <p>Mobile: +123456789 | Email: example@yourbrand.com | WhatsApp: +123456789</p>
 </section>
 
 <script>
