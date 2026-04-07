@@ -15,7 +15,11 @@ body {
   color: #222;
 }
 
-  section { padding: 60px 20px; text-align: center; position: relative; }
+  section { section {
+  padding: 60px 20px; /* top/bottom padding */
+  border-bottom: 2px solid #ddd; /* subtle separation */
+  position: relative; /* ensures floating numbers don't affect stacking */
+}
 h1, h2, h3 { margin: 0 0 15px 0; }
 p { line-height: 1.6; }
 
