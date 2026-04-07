@@ -49,15 +49,30 @@ p { line-height: 1.6; }
 .hero button:hover { background:#e68a00; }
 
 /* FLOATING NUMBERS */
+/* FLOATING NUMBERS */
 .floating-number {
-  position:absolute;
-  font-size:20px;
-  font-weight:bold;
-  .floating-number {
-  color: rgba(255,255,255,0.95);
-  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  position: absolute;
+  font-size: 22px;
+  font-weight: bold;
+  animation: floatUp linear infinite;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  pointer-events: none; /* numbers don’t block clicks */
 }
-}
+
+/* FLOAT UP ANIMATION */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
 @keyframes floatUp { 0%{ transform:translateY(100%); opacity:0; } 50%{ opacity:1; } 100%{ transform:translateY(-100%); opacity:0; } }
 
 /* SECTIONS BACKGROUND */
@@ -116,8 +131,13 @@ p { line-height: 1.6; }
 </header>
 
 <!-- HERO -->
-<section class="hero"> <h1>Master Execution. Win with Intelligence.</h1>
-<p>
+<section class="hero">
+<div class="floating-number" style="left:10%; animation-duration:6s; color:#FFEB3B;">5</div>
+<div class="floating-number" style="left:25%; animation-duration:8s; color:#4CAF50;">12</div>
+<div class="floating-number" style="left:40%; animation-duration:7s; color:#FF5722;">23</div>
+<div class="floating-number" style="left:60%; animation-duration:9s; color:#03A9F4;">31</div>
+<div class="floating-number" style="left:80%; animation-duration:6.5s; color:#E91E63;">38</div>
+  <p>
 
 </p>
 <p style="margin-top:10px; font-size:14px;">
@@ -292,6 +312,11 @@ toggle.addEventListener('click',()=>{ nav.classList.toggle('active'); });
 const floats=document.querySelectorAll('.floating-number');
 floats.forEach(num=>{ num.style.animationDelay=Math.random()*5+'s'; });
 </script>
-
+<script>
+const floats = document.querySelectorAll('.floating-number');
+floats.forEach(num => {
+  num.style.animationDelay = Math.random() * 5 + 's';
+});
+</script>
 </body>
 </html>
