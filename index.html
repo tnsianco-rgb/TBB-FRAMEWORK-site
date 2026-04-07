@@ -41,7 +41,9 @@ p { line-height: 1.6; }
   position:relative;
   overflow:hidden;
 }
-.hero h1 { font-size:38px; margin-bottom:15px; }
+..hero h1, .hero p {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+} h1 { font-size:38px; margin-bottom:15px; }
 .hero p { font-size:20px; max-width:700px; }
 .hero button { margin-top:20px; padding:14px 28px; font-size:16px; background:#FF9800; color:#fff; border:none; border-radius:5px; cursor:pointer; }
 .hero button:hover { background:#e68a00; }
@@ -51,8 +53,10 @@ p { line-height: 1.6; }
   position:absolute;
   font-size:20px;
   font-weight:bold;
-  color:rgba(255,255,255,0.7);
-  animation:floatUp linear infinite;
+  .floating-number {
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
 }
 @keyframes floatUp { 0%{ transform:translateY(100%); opacity:0; } 50%{ opacity:1; } 100%{ transform:translateY(-100%); opacity:0; } }
 
