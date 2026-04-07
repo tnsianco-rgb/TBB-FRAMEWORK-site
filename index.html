@@ -3,68 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>The TBB Framework</title>
+<title>TBB Execution System</title>
 
 <style>
 
-/* BODY */
+/* RESET */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #071426;
-    color: #ffffff;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f5f5;
+  color:#222;
 }
 
 /* HEADER */
-header img {
-    width: 100%;
-    display: block;
+header {
+  background:#0D47A1;
+  color:#fff;
+  padding:20px;
+  text-align:center;
+  font-size:26px;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero {
+  position:relative;
+  height:420px;
+  background:#0D47A1;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  overflow:hidden;
+}
+
+.hero h1 {
+  font-size:34px;
+  margin:0;
+}
+
+.hero p {
+  margin-top:10px;
+}
+
+/* FLOATING NUMBERS */
+.floating-number {
+  position:absolute;
+  font-weight:bold;
+  animation:floatUp linear infinite;
+  font-size:22px;
+}
+
+@keyframes floatUp {
+  0% {transform:translateY(100%); opacity:0;}
+  50% {opacity:1;}
+  100% {transform:translateY(-100%); opacity:0;}
 }
 
 /* SECTIONS */
-.section {
-    background: #0b1f3a;
-    margin: 30px auto;
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 1000px;
+section {
+  padding:50px 20px;
 }
 
-/* TEXT */
-h1, h2 {
-    color: #63b3ff;
-    text-align: center;
+section:nth-child(even) {
+  background:#f0f0f0;
 }
 
-p {
-    color: #e6f2ff;
-    line-height: 1.6;
+/* BUNDLE */
+.bundle h2, .author h2, .contact h2 {
+  text-align:center;
 }
 
-/* IMAGES */
-img {
-    width: 100%;
-    max-width: 700px;
-    margin: 15px auto;
-    display: block;
-    border-radius: 10px;
+.bundle p, .author p, .contact p {
+  max-width:700px;
+  margin:10px auto;
+  text-align:center;
+}
+
+/* GRID */
+.items {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-top:20px;
+}
+
+.item {
+  background:#fff;
+  padding:15px;
+  width:180px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+  text-align:center;
 }
 
 /* BUTTON */
-.cta a {
-    display: inline-block;
-    background: #1e90ff;
-    color: white;
-    padding: 15px 25px;
-    margin: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.cta {
-    text-align: center;
+button, input[type=submit] {
+  margin-top:20px;
+  padding:12px 25px;
+  background:#0070BA;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  font-weight:bold;
 }
 
 </style>
@@ -72,90 +116,59 @@ img {
 
 <body>
 
-<!-- HEADER -->
-<header>
-    <img src="banner.png" alt="TBB Framework Banner">
-</header>
+<header>TBB EXECUTION SYSTEM</header>
 
-<!-- INTRO -->
-<div class="section">
-    <h2>We Don’t Predict — We Position</h2>
-    <p>
-        The TBB Framework is a structured system designed to give you a positioning edge
-        through discipline, precision, and controlled execution.
-    </p>
-</div>
+<section class="hero">
+  <h1>Execution Over Guessing</h1>
+  <p>UK49S Bonus Ball Strategy • Discipline • Precision</p>
 
-<!-- BUNDLE -->
-<div class="section">
-    <h2>What You Get</h2>
-    <p>
-        📊 Dashboard<br>
-        🛠 Input Engine<br>
-        📈 Output Engine<br>
-        📜 Log History<br>
-        💎 Smart Money Positioning System<br>
-        📊 Progression Tracker
-    </p>
-</div>
+  <div class="floating-number" style="left:10%; animation-duration:6s; color:yellow;">5</div>
+  <div class="floating-number" style="left:25%; animation-duration:8s; color:lime;">12</div>
+  <div class="floating-number" style="left:40%; animation-duration:7s; color:orange;">23</div>
+  <div class="floating-number" style="left:60%; animation-duration:9s; color:cyan;">31</div>
+  <div class="floating-number" style="left:80%; animation-duration:6s; color:pink;">38</div>
+</section>
 
-<!-- SYSTEM PREVIEW -->
-<div class="section">
-    <h2>Inside The Framework</h2>
+<section class="bundle">
+  <h2>Execution Bundle System</h2>
+  <p>This is a complete system designed for UK49S Bonus Ball execution.</p>
 
-    <img src="dashboard.png">
-    <p>📊 Dashboard</p>
+  <div class="items">
+    <div class="item"><strong>Dashboard</strong><br>Track stages and performance</div>
+    <div class="item"><strong>Input/Output</strong><br>Record every move</div>
+    <div class="item"><strong>SMPS</strong><br>Manage stake progression</div>
+    <div class="item"><strong>History</strong><br>Review past results</div>
+    <div class="item"><strong>Plug & Play</strong><br>Works with Excel & Sheets</div>
+  </div>
 
-    <img src="input.png">
-    <p>🛠 Engine Input</p>
+  <p><strong>This is not prediction. This is execution.</strong></p>
+</section>
 
-    <img src="output.png">
-    <p>📈 Engine Output</p>
+<section class="author">
+  <h2>Meet the Founder</h2>
+  <p>This system is built on discipline, structure, and execution.</p>
+  <p>Winning is not luck — it is controlled decision-making.</p>
+  <p><strong>This is applied execution.</strong></p>
+</section>
 
-    <img src="log.png">
-    <p>📜 Log History</p>
+<section class="contact">
+  <h2>Start Your Execution</h2>
+  <p>Ready to move beyond guessing? Get access below.</p>
 
-    <img src="smps.png">
-    <p>💎 Smart Money Positioning System</p>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
+    <input type="hidden" name="item_name" value="TBB Execution Bundle">
+    <input type="hidden" name="amount" value="49.99">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="submit" value="Buy Now with PayPal">
+  </form>
+</section>
 
-    <img src="progression.png">
-    <p>📊 Progression Tracker</p>
-</div>
-
-<!-- HOW IT WORKS -->
-<div class="section">
-    <h2>How It Works</h2>
-    <p>
-        1. Input your numbers<br>
-        2. System processes structure<br>
-        3. Output is generated<br>
-        4. Positioning is applied<br>
-        5. Results are tracked
-    </p>
-</div>
-
-<!-- RESULTS (ONLY PART YOU UPDATE) -->
-<div class="section">
-    <h2>Latest Results</h2>
-    <p>
-        
-    </p>
-</div>
-
-<!-- CTA -->
-<div class="section cta">
-    <h2>Get Access</h2>
-    <a href=" https://www.paypal.com/ncp/payment/QPG2E4ZWH6EDS>Buy Now</a>
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-    <h2>Contact</h2>
-    <p>
-        📱 WhatsApp:27 684 864 474<br>
-        📧 Email: tnsianco@gmail.com 
-    </p>
-</div>
+<script>
+document.querySelectorAll('.floating-number').forEach(n=>{
+  n.style.animationDelay = Math.random()*5 + 's';
+});
+</script>
 
 </body>
 </html>
