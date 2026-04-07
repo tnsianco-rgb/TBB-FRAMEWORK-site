@@ -3,55 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Execution & Winning - YourBrand</title>
+<title>TBB Execution System</title>
 <style>
-/* GLOBAL STYLES */
+/* --------------------------- */
+/* GENERAL RESET & BODY */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-  overflow-x: hidden;
-  position: relative;
+  line-height: 1.6;
+  background-color: #f5f5f5;
   color: #222;
 }
 
-  section { section {
-  padding: 60px 20px; /* top/bottom padding */
-  border-bottom: 2px solid #ddd; /* subtle separation */
-  position: relative; /* ensures floating numbers don't affect stacking */
-}
-h1, h2, h3 { margin: 0 0 15px 0; }
-p { line-height: 1.6; }
-
+/* --------------------------- */
 /* HEADER */
-.header { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; background:#ffffff; box-shadow:0 2px 6px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; }
-.header .logo { font-size:24px; font-weight:bold; color:#222; text-decoration:none; }
-.nav-links { display:flex; gap:20px; }
-.nav-links a { text-decoration:none; color:#222; font-weight:500; }
-.nav-links a:hover { color:#FF9800; }
-.menu-toggle { display:none; font-size:28px; background:none; border:none; cursor:pointer; color:#222; }
-
-/* HERO */
-.hero {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  height:450px;
-  background: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-    url('https://i.postimg.cc/XYYBy9HN/Untitled-design-20260406-122337-0000.png ') center/cover no-repeat;
-  color:#fff;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
+header {
+  background-color: #0D47A1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
 }
-..hero h1, .hero p {
+
+/* --------------------------- */
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 450px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('your-hero-image.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 42px;
+  margin: 0;
   text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-} h1 { font-size:38px; margin-bottom:15px; }
-.hero p { font-size:20px; max-width:700px; }
-.hero button { margin-top:20px; padding:14px 28px; font-size:16px; background:#FF9800; color:#fff; border:none; border-radius:5px; cursor:pointer; }
-.hero button:hover { background:#e68a00; }
+}
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
 
 /* FLOATING NUMBERS */
 .floating-number {
@@ -60,286 +59,159 @@ p { line-height: 1.6; }
   font-weight: bold;
   animation: floatUp linear infinite;
   text-shadow: 0 0 8px rgba(0,0,0,0.7);
-  pointer-events: none; /* numbers don’t block clicks */
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes floatUp {
+  0% { transform: translateY(100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-100%); opacity: 0; }
 }
 
-/* FLOAT UP ANIMATION */
-@keyframes floatUp {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
+/* --------------------------- */
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+}
 
-@keyframes floatUp { 0%{ transform:translateY(100%); opacity:0; } 50%{ opacity:1; } 100%{ transform:translateY(-100%); opacity:0; } }
+/* ALTERNATE BACKGROUNDS */
+section:nth-child(odd) { background-color: #fff; }
+section:nth-child(even) { background-color: #f0f0f0; }
 
-/* SECTIONS BACKGROUND */
-.about { background-color:#f0f4c3; }
-.advantages-section { background-color:#fff9c4; }
-.bundle-section { background-color:#ffe0b2; }
-.author { background-color:#d1c4e9; }
-#contact { background-color:#b2dfdb; }
+/* --------------------------- */
+/* BUNDLE SECTION */
+.bundle h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.bundle p {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+.bundle .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.bundle .item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 
-/* ABOUT */
-.about p { font-size:18px; max-width:700px; margin:0 auto; }
+/* --------------------------- */
+/* AUTHOR SECTION */
+.author h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.author p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+}
 
-/* ADVANTAGES / PLATFORMS */
-.advantages { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; margin-top:40px; }
-.adv-card { background:#fff; padding:20px; border-radius:10px; width:220px; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-.adv-card h3 { font-size:20px; }
-.adv-card p { font-size:16px; }
-
-/* BUNDLE SHOWCASE */
-.bundle-banner img { max-width:100%; height:auto; border-radius:10px; margin-bottom:30px; }
-.bundle-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-.bundle-item { width:220px; text-align:center; background:#fff; padding:15px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-.bundle-item img { width:100%; border-radius:10px; }
-.bundle-item h3 { margin:10px 0 5px 0; font-size:18px; }
-.bundle-item p { font-size:15px; line-height:1.4; }
-
-/* AUTHOR */
-.author img { width:120px; border-radius:50%; margin-bottom:15px; }
-.author p { max-width:600px; margin:0 auto; font-size:16px; }
-
-/* CONTACT */
-#contact p { font-size:16px; }
-
-/* RESPONSIVE */
-@media(max-width:768px) {
-.menu-toggle { display:block; }
-.nav-links { display:none; flex-direction:column; gap:15px; background:#fff; position:absolute; top:60px; right:20px; padding:10px 20px; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
-.nav-links.active { display:flex; }
-.advantages, .bundle-grid { flex-direction:column; align-items:center; }
+/* --------------------------- */
+/* CONTACT SECTION */
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact p {
+  max-width: 700px;
+  margin: 0 auto 10px auto;
+  text-align: center;
+}
+.contact form input[type=submit] {
+  padding: 12px 25px;
+  background: #0070BA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+.contact form input[type=submit]:hover {
+  background: #004b80;
 }
 </style>
 </head>
 <body>
+
 <!-- HEADER -->
-<header class="header">
-  <a href="#" class=" https://i.postimg.cc/W3q2tjRj/Brand logo.png>YourBrand</a>
-  <button class="menu-toggle" aria-label="Open Menu">☰</button>
-  <nav class="nav-links">
-    <a href="#about">About</a>
-    <a href="#advantages">Execution</a>
-    <a href="#bundle">Bundles</a>
-    <a href="#author">Author</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>TBB EXECUTION SYSTEM</header>
 
-</header>
-
-  <!-- HERO -->
+<!-- HERO -->
 <section class="hero">
-<div class="floating-number" style="left:10%; animation-duration:6s; color:#FFEB3B;">5</div>
-<div class="floating-number" style="left:25%; animation-duration:8s; color:#4CAF50;">12</div>
-<div class="floating-number" style="left:40%; animation-duration:7s; color:#FF5722;">23</div>
-<div class="floating-number" style="left:60%; animation-duration:9s; color:#03A9F4;">31</div>
-<div class="floating-number" style="left:80%; animation-duration:6.5s; color:#E91E63;">38</div>
-
-</p>
-
-  <p style="margin-top:10px; font-size:14px;"> </p>
-<button>Start Execution</button>
-  <p style="margin-top:15px; font-size:14px; font-weight:bold;">
-UK49S Bonus Ball Execution • Structured • Disciplined • Proven Approach
-  </p>
+  <h1>Execution Over Guessing</h1>
+  <p>Structured UK49S Bonus Ball System • Precision • Discipline • Confidence</p>
   
-  <button>Start Winning</button>
-  <div class="floating-number" style="left:10%; animation-duration:6s;">5</div>
-  <div class="floating-number" style="left:25%; animation-duration:8s;">12</div>
-  <div class="floating-number" style="left:40%; animation-duration:7s;">23</div>
-  <div class="floating-number" style="left:60%; animation-duration:9s;">31</div>
-  <div class="floating-number" style="left:80%; animation-duration:6.5s;">38</div>
+  <!-- FLOATING NUMBERS -->
+  <div class="floating-number" style="left:10%; animation-duration:6s; color:#FFEB3B;">5</div>
+  <div class="floating-number" style="left:25%; animation-duration:8s; color:#4CAF50;">12</div>
+  <div class="floating-number" style="left:40%; animation-duration:7s; color:#FF5722;">23</div>
+  <div class="floating-number" style="left:60%; animation-duration:9s; color:#03A9F4;">31</div>
+  <div class="floating-number" style="left:80%; animation-duration:6.5s; color:#E91E63;">38</div>
 </section>
 
-  <!-- ABOUT -->
-<section id="about" class="about">
-  <h2>About Our Execution Philosophy</h2>
-  <p>We focus on strategy, timing, and precise execution. Numbers alone do not win — intelligent decisions backed by structured systems do. Our tools and insights are designed to help you execute effectively and achieve consistent results.</p>
-
-</section>
-<p style="margin-top:20px; font-style:italic;">
-Most players look for numbers. We focus on execution.
-</p>
-
-  <!-- ADVANTAGES -->
-<section id="advantages" class="advantages-section">
-  <h2>Plug & Play Platforms</h2>
-  <div class="advantages">
-    <div class="adv-card"><h3>Google Sheets</h3><p>Interactive templates for real-time tracking and decision-making.</p></div>
-    <div class="adv-card"><h3>Excel</h3><p>Powerful spreadsheets designed for strategy execution and analysis.</p></div>
-    <div class="adv-card"><h3>Other Platforms</h3><p>Seamless integration with your preferred tools to ensure no delays in execution.</p></div>
-  </div>
-
-</section>
-
-<!-- BUNDLE SHOWCASE -->
-<section id="bundle" class="bundle-section">
-  <h2>Execution Bundle System</h2>
-
-<p>
-
-  This is a complete execution environment designed for UK49S Bonus Ball strategy. 
-Each component plays a critical role in transforming raw numbers into structured, 
-repeatable winning decisions.
-</p>
-  
-  <p style="max-width:700px; margin:0 auto;">
-Each component below is designed to eliminate guesswork and give you full control over your execution process.
-
-  </p>
-  <div class="bundle-banner">
-    <img src="tbb-banner.jpg" alt="TBB Banner">
-  </div>
-  <div class="bundle-grid">
-    <div class="bundle-item">
-      <img src="dashboard.jpg" alt="Dashboard">
-      <h3>Dashboard</h3>
-<p>
-
-  Your central control panel. Monitor stages, track performance, and make real-time execution decisions with clarity and confidence.
-
-</p>
-    </div>
-    <div class="bundle-item">
-      <img src="logs.jpg" alt="Input/Output Logs">
-      <h3>Input / Output Logs</h3>
-<p>
-
-  Capture every move. Track entries, outcomes, and patterns to refine execution and eliminate guesswork.
-
-</p>
-    </div>
-    <div class="bundle-item">
-      <img src="history-smps.jpg" alt="History & SMPS">
-      <h3>History & SMPS</h3>
-<p>
-
-  Leverage historical data and structured SMPS logic to understand cycles, positioning, and Bonus Ball behavior.
-
-</p>
-    </div>
-    <div class="bundle-item">
-      <img src="tools.jpg" alt="Plug & Play Tools">
-      <h3>Plug & Play Tools</h3>
-      
-<p>
-
-  Fully compatible with Google Sheets, Excel, and other platforms. Execute seamlessly without delays or complexity.
-</p>
-    <p style="margin-top:30px; font-weight:bold;">
-
-      This is not a prediction tool. This is an execution system.
-</p>
-    </div>
+<!-- BUNDLE -->
+<section class="bundle">
+  <h2>Our Bundle</h2>
+  <p>Each component below is designed to eliminate guesswork and give you full control over your execution process.</p>
+  <div class="items">
+    <div class="item">Dashboard</div>
+    <div class="item">Input/Output Log</div>
+    <div class="item">SMPS</div>
+    <div class="item">Plug & Play Tools</div>
+    <div class="item">History Tracker</div>
   </div>
 </section>
 
 <!-- AUTHOR -->
-<section id="author" class="author">
-  <img src="your-photo.jpg" alt="Founder Photo">
+<section class="author">
   <h2>Meet the Founder</h2>
-
-<p>
-This system was built from a deep understanding that winning is not about luck — 
-it is about structured execution, discipline, and timing.
-
-</p>
-
-<p>
-After studying patterns, cycles, and Bonus Ball behavior over time, the focus became clear:
-create a system that removes guesswork and replaces it with intelligent decision-making.
-</p>
-
-<p>
-
-  Every tool, every log, every stage within this framework exists for one purpose —
-to help serious players execute with clarity, confidence, and consistency.
-</p>
-
-<p style="margin-top:20px; font-weight:bold;">
-This is not theory. This is applied execution.
-</p>
-
-  <p style="margin-top:15px; font-size:14px;">
-Focused on UK49S Bonus Ball strategy, execution systems, and disciplined play.
-
-  </p>
+  <p>This system was built from a deep understanding that winning is not about luck — it is about structured execution, discipline, and timing.</p>
+  <p>Every tool, log, and stage exists for one purpose — to help serious players execute with clarity, confidence, and consistency.</p>
+  <p style="font-weight:bold;">This is not theory. This is applied execution.</p>
+  <p style="margin-top:10px;">— Founder</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
+<section class="contact">
   <h2>Start Your Execution</h2>
-
-<p>
-You’ve seen the system. You understand the structure.  
-Now it’s time to apply it.
-</p>
-
-<p>
-This platform is built for individuals who are ready to move beyond guessing 
-and start executing with precision and discipline.
-</p>
-
-If you're ready to take control of your execution, get in touch below.
-</p>
-<p style="font-size:14px; color:#222; margin-bottom:10px;">
-
-}
-  Secure checkout via PayPal — start executing immediately.
-</p>
-  <!-- PAYPAL ACCESS POINT -->
-  <form action="https://www.paypal.com/ncp/payment/QPG2E4ZWH6EDS method="post" target="_blank">
-    <!-- Identify your PayPal account -->
-    <input type="hidden" name="business" value="tonysitaltools@yahoo.com">
-
-    <!-- Set the item name and amount -->
-    <input type="hidden" name="item_name" value="TBB Execution Bundle">
-    <input type="hidden" name="amount" value="149.99"> <!-- Replace with your price -->
-    <input type="hidden" name="currency_code" value="USD">
-
-    <!-- Buy Now button -->
-    <input type="submit" value="Buy Now with PayPal" 
-      style="padding:12px 25px; background:#0070BA; color:#fff; border:none; border-radius:5px; cursor:pointer; font-weight:bold; font-size:16px;">
-  </form>
-
-</div>
-<p style="margin-top:20px;">
-📱 Mobile: +27 684 864 474 <br>
-📧 Email: tnsianco@gmail.com.com.com <br>
-💬 WhatsApp: +27 684 864 474 
-</p>
-
-  <p style="text-align:center; margin-top:40px; font-weight:bold;">
-Built for those who take execution seriously.
-</p>
-<p style="margin-top:20px; font-weight:bold;">
-Execution is the difference. Start now.
-</p>
+  <p>You’ve seen the system. You understand the structure. Now it’s time to apply it.</p>
+  <p style="margin-top:20px; font-weight:bold;">If you're ready to take control of your execution, get in touch below.</p>
+  <p>📱 Mobile: +27 684 864 474 <br> 📧 Email: tnsianco@gmail.com <br> 💬 WhatsApp: +27 684 864 474</p>
+  
+  <!-- PAYPAL FORM -->
+  <div style="margin-top:20px; text-align:center;">
+    <form action="https://www.paypal.com/ncp/payment/QPG2E4ZWH6EDS method="post" target="_blank">
+      <input type="hidden" name="business" value="tonysitaltools@yahoo.com">
+      <input type="hidden" name="item_name" value="TBB Execution Bundle">
+      <input type="hidden" name="amount" value="149.99">
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="submit" value="Buy Now with PayPal">
+    </form>
+  </div>
 </section>
 
-<script>
-// Mobile menu toggle
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-links');
-toggle.addEventListener('click',()=>{ nav.classList.toggle('active'); });
-
-// Floating numbers random delay
-const floats=document.querySelectorAll('.floating-number');
-floats.forEach(num=>{ num.style.animationDelay=Math.random()*5+'s'; });
-</script>
+<!-- FLOATING NUMBERS RANDOM DELAY -->
 <script>
 const floats = document.querySelectorAll('.floating-number');
 floats.forEach(num => {
   num.style.animationDelay = Math.random() * 5 + 's';
 });
 </script>
+
 </body>
 </html>
