@@ -3,171 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TBB Execution System</title>
+<title>TBB Framework</title>
 
 <style>
-
-/* RESET */
 body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f5f5f5;
-  color:#222;
-}
-
-/* HEADER */
-header {
-  background:#0D47A1;
-  color:#fff;
-  padding:20px;
-  text-align:center;
-  font-size:26px;
-  font-weight:bold;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a1f40;
+  color: white;
 }
 
 /* HERO */
 .hero {
-  position:relative;
-  height:420px;
-  background:#0D47A1;
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  overflow:hidden;
+  text-align: center;
+  padding: 80px 20px 40px;
 }
 
-.hero h1 {
-  font-size:34px;
-  margin:0;
+.hero img {
+  width: 80px;
+  margin-bottom: 20px;
 }
 
-.hero p {
-  margin-top:10px;
+.logo {
+  font-size: 2.8em;
+  color: gold;
 }
 
-/* FLOATING NUMBERS */
-.floating-number {
-  position:absolute;
-  font-weight:bold;
-  animation:floatUp linear infinite;
-  font-size:22px;
+.welcome {
+  max-width: 600px;
+  margin: 15px auto;
+  color: #ccc;
 }
 
-@keyframes floatUp {
-  0% {transform:translateY(100%); opacity:0;}
-  50% {opacity:1;}
-  100% {transform:translateY(-100%); opacity:0;}
+.signature {
+  margin-top: 20px;
+  color: gold;
 }
 
 /* SECTIONS */
-section {
-  padding:50px 20px;
+.section {
+  width: 90%;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #0f2a55;
+  border-radius: 10px;
 }
 
-section:nth-child(even) {
-  background:#f0f0f0;
+/* FLOATING BACKGROUND */
+.floating {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-/* BUNDLE */
-.bundle h2, .author h2, .contact h2 {
-  text-align:center;
+/* FLOATING BUTTON */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: gold;
+  color: black;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.bundle p, .author p, .contact p {
-  max-width:700px;
-  margin:10px auto;
-  text-align:center;
+/* DASHBOARD PANEL */
+.panel {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 280px;
+  background: #142d5c;
+  padding: 15px;
+  border-radius: 10px;
+  display: none;
 }
 
 /* GRID */
-.items {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-  margin-top:20px;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
-.item {
-  background:#fff;
-  padding:15px;
-  width:180px;
-  border-radius:8px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.2);
-  text-align:center;
+.box {
+  background: #0f2a55;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
 }
 
-/* BUTTON */
-button, input[type=submit] {
-  margin-top:20px;
-  padding:12px 25px;
-  background:#0070BA;
-  color:#fff;
-  border:none;
-  border-radius:5px;
-  font-weight:bold;
+.full {
+  grid-column: span 2;
 }
-
 </style>
 </head>
 
 <body>
 
-<header>TBB EXECUTION SYSTEM</header>
+<div class="floating" id="floating"></div>
 
-<section class="hero">
-  <h1>Execution Over Guessing</h1>
-  <p>UK49S Bonus Ball Strategy • Discipline • Precision</p>
-
-  <div class="floating-number" style="left:10%; animation-duration:6s; color:yellow;">5</div>
-  <div class="floating-number" style="left:25%; animation-duration:8s; color:lime;">12</div>
-  <div class="floating-number" style="left:40%; animation-duration:7s; color:orange;">23</div>
-  <div class="floating-number" style="left:60%; animation-duration:9s; color:cyan;">31</div>
-  <div class="floating-number" style="left:80%; animation-duration:6s; color:pink;">38</div>
-</section>
-
-<section class="bundle">
-  <h2>Execution Bundle System</h2>
-  <p>This is a complete system designed for UK49S Bonus Ball execution.</p>
-
-  <div class="items">
-    <div class="item"><strong>Dashboard</strong><br>Track stages and performance</div>
-    <div class="item"><strong>Input/Output</strong><br>Record every move</div>
-    <div class="item"><strong>SMPS</strong><br>Manage stake progression</div>
-    <div class="item"><strong>History</strong><br>Review past results</div>
-    <div class="item"><strong>Plug & Play</strong><br>Works with Excel & Sheets</div>
+<!-- HERO -->
+<div class="hero">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Fibonacci_spiral_34.svg">
+  <div class="logo">TBB Framework</div>
+  <p class="welcome">
+    A structured Bonus Ball positioning system designed for the 🇬🇧 UK49s Lunch Time and Tea Time draws.
+  </p>
+  <div class="signature">
+    We don’t predict outcomes.<br>
+    We position within structure.
   </div>
+</div>
 
-  <p><strong>This is not prediction. This is execution.</strong></p>
-</section>
+<!-- PURPOSE -->
+<div class="section">
+  <h2>Definiteness of Purpose</h2>
+  <p>
+    The TBB Framework is a working system built on intelligence, structure, and disciplined progression.
+  </p>
+  <p>
+    Delivered through a plug-and-play platform using Google Sheets and Excel, it is accessible on both mobile and computer.
+  </p>
+  <p>
+    The focus is not on individual numbers, but on structured positioning within the UK49s Bonus Ball cycle.
+  </p>
+</div>
 
-<section class="author">
-  <h2>Meet the Founder</h2>
-  <p>This system is built on discipline, structure, and execution.</p>
-  <p>Winning is not luck — it is controlled decision-making.</p>
-  <p><strong>This is applied execution.</strong></p>
-</section>
+<!-- HOW IT WORKS -->
+<div class="section">
+  <h2>How It Works</h2>
+  <p>
+    1. Deploy structured 12-number units<br>
+    2. Advance through Fibonacci progression<br>
+    3. Build position over time<br>
+    4. Interact with the draw cycle
+  </p>
+</div>
 
-<section class="contact">
-  <h2>Start Your Execution</h2>
-  <p>Ready to move beyond guessing? Get access below.</p>
+<!-- FLOAT BUTTON -->
+<div class="floating-btn" onclick="togglePanel()">📊</div>
 
-  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
-    <input type="hidden" name="item_name" value="TBB Execution Bundle">
-    <input type="hidden" name="amount" value="49.99">
-    <input type="hidden" name="currency_code" value="USD">
-    <input type="submit" value="Buy Now with PayPal">
-  </form>
-</section>
+<!-- DASHBOARD PANEL -->
+<div id="panel" class="panel">
+  <div class="grid">
+
+    <div class="box">Stage<br><strong>6</strong></div>
+    <div class="box">Fib<br><strong>8</strong></div>
+
+    <div class="box">Stake<br><strong>960</strong></div>
+    <div class="box">Gross<br><strong>3680</strong></div>
+
+    <div class="box full">Status<br><strong>Observation</strong></div>
+
+  </div>
+</div>
 
 <script>
-document.querySelectorAll('.floating-number').forEach(n=>{
-  n.style.animationDelay = Math.random()*5 + 's';
+function togglePanel() {
+  let panel = document.getElementById("panel");
+  panel.style.display = panel.style.display === "block" ? "none" : "block";
+}
+
+// Floating balls
+document.addEventListener("DOMContentLoaded", function () {
+  let container = document.getElementById("floating");
+
+  for (let i = 0; i < 15; i++) {
+    let ball = document.createElement("div");
+    let size = Math.random() * 25 + 15;
+
+    ball.style.position = "absolute";
+    ball.style.width = size + "px";
+    ball.style.height = size + "px";
+    ball.style.borderRadius = "50%";
+    ball.style.background = "#0033aa";
+    ball.style.color = "gold";
+    ball.style.display = "flex";
+    ball.style.alignItems = "center";
+    ball.style.justifyContent = "center";
+    ball.style.top = Math.random() * 100 + "%";
+    ball.style.left = "-50px";
+    ball.style.animation = `move ${10 + Math.random()*10}s linear infinite`;
+
+    ball.innerText = Math.floor(Math.random() * 49) + 1;
+
+    container.appendChild(ball);
+  }
 });
+
+// animation
+let style = document.createElement('style');
+style.innerHTML = `
+@keyframes move {
+  from { transform: translateX(0); }
+  to { transform: translateX(120vw); }
+}`;
+document.head.appendChild(style);
 </script>
 
 </body>
