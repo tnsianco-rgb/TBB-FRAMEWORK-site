@@ -541,15 +541,14 @@ Execute with discipline. Act responsibly.
 }
 </style>
 
-<div class="numbers">
-  <span style="left:15%; animation-delay:0s;">7</span>
-  <span style="left:25%; animation-delay:3s;">23</span>
-  <span style="left:35%; animation-delay:6s;">41</span>
-  <span style="left:45%; animation-delay:2s;">12</span>
-  <span style="left:55%; animation-delay:5s;">30</span>
-  <span style="left:65%; animation-delay:1s;">19</span>
-  <span style="left:75%; animation-delay:4s;">44</span>
-  <span style="left:85%; animation-delay:2s;">9</span>
+  <div class="numbers">
+  <span style="left:10%; animation-delay:0s; background:rgba(255,215,0,0.3);">7</span>
+  <span style="left:25%; animation-delay:3s; background:rgba(0,255,156,0.3);">23</span>
+  <span style="left:40%; animation-delay:6s; background:rgba(255,76,76,0.3);">44</span>
+  <span style="left:55%; animation-delay:2s; background:rgba(0,150,255,0.3);">12</span>
+  <span style="left:70%; animation-delay:5s; background:rgba(255,215,0,0.3);">30</span>
+  <span style="left:85%; animation-delay:1s; background:rgba(0,255,156,0.3);">19</span>
+</div>
 </div>
 <style>
 .numbers {
@@ -587,15 +586,44 @@ Execute with discipline. Act responsibly.
 }
 </style>
 <div class="numbers">
-  <span style="left:10%; animation-delay:0s;">7</span>
-  <span style="left:20%; animation-delay:2s;">23</span>
-  <span style="left:30%; animation-delay:4s;">44</span>
-  <span style="left:40%; animation-delay:1s;">12</span>
-  <span style="left:50%; animation-delay:3s;">30</span>
-  <span style="left:60%; animation-delay:5s;">19</span>
-  <span style="left:70%; animation-delay:2s;">41</span>
-  <span style="left:80%; animation-delay:4s;">9</span>
-  <span style="left:90%; animation-delay:1s;">27</span>
+  <style>
+.numbers span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #fff;
+  background: rgba(255, 215, 0, 0.2);
+
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
+              inset 0 0 10px rgba(255, 215, 0, 0.3);
+
+  backdrop-filter: blur(4px);
+
+  animation: floatUp 20s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.1);
+    opacity: 0;
+  }
+}
+  </style>
 </div>
 </footer></body>
 </html>
