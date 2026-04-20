@@ -551,5 +551,51 @@ Execute with discipline. Act responsibly.
   <span style="left:75%; animation-delay:4s;">44</span>
   <span style="left:85%; animation-delay:2s;">9</span>
 </div>
+<style>
+.numbers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.numbers span {
+  position: absolute;
+  color: rgba(255, 215, 0, 0.6); /* brighter */
+  font-size: 20px; /* bigger */
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8),
+               0 0 15px rgba(255, 215, 0, 0.6);
+  animation: rise 18s linear infinite;
+}
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+</style>
+<div class="numbers">
+  <span style="left:10%; animation-delay:0s;">7</span>
+  <span style="left:20%; animation-delay:2s;">23</span>
+  <span style="left:30%; animation-delay:4s;">44</span>
+  <span style="left:40%; animation-delay:1s;">12</span>
+  <span style="left:50%; animation-delay:3s;">30</span>
+  <span style="left:60%; animation-delay:5s;">19</span>
+  <span style="left:70%; animation-delay:2s;">41</span>
+  <span style="left:80%; animation-delay:4s;">9</span>
+  <span style="left:90%; animation-delay:1s;">27</span>
+</div>
 </footer></body>
 </html>
