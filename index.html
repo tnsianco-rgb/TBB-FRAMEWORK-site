@@ -305,14 +305,12 @@
       <li>Reset systems to protect capital</li>
     </ul>
  <div style="padding:50px 20px; background:linear-gradient(135deg,#0d1b2a,#1b263b); border-radius:12px; margin:40px 0; text-align:center;">
-.tbb-img {
-  width: 100%;
-  max-width: 500px;   /* 👈 controls size */
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+.tbb-image-container {
+  display: flex;
+  flex-direction: column;   /* 👈 stacks images vertically */
+  align-items: center;
+  gap: 20px;
+}
 }
   <h2 style="color:#FFD700; font-size:28px; margin-bottom:10px;">
     📊 Inside The TBB Framework
@@ -325,8 +323,14 @@
 
   <!-- IMAGE -->
   <div style="margin:30px 0;">
-    <img src="https://i.postimg.cc/RZGGQGFp/TBB Framework System .jpg " alt="">
-      " 
+  
+      <div class="tbb-image-container">
+
+  <img src="IMAGE-1" class="tbb-img">
+  <img src="IMAGE-2" class="tbb-img">
+  <img src="IMAGE-3" class="tbb-img">
+
+</div>
          style="max-width:100%; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
   </div>
 
