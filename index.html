@@ -1,5 +1,26 @@
 <!DOCTYPE html><html lang="en">
 <head>
+  <div class="brand-header">
+
+  <!-- FLOATING NUMBERS -->
+  <div class="floating-number" style="left:10%; animation-delay:0s;">7</div>
+  <div class="floating-number" style="left:25%; animation-delay:2s;">13</div>
+  <div class="floating-number" style="left:40%; animation-delay:4s;">25</div>
+  <div class="floating-number" style="left:60%; animation-delay:1s;">33</div>
+  <div class="floating-number" style="left:80%; animation-delay:3s;">49</div>
+
+  <!-- LOGO -->
+  <img src="https://i.postimg.cc/bNqR7z0J/Brand Logo.png " class="">
+
+  <!-- TITLE -->
+  <div class="brand-title">TBB FRAMEWORK</div>
+
+  <!-- TAGLINE -->
+  <div class="brand-tagline">
+    Structured Execution • No Guesswork • Full Cycle Control
+  </div>
+
+</div>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TBB Framework</title>
@@ -53,7 +74,65 @@
     }
   </style>
 </head>
-<body><header>
+<style>
+/* BRAND HEADER */
+.brand-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* LOGO */
+.brand-logo {
+  width: 120px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255,215,0,0.6);
+  animation: glow 2.5s infinite alternate;
+}
+
+/* TITLE */
+.brand-title {
+  color: #FFD700;
+  font-size: 28px;
+  margin-top: 15px;
+  letter-spacing: 2px;
+}
+
+/* TAGLINE */
+.brand-tagline {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* GLOW ANIMATION */
+@keyframes glow {
+  from { box-shadow: 0 0 10px rgba(255,215,0,0.4); }
+  to { box-shadow: 0 0 30px rgba(255,215,0,0.9); }
+}
+
+/* FLOATING NUMBERS */
+.floating-number {
+  position: absolute;
+  color: rgba(255,255,255,0.15);
+  font-size: 20px;
+  animation: floatUp 10s linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-400px);
+    opacity: 1;
+  }
+}
+</style>
   <span style="font-size:32px; font-weight:bold; letter-spacing:2px;">
   <span style="color:#f5b942;">TBB</span> 
   <span style="color:#ffffff;">FRAMEWORK</span>
@@ -78,15 +157,6 @@
 
   <p style="max-width:600px; margin:20px auto; font-size:18px;">
     A structured execution system built for discipline, not guesswork.
-  </p>
-<div style="text-align:center; padding:40px 20px; background:#0d1b2a; border-radius:12px; margin:30px 0;">
-
-  <img src=" https://i.postimg.cc/WbH36ztM/TBB Framework.png alt="" style="max-width:140px; margin-bottom:20px; border-radius:12px;">
-
-  <h2 style="color:#FFD700;">TBB FRAMEWORK</h2>
-
-  <p style="color:#ccc; max-width:500px; margin:auto;">
-    Structured execution. Real-time positioning. Proven discipline.
   </p>
 
 </div>
