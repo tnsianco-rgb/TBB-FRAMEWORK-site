@@ -177,6 +177,7 @@ footer {
 <div class="hero">
     <h2>UK49S — Our Focus, Your Edge 🇬🇧</h2>
     <p>We don’t predict. We position. Our system is built on <strong>structure, flow, and precision</strong>, designed specifically for UK49S. Every move is calculated, every level has purpose — this is where we have the edge others don’t.</p>
+<span style="animation: glow 2s infinite alternate;">TBB FRAMEWORK</span>
 </div>
 <div style="margin-top:20px; text-align:center;">
   <a href="#contact" style="background:#f5b942; color:#000; padding:12px 20px; text-decoration:none; font-weight:bold; border-radius:8px;">
@@ -309,14 +310,15 @@ footer {
 
   <form action="https://www.paypal.com/ncp/payment/QPG2E4ZWH6EDS
       " method="post" target="_blank" style="margin-top:20px;">
-    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
+    <input type="hidden" name="business" value="tonysitaltools@yahoo.ncom.com">
     <input type="hidden" name="item_name" value="TBB Execution Bundle">
-    <input type="hidden" name="amount" value="49.99">
+    <input type="hidden" name="amount" value="200.00">
     <input type="hidden" name="currency_code" value="USD">
 
     <input type="submit" value="Buy Now with PayPal"
-    style="padding:12px 25px; background:#0070BA; color:#fff; border:none; border-radius:6px; font-weight:bold;">
-  </form>
+style="padding:12px 25px; background:#0070BA; color:#fff; border:none; border-radius:6px; font-weight:bold; transition:0.3s;"
+onmouseover="this.style.transform='scale(1.05)'"
+onmouseout="this.style.transform='scale(1)'">
 
   <p style="color:#f5b942; margin-top:20px; font-weight:bold;">
     Built for those who take execution seriously.
@@ -324,5 +326,24 @@ footer {
 </div>
   </p>
 </div>
-</body>
+<script>
+const sections = document.querySelectorAll("div");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
+
+sections.forEach(sec => {
+  sec.style.opacity = "0";
+  sec.style.transform = "translateY(40px)";
+  sec.style.transition = "all 0.6s ease";
+  observer.observe(sec);
+});
+</script>
+< /body>
 </html>
