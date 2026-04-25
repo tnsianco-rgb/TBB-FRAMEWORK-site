@@ -522,5 +522,49 @@ sections.forEach(sec => {
   observer.observe(sec);
 });
 </script>
-< /body>
+
+  <style>
+.numbers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.numbers span {
+  position: absolute;
+  color: rgba(255, 215, 0, 0.2);
+  font-size: 14px;
+  animation: rise 20s linear infinite;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+</style>
+
+<div class="numbers">
+  <span style="left:15%; animation-delay:0s;">7</span>
+  <span style="left:25%; animation-delay:3s;">23</span>
+  <span style="left:35%; animation-delay:6s;">41</span>
+  <span style="left:45%; animation-delay:2s;">12</span>
+  <span style="left:55%; animation-delay:5s;">30</span>
+  <span style="left:65%; animation-delay:1s;">19</span>
+  <span style="left:75%; animation-delay:4s;">44</span>
+  <span style="left:85%; animation-delay:2s;">9</span>
+</div>
+    < /body>
 </html>
