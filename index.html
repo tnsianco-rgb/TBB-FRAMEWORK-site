@@ -1,760 +1,145 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<head>
-  
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-
-</head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UK49S TBB System</title>
+<title>TBB Framework</title>
+
 <style>
-/* GENERAL STYLES */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0a192f;
-    color: white;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #fff;
 }
 
-/* HEADER BANNER */
-header {
-    position: relative;
-    height: 260px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(180deg, #020c1b, #0a192f);
-    overflow: hidden;
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.9);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
 }
 
-header::before {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(100,255,218,0.1) 0%, transparent 60%);
-    top: -50%;
-    left: -50%;
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-}
-
-.logo {
-    max-height: 150px;       
-    width: auto;             
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-    filter: drop-shadow(0 0 20px #64ffda);
-}
-
-/* BANNER LINE */
-.banner-line {
-    height: 3px;
-    width: 100%;
-    background: #64ffda;
-    box-shadow: 0 0 15px #64ffda;
-}
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 40px 20px;
-}
-.hero h2 {
-    font-size: 22px; /* smaller = less competition */
-    margin-bottom: 10px;
-    color: #64ffda; /* clean, not overpowering */
-    text-shadow: 0 0 6px rgba(100,255,218,0.5);
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .hero {
-    text-align: center;
-    padding: 40px 20px; /* less space = less dominance */
+  text-align: center;
+  padding: 120px 20px;
 }
 
-/* PLUG & PLAY SECTION */
-.plug-play h2 {
-    color: #64ffda;
-    text-shadow: 0 0 8px #ff57a1;
+.hero h1 {
+  font-size: 48px;
 }
 
-.plug-play p {
-    font-size: 16px;
-    opacity: 0.9;
-    line-height: 1.5;
-    text-align: center;
+.hero p {
+  color: #aaa;
 }
 
-/* SECTION HEADERS */
-.section h2 {
-    color: #ff57a1;
-    text-shadow: 0 0 10px #64ffda;
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #00AEEF, #0077cc);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-/* FOUNDER SECTION */
-.founder {
-    background: #112240;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: auto;
+.section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
 }
 
-.founder h3 {
-    color: #ffd700;
-    text-shadow: 0 0 5px #64ffda;
-    margin: 10px 0;
-    font-size: 22px;
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.founder p {
-    margin: 10px 0;
+.card {
+  background: #0a0a0a;
+  padding: 20px;
+  border: 1px solid #111;
+  width: 250px;
 }
 
-/* HOW IT WORKS LIST */
-ul {
-    text-align: left;
-    display: inline-block;
-    margin: 10px auto;
-    padding-left: 20px;
-}
-
-/* CONTACT SECTION */
-.contact a {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 20px;
-    background: linear-gradient(90deg, #64ffda, #ff57a1);
-    color: black;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-.contact a:hover {
-    background: linear-gradient(90deg, #ff57a1, #ffd700);
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    opacity: 0.6;
-}
-
-/* MOBILE ADJUSTMENTS */
-@media (max-width: 480px) {
-    .hero h2 {
-        font-size: 22px;
-    }
-    .hero p {
-        font-size: 14px;
-    }
-    .logo {
-        max-height: 120px;
-    }
+.footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
 }
 </style>
 </head>
+
 <body>
 
+<nav>
+  <div><strong>TBB</strong></div>
+  <div>
+    <a href="how.html">How It Works</a>
+    <a href="results.html">Execution</a>
+    <a href="pricing.html">Pricing</a>
   </div>
-
-  <!-- MENU -->
-  <div style="display: flex; gap: 20px;">
-
-    <a href="#home" style="color: #cccccc; text-decoration: none;">Home</a>
-    <a href="#about" style="color: #cccccc; text-decoration: none;">About</a>
-    <a href="#framework" style="color: #cccccc; text-decoration: none;">Framework</a>
-    <a href="#access" style="color: #cccccc; text-decoration: none;">Access</a>
-    <a href="#contact" style="color: #cccccc; text-decoration: none;">Contact</a>
-
-  </div>
-
 </nav>
-<!-- HEADER -->
-<header>
-    <img src="https://i.postimg.cc/BnrK4Q2B/TBB IMAGE.png " class="" style="max-width:100%; height:auto;">
-        
-</header>
-<div class="banner-line"></div>
-<!-- HERO SECTION -->
-<div class="hero">
-    <section style="padding: 60px 20px; background-color: #0d0d0d; color: #f5f5f5; text-align: center;">
 
-  <div style="max-width: 800px; margin: auto;">
-
-    <h2 style="font-size: 28px; margin-bottom: 20px; letter-spacing: 1px;">
-      🧠 Welcome to the TBB Framework
-    </h2>
-
-    <p style="font-size: 16px; line-height: 1.7; margin-bottom: 20px; color: #cccccc;">
-      This is not about predicting numbers.
-      <br>
-      It’s about understanding how to operate within a structured system.
-    </p>
-
-    <p style="font-size: 16px; line-height: 1.7; margin-bottom: 20px; color: #cccccc;">
-      The TBB Framework was built through observation, discipline, and a shift in thinking —
-      from chasing outcomes to managing process.
-    </p>
-
-    <p style="font-size: 16px; line-height: 1.7; margin-bottom: 25px; color: #cccccc;">
-      • Positioning is intentional<br>
-      • Progression is controlled<br>
-      • Capital is managed with discipline
-    </p>
-
-    <p style="font-size: 16px; line-height: 1.7; margin-bottom: 25px; color: #cccccc;">
-      We don’t react to results.
-      <br>
-      We execute a structure over time.
-    </p>
-
-    <p style="font-size: 16px; line-height: 1.7; color: #aaaaaa;">
-      👉 If you’re looking for shortcuts, this is not it.<br>
-      👉 If you’re ready for structure, you’re in the right place.
-    </p>
-
-    <p style="margin-top: 30px; font-weight: bold; font-size: 18px; color: #ffffff;">
-      Structure first. Outcome follows.
-    </p>
-
-  </div>
-
-    </section>
-    <h2>UK49S — Our Focus, Your Edge 🇬🇧</h2>
-    <p>We don’t predict. We position. Our system is built on <strong>structure, flow, and precision</strong>, designed specifically for UK49S. Every move is calculated, every level has purpose — this is where we have the edge others don’t.</p>
-<span style="animation: glow 2s infinite alternate;">TBB FRAMEWORK</span>
-</div>
-<div style="margin-top:20px; text-align:center;">
-  <a href="#contact" style="background:#f5b942; color:#000; padding:12px 20px; text-decoration:none; font-weight:bold; border-radius:8px;">
-    🔓 Access Full System
-  </a>
-</div>
-<!-- PLUG & PLAY SECTION -->
-<div class="section plug-play">
-    <h2>Plug & Play Application</h2>
-    <p><strong>Use it instantly on Google Sheets, Excel, or any platform — everything is ready to go. No setup, no guesswork, just results.</strong></p>
-<div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-  <h3 style="color:#FFD700;">💻 Multi-Platform Execution</h3>
-  <p>
-    Seamlessly operates on Google Sheets, Microsoft Excel, and similar platforms — giving you full control, visibility, and flexibility during live execution.
-  </p>
-  <p style="color:#00FF9C; font-weight:bold;">
-    No special software required.
-  </p>
-<!-- OPERATING PLATFORMS -->
-<div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-  <h3 style="color:#FFD700;">💻 Multi-Platform Compatibility</h3>
-  <p>
-    The framework is fully compatible with commonly used tools such as Google Sheets, Microsoft Excel, and other spreadsheet-based platforms.
-  </p>
-  <p>
-    This allows for easy tracking, real-time updates, and structured execution within an environment you are already familiar with.
-  </p>
-
-
-  <h2 style="text-align:center; font-size:28px;">
-    🔴 LIVE STRUCTURED EXECUTION
-  </h2>
-
-  <p style="text-align:center; color:#ccc;">
-    Daily Lunch Time & Tea Time UK49s System Updates
-  </p>
-
-  <!-- STATUS BAR -->
-  <div style="margin:20px auto; text-align:center; padding:10px; background:#1f3f5b; border-radius:8px;">
-    <strong>STATUS:</strong> Cycle Active — Execution in Progress
-  </div>
-
-  <!-- LUNCH TIME -->
-  <div style="margin-top:30px; padding:20px; background:#142c44; border-radius:10px;">
-    <h3>📊 Lunch Time Update</h3>
-
-    <p><strong>Previous Positioning:</strong><br>
-    23 • 26 • 26 • 28 • 31 • 33 • 32 • 34 • 39 • 41</p>
-
-    <p><strong>Result:</strong> No Match</p>
-
-    <p>
-    Stage: 9 | Fibonacci: 34<br>
-    Wager: 3400 | Investment: 8800
-    </p>
-  </div>
-
-  <!-- TEA TIME -->
-  <div style="margin-top:20px; padding:20px; background:#142c44; border-radius:10px;">
-    <h3>🎯 Tea Time Positioning</h3>
-
-    <p>
-    18 • 20 • 21 • 23 • 22 • 24 • 26 • 28 • 37 • 39
-    </p>
-  
-<section>
-
-  <h2>TBB FRAMEWORK 🇬🇧 UK49S</h2>
-  <h3>FULL 15-STAGE EXPOSURE MODEL ⚙️</h3>
-
-  <p>
-    This section represents the full exposure structure of the TBB Fibonacci execution model,
-    covering Stage 1 through Stage 15.
-  </p>
-
-  <p>
-    This is not a performance result or completed cycle, but a structured view of the system’s full operational range.
-  </p>
-
-  <hr>
-
-  <h3>15-STAGE STRUCTURE (NUMERICAL VIEW)</h3>
-
-  <p><strong>Stage 1 → Stage 15 Fibonacci Progression</strong></p>
-
-  <p>
-    1 - 2 - 3 - 5 - 8 - 13 - 21 - 34 - 55 - 89 - 144 - 233 - 377 - 610 - 987
-  </p>
-
-  <hr>
-
-  <h3>WHAT THIS MODEL REPRESENTS</h3>
-
-  <ul>
-    <li>Full Fibonacci progression across all 15 stages</li>
-    <li>Complete capital exposure structure under extended drawdown conditions</li>
-    <li>Structured execution framework designed for disciplined progression</li>
-    <li>System behaviour from entry to maximum exposure limit</li>
-  </ul>
-
-  <hr>
-
-  <h3>SYSTEM CLARITY</h3>
-
-  <p>
-    Most approaches focus only on early-stage progression. This model extends the structure to its full range,
-    showing how the system behaves under complete cycle conditions.
-  </p>
-
-  <p>
-    It is designed for understanding structure, not for implying outcomes or guarantees.
-  </p>
-
-  <hr>
-
-  <h3>IMPORTANT NOTE</h3>
-
-  <p>
-    This is not a prediction model and does not guarantee results.
-    It is a structural framework for understanding full-stage exposure and execution logic.
-  </p>
-
+<section class="hero">
+  <h1>Structured Execution</h1>
+  <p>UK49s Bonus Ball System</p>
+  <p>No prediction. No guesswork.</p>
+  <a href="offer.html" class="btn">Start Here</a>
 </section>
-</div>
 
-<!-- HOW IT WORKS SECTION -->
-<div class="section">
-    <h2>How It Works</h2>
-    <p>Our approach uses a <strong>networked progression framework</strong> where:</p>
-    <ul>
-        <li>Each level follows a <strong>Fibonacci step</strong></li>
-        <li>Expected gross at any stage = current Fibonacci step × base gross amount</li>
-        <li>Stake at each level = Fibonacci step × base stake</li>
-        <li>The system is <strong>discipline-driven</strong> — no guesswork, no emotion</li>
-    </ul>
-    <p>This method allows precise control over your bankroll while <strong>leveraging the UK49S system</strong> for consistent positioning.</p>
-</div>
-<div style="background:#0f2a3a; padding:15px; border-radius:10px; margin-top:15px;">
-  <h3 style="color:#f5b942;">⚡ Why This Works</h3>
-  <ul style="color:#ccc;">
-    <li>Structured stage progression</li>
-    <li>Disciplined execution (no guessing)</li>
-    <li>Controlled stake management</li>
-    <li>Proven tracking and history logs</li>
-  </ul>
-</div>
-<!-- WHY UK49S SECTION -->
-<div class="section">
-    <h2>Why UK49S?</h2>
-    <p>UK49S is our specialization because it allows <strong>structured positioning</strong>. Unlike other systems, our framework is optimized to work exclusively with UK49S, giving us an advantage that others can’t replicate.</p>
-    <p>We track numbers, levels, and Fibonacci steps to maximize precision, minimize risk, and ensure the system works as intended — consistently.</p>
-</div>
-<div style="background:#0f2a3d; margin:20px; padding:25px; border-radius:15px;">
-  <h2 style="color:#f5b942;">📦 Execution Bundle</h2>
-
-  <p style="color:#fff;">
-    A complete system designed for disciplined UK49S Bonus Ball execution.
-  </p>
-<div style="background:#111; padding:20px; border-radius:12px; margin-top:20px; text-align:center;">
-  <h3 style="color:#f5b942;">⚡ Proven Execution Approach</h3>
-  
-  <p style="color:#ccc; margin-top:10px;">
-    This is not based on guessing or luck.
-  </p>
-  
-  <p style="color:#aaa; font-size:14px;">
-    The TBB Framework is built on structured stages, controlled progression,
-    and disciplined execution principles designed for consistency over time.
-  </p>
-
-  <div style="margin-top:15px; color:#f5b942; font-weight:bold;">
-    ✔ Structured System  
-    ✔ Tracked Results  
-    ✔ Controlled Risk  
-    ✔ Execution Discipline  
-  </div>
-</div>
-  <ul style="color:#fff;">
-    <li>📊 Dashboard — Track stages and performance</li>
-    <li>📥 Input / Output Logs — Record every move</li>
-    <li>📚 History Tracker — Analyze past results</li>
-    <li>⚙️ SMPS — Manage stake progression</li>
-    <li>🔗 Plug & Play — Works with Excel & Google Sheets</li>
-  </ul>
-
-  <p style="color:#f5b942; font-weight:bold;">
-    This is not prediction. This is execution.
-  </p>
-<div style="background:#0A192F; color:#fff; padding:70px 25px; margin:50px 0; border-radius:12px; position:relative; z-index:1;">
-
-  <h2 style="color:#FFD700; text-align:center; font-size:28px;">
-    ⚡ WHY THIS IS DIFFERENT
-  </h2>
-
-  <p style="text-align:center; max-width:700px; margin:20px auto;">
-    Most systems focus on predicting outcomes. This framework focuses on structured execution — and that changes everything.
-  </p>
-
-  <div style="max-width:800px; margin:auto;">
-
-    <!-- POINT 1 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">❌ No Guesswork</h3>
-      <p>
-        There are no predictions, signals, or random selections. Every move is predefined within a structured system.
-      </p>
-    </div>
-
-    <!-- POINT 2 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">📊 Full-Cycle Execution</h3>
-      <p>
-        The framework is designed to operate across complete cycles — not isolated events — ensuring consistency and continuity.
-      </p>
-    </div>
-
-    <!-- POINT 3 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">💰 Built-In Financial Control</h3>
-      <p>
-        With SMPS at its core, financial exposure is planned and controlled before execution even begins.
-      </p>
-    </div>
-
-    <!-- POINT 4 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">🔁 Structured Reset Logic</h3>
-      <p>
-        Profits are secured through a defined reset system, allowing each new cycle to begin from a controlled position.
-      </p>
-    </div>
-
-    <!-- POINT 5 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">🧠 Execution Over Emotion</h3>
-      <p>
-        The framework eliminates emotional decision-making by replacing it with disciplined, rule-based execution.
-     
-     </p>
-    <iframe 
-width="100%" 
-height="315" 
-src="https://www.youtube.com/embed/PS40QsvINRE" 
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen>
-</iframe>
-    </div>
-
-  <p style="text-align:center; margin-top:40px; font-size:18px;">
-    This is not about trying to be right…
-  </p>
-
-  <p style="text-align:center; color:#FFD700; font-size:20px; font-weight:bold;">
-    It’s about being structured at every stage.
-  </p>
-<section>
-  <h2>📊 Example Result</h2>
-
-  <p>Stage 2 Win</p>
-  <p>Investment: 200</p>
-  <p>Return: 460</p>
-  <p>Profit: +260</p>
+<section class="section">
+  <h2>The Problem</h2>
+  <p>Most approaches rely on guessing and reacting.</p>
+  <p>This creates inconsistency and loss of control.</p>
 </section>
-</div>
-</div>
-<!-- CONTACT SECTION -->
-<div class="section contact">
-    <h2>Get In Touch</h2>
-    <a href="tel:+27 684 864 474 ">📞 Call</a>
-    <a href="mailto:tnsianco@gmail.com">📧 Email</a>
-    <a href="https://wa.me/27 684 864 474">💬 WhatsApp</a>
-</div>
-<div style="background:#0f2a3d; margin:20px; padding:25px; border-radius:15px;">
-  <h2 style="color:#f5b942;">👤 Tony S Munkombwe</h2>
 
-  <p style="color:#fff;">
-    The TBB Framework was built from a deep understanding that winning is not about luck — 
-    it is about structured execution, discipline, and timing.
-  </p>
-
-  <p style="color:#fff;">
-    Through studying number behavior, cycles, and Bonus Ball patterns, this system was developed 
-    to remove guesswork and replace it with intelligent, repeatable decisions.
-  </p>
-
-  <p style="color:#f5b942; font-weight:bold;">
-    This is not theory. This is applied execution.
-  </p>
-
-  <p style="color:#ccc;">— Founder</p>
-</div>
-<!-- FOOTER -->
-<footer>
-    © 2026 UK49S System | Built on Discipline & Structure
-</footer>
-<div style="background:#0f2a3d; margin:20px; padding:25px; border-radius:15px; text-align:center;">
-  <h2 style="color:#f5b942;">🚀 Start Your Execution</h2>
-
-  <p style="color:#fff;">
-    You’ve seen the system. Now take action.
-  </p>
-  </p>
-<div style="margin-top:20px; color:#ff4d4d; font-weight:bold; text-align:center;">
-  ⚠️ Limited access – This system is shared with serious players only
-</div>
-  <div style="background:#0f2a3d; margin:20px; padding:25px; border-radius:15px; text-align:center;">
-  <h2 style="color:#f5b942;">🚀 Start Your Execution</h2>
-
-  <p style="color:#fff;">
-    You’ve seen the system. Now take action.
-  </p>
-
-  <p style="color:#fff; margin-top:15px;">
-     📱 Mobile: 27 684 864 474<br>
-     📧 Email: tnsianco@gmail.com<br>
-    💬 WhatsApp: 27 684 864 474 
-  </p>
-<div style="background:#112240; color:#fff; padding:50px 25px; margin:40px 0; border-radius:12px; text-align:center; position:relative; z-index:1;">
-
-  <h2 style="color:#FFD700;">
-    💎 FULL FRAMEWORK ACCESS
-  </h2>
-
-  <p style="max-width:600px; margin:20px auto;">
-    You are not purchasing numbers or predictions.
-  </p>
-
-  <p style="max-width:600px; margin:10px auto; font-weight:bold;">
-    You are gaining access to a complete structured execution framework designed to operate across full cycles with built-in financial control.
-  </p>
-
-  <div style="margin:25px 0;">
-
-    <p>✔ Plug & Play System</p>
-    <p>✔ Multi-Platform Execution (Google Sheets / Excel)</p>
-    <p>✔ Number Positioning Engine</p>
-    <p>✔ Fibonacci Stage Progression</p>
-    <p>✔ SMPS Financial Control</p>
-    <p>✔ Reset & Cycle Completion Logic</p>
-    <p>✔ Live Execution Framework</p>
-
+<section class="section">
+  <h2>The System</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Deployment</h3>
+      <p>Structured placement</p>
+    </div>
+    <div class="card">
+      <h3>Positioning</h3>
+      <p>System-based selection</p>
+    </div>
+    <div class="card">
+      <h3>Execution</h3>
+      <p>Cycle completion</p>
+    </div>
   </div>
-<div style="background:#0A192F; color:#fff; padding:70px 25px; margin:50px 0; border-radius:12px; position:relative; z-index:1;">
-
-  <h2 style="color:#FFD700; text-align:center; font-size:28px;">
-    📦 WHAT YOU GET INSIDE THE TBB FRAMEWORK
-  </h2>
-
-  <p style="text-align:center; max-width:700px; margin:20px auto;">
-    This is not a guesswork system. This is a complete execution framework designed to guide you from entry to cycle completion with structure and control.
-  </p>
-
-  <div style="max-width:800px; margin:auto;">
-
-    <!-- ITEM 1 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">📊 Number Positioning Engine</h3>
-      <p>
-        A structured 10-number deployment system that removes randomness and ensures you are always strategically positioned within the draw.
-      </p>
-    </div>
-
-    <!-- ITEM 2 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">📐 Stage Progression System (Fibonacci)</h3>
-      <p>
-        A disciplined progression model that controls how stakes increase across stages, eliminating emotional decision-making.
-      </p>
-    </div>
-
-    <!-- ITEM 3 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">💰 SMPS — Smart Money Protection System</h3>
-      <p>
-        The financial backbone of the framework. It defines bankroll, controls exposure, and ensures sustainability throughout the entire cycle.
-      </p>
-    </div>
-
-    <!-- ITEM 4 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">🔁 Reset & Cycle Completion Logic</h3>
-      <p>
-        A structured reset system that locks in profit after a win and returns execution to Stage 1, protecting gains and maintaining consistency.
-      </p>
-    </div>
-
-    <!-- ITEM 5 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">📊 Live Execution Framework</h3>
-      <p>
-        Real-time deployment and tracking structure showing positioning, stages, and profit flow — providing full transparency at every step.
-      </p>
-    </div>
-
-    <!-- ITEM 6 -->
-    <div style="background:#112240; padding:25px; margin-top:20px; border-radius:10px;">
-      <h3 style="color:#FFD700;">🧠 Discipline Protocol</h3>
-      <p>
-        A built-in mindset framework that removes emotion, enforces consistency, and ensures clean execution from start to finish.
-      </p>
-    </div>
-<section style="text-align:center;">
-  <h2>🚀 Get Full Access</h2>
-
-  <p>This is the exact framework used in all posted results.</p>
-
-  <a href=" https://www.paypal.com/ncp/payment/QPG2E4ZWH6EDS " 
-     style="background:#FFD700; color:#000; padding:15px 25px; text-decoration:none; border-radius:8px;">
-     Access Full Framework
-  </a>
 </section>
-  </div>
 
+<section class="section">
+  <h2>Live Execution</h2>
+  <p>Stage 4 • Investment 700 • Expected 1380</p>
+  <a href="results.html" class="btn">View Live</a>
+</section>
+
+<section class="section">
+  <h2>Start Here</h2>
+  <p>This system is meant to be executed.</p>
+  <a href="offer.html" class="btn">Access Framework</a>
+</section>
+
+<div class="footer">
+  TBB Framework — Position • Execute • Complete
 </div>
-  <p style="color:#00FF9C; font-weight:bold; font-size:18px;">
-    One-time access. Full system included.
-  </p>
 
-  <p style="color:#FFD700; font-size:22px; font-weight:bold; margin-top:15px;">
-    $200 Full Access
-  </p>
-
-</div>
-  <form action="https://www.paypal.com/ncp/payment/QPG2E4ZWH6EDS
-      " method="post" target="_blank" style="margin-top:20px;">
-    <input type="hidden" name="business" value="tonysitaltools@yahoo.ncom.com">
-    <input type="hidden" name="item_name" value="TBB Execution Bundle">
-    <input type="hidden" name="amount" value="200.00">
-    <input type="hidden" name="currency_code" value="USD">
-
-    <input type="submit" value="Buy Now with PayPal"
-style="padding:12px 25px; background:#0070BA; color:#fff; border:none; border-radius:6px; font-weight:bold; transition:0.3s;"
-onmouseover="this.style.transform='scale(1.05)'"
-onmouseout="this.style.transform='scale(1)'">
-
-  <p style="color:#f5b942; margin-top:20px; font-weight:bold;">
-    Built for those who take execution seriously.
-  </p>
-</div>
-  </p>
-</div>
-<script>
-const sections = document.querySelectorAll("div");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
-    }
-  });
-});
-
-sections.forEach(sec => {
-  sec.style.opacity = "0";
-  sec.style.transform = "translateY(40px)";
-  sec.style.transition = "all 0.6s ease";
-  observer.observe(sec);
-});
-</script>
-
-  <style>
-.numbers {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.numbers span {
-  position: absolute;
-  color: rgba(255, 215, 0, 0.6); /* brighter gold */
-  font-size: 20px; /* bigger */
-  font-weight: bold;
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8),
-               0 0 15px rgba(255, 215, 0, 0.6);
-  animation: rise 18s linear infinite;
-}
-
-@keyframes rise {
-  0% {
-    transform: translateY(100vh) scale(0.8);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10vh) scale(1.2);
-    opacity: 0;
-  }
-}
-</style>
-
-<div class="numbers">
-  <span style="left:15%; animation-delay:0s;">7</span>
-  <span style="left:25%; animation-delay:3s;">23</span>
-  <span style="left:35%; animation-delay:6s;">41</span>
-  <span style="left:45%; animation-delay:2s;">12</span>
-  <span style="left:55%; animation-delay:5s;">30</span>
-  <span style="left:65%; animation-delay:1s;">19</span>
-  <span style="left:75%; animation-delay:4s;">44</span>
-  <span style="left:85%; animation-delay:2s;">9</span>
-<span style="left:20%; animation-delay:2s; color:#FFD700;">23</span> <!-- gold -->
-<span style="left:40%; animation-delay:4s; color:#00FF9C;">44</span> <!-- green -->
-<span style="left:60%; animation-delay:1s; color:#FF4C4C;">7</span>  <!-- red -->
-</div>
-    
-    
+</body>
 </html>
