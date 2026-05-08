@@ -30,13 +30,38 @@ nav a {
   text-decoration: none;
   font-size: 14px;
 }
-
 .hero {
-  text-align: center;
-  padding: 120px 20px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+    linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+
+    background-size: cover;
+    background-position: center;
+}
+  
+  .hero h1 {
+    animation: fadeInUp 1.2s ease;
 }
 
-.hero h1 {
+.hero p {
+    animation: fadeInUp 1.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
   font-size: 48px;
 }
 
@@ -96,14 +121,34 @@ nav a {
   </div>
 </nav>
       
+<section class="hero section">
 
-<section class="hero">
-  <section class="section">
-  <h1>Structured Execution</h1>
-  <p>UK49s Bonus Ball System</p>
-  <p>No prediction. No guesswork.</p>
-  <a href="offer.html" class="btn">Start Here</a>
+    <h1>
+        Structured <span class="highlight">UK49s Bonus Ball</span><br>
+        Execution Environment
+    </h1>
+
+    <p>
+        The TBB Framework operates through structured positioning,
+        controlled exposure and disciplined execution cycles.
+    </p>
+
+    <p>
+        Built around progression logic, operational consistency and
+        Smart Money Positioning System integration.
+    </p>
+
+    <div>
+        <a href="offer.html" class="btn">Access Framework</a>
+
+        <a href="results.html" class="btn"
+        style="background: transparent; color: white; border: 1px solid #f5c542; margin-left: 15px;">
+        Live Execution
+        </a>
+    </div>
+
 </section>
+
 
 <section class="section">
   <h2>The Problem</h2>
