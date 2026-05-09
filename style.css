@@ -68,15 +68,21 @@ li {
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 30px;
-    background: #f5c542;
-    color: black;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.3s ease;
+    .dashboard-image {
+    width: 65%;
+    max-width: 700px;
+    display: block;
+    margin: 50px auto 0 auto;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+    0 0 40px rgba(0,0,0,0.6);
+
+    transition: 0.4s ease;
+    }
 }
 
 .btn:hover {
