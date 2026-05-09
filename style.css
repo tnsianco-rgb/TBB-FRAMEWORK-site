@@ -181,3 +181,21 @@ line-height: 1.05;
     color: #f5c542;
     margin-bottom: 20px;
 }
+.component-card {
+    margin-bottom: 40px;
+    padding: 35px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.35);
+    transition: 0.3s ease;
+}
+
+.component-card:hover {
+    transform: translateY(-5px);
+}
+
+.component-card h2 {
+    color: #f5c542;
+    margin-bottom: 20px;
+}
