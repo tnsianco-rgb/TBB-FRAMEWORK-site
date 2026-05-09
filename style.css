@@ -199,3 +199,10 @@ line-height: 1.05;
     color: #f5c542;
     margin-bottom: 20px;
 }
+.hero-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    opacity: 0.35;
+    display: block;
+}
