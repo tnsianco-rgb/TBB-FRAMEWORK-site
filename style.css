@@ -237,3 +237,15 @@ line-height: 1.05;
     margin-bottom: 12px;
     color: #d0d0d0;
     }
+a {
+    color: #f5c542;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #f5c542;
+}
+
+a:hover {
+    color: white;
+}
