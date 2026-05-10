@@ -207,3 +207,33 @@ line-height: 1.05;
     display: block;
 }
 }
+.payment-card {
+    margin-top: 40px;
+    padding: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+
+    box-shadow: 0 0 40px rgba(0,0,0,0.45);
+}
+
+.payment-card h3 {
+    font-size: 42px;
+    color: #f5c542;
+    margin-bottom: 15px;
+}
+
+.payment-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.payment-list li {
+    margin-bottom: 12px;
+    color: #d0d0d0;
+    }
