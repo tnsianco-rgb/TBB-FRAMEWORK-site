@@ -283,7 +283,7 @@ border: 1px solid rgba(245,197,66,0.15);
 
 }
 .access-btn {
-
+color: #111 !important;
 display: inline-block;
 
 padding: 18px 42px;
