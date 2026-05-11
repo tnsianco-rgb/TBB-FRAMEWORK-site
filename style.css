@@ -316,12 +316,36 @@ transition: all 0.35s ease;
 
 }
 
-.access-btn:hover {
+.access-btn {
 
-transform: translateY(-3px);
+display: inline-block;
+
+padding: 18px 42px;
+
+margin-top: 25px;
+
+font-size: 18px;
+
+font-weight: bold;
+
+letter-spacing: 1px;
+
+color: white !important;
+
+background: linear-gradient(
+135deg,
+#0077ff,
+#00a2ff
+);
+
+border-radius: 14px;
+
+text-decoration: none;
 
 box-shadow:
-0 0 25px rgba(245,197,66,0.7),
-0 0 50px rgba(245,197,66,0.25);
+0 0 20px rgba(0,119,255,0.45),
+0 0 40px rgba(0,119,255,0.15);
 
-    }
+transition: all 0.35s ease;
+
+}
