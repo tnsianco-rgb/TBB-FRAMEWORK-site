@@ -382,3 +382,18 @@ box-shadow:
 display: block;
 
 }
+.back-button {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: #f5c542;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+.back-button:hover {
+    color: white;
+}
