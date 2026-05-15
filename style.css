@@ -1,4 +1,4 @@
-body {
+ybody {
     margin: 0;
     padding: 0;
     background: #050505;
@@ -524,8 +524,8 @@ display: block;
 
   .hero-left h1 {
     font-family:'Orbitron',sans-serif;
-    font-size:3rem;
-    line-height:1.1;
+    font-size:2rem;
+    line-height:1.0;
     color:#d4af37;
     margin-bottom:25px;
 }
@@ -537,13 +537,13 @@ display: block;
 }
 @media(max-width:768px){
 .hero-left h1{
-    font-size:1.7rem;
+    font-size:1.5rem;
     line-height:1.05;
    padding:0 10px;
 }
   .hero-description{
     font-size:1rem;
-    line-height:1.7;
+    line-height:1.5;
     padding:0 10px;
   }
 
