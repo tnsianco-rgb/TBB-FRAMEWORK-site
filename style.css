@@ -575,3 +575,139 @@ display: block;
 }
 
 }
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TBB HOW IT WORKS PAGE FIX
+━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* MAIN PAGE BACKGROUND */
+body {
+    background: #060606;
+    color: #cfcfcf;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+}
+
+/* PAGE CONTAINER */
+.container,
+.section,
+.content-wrapper {
+    background: transparent;
+}
+
+/* MAIN TITLE */
+h1 {
+    color: #d4af37;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 12px rgba(212,175,55,0.25);
+}
+
+/* SECTION HEADINGS */
+h2 {
+    color: #d4af37;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(212,175,55,0.18);
+}
+
+/* BODY TEXT */
+p,
+li {
+    color: #cfcfcf;
+    font-size: 17px;
+    line-height: 1.9;
+    opacity: 1;
+}
+
+/* REMOVE FADED LOOK */
+* {
+    opacity: 1 !important;
+}
+
+/* SECTION PANELS */
+.section-block {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(212,175,55,0.18);
+    border-radius: 18px;
+    padding: 35px;
+    margin-bottom: 35px;
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.05);
+}
+
+/* IMAGE STYLING */
+img {
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid rgba(212,175,55,0.25);
+    box-shadow:
+        0 0 35px rgba(212,175,55,0.12);
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+/* LIST SPACING */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 34px;
+        line-height: 1.25;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p,
+    li {
+        font-size: 16px;
+    }
+
+    .section-block {
+        padding: 25px;
+    }
+}
+
+/* PREMIUM GOLD DIVIDER */
+.gold-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(212,175,55,0.5),
+        transparent
+    );
+    margin: 40px 0;
+}
+
+/* OPTIONAL HERO GLOW */
+.hero-glow {
+    position: relative;
+}
+
+.hero-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212,175,55,0.08),
+            transparent 70%
+        );
+    z-index: -1;
+    }
