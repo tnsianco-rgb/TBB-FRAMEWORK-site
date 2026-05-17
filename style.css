@@ -412,7 +412,7 @@ display: block;
             rgba(5,5,5,0.72),
             rgba(5,5,5,0.86)
         ),
-        url('file_00000000a5c871f8bba8d258af2fc8af.png ');
+        url('YOUR-IMAGE-NAME.png');
 
     background-size: cover;
     background-position: center;
@@ -560,10 +560,4 @@ display: block;
         max-width: 320px;
     }
 }
-.hero h1 {
-    font-family: 'Cinzel', serif;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-}
+     
