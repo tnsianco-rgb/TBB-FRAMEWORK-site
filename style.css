@@ -560,3 +560,10 @@ display: block;
         max-width: 320px;
     }
 }
+.hero h1 {
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
