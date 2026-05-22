@@ -407,8 +407,8 @@ display: block;
 filter: brightness(1.45) contrast(1.08);
     background:
         linear-gradient(
-            rgba(0,0,,0.25),
-            rgba(0,0,0,0.35),
+            rgba(0,0,0.0,10),
+            rgba(0,0,0,0,18),
         url('YOUR-IMAGE-NAME.png');
 
     background-size: cover;
