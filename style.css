@@ -109,8 +109,8 @@ footer {
 
     background:
     linear-gradient(
-    rgba(5,5,5,0.72),
-    rgba(5,5,5,0.82)
+    rgba(0,0,0,0.10),
+    rgba(0,0,0,0.18)
     ),
 
     url('images/smps-hero.png');
