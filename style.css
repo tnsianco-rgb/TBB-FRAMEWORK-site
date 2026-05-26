@@ -105,26 +105,28 @@ footer {
     margin-top: 40px;
 }
 
-.hero {
-    min-height: 55vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
+   .hero {
+    position: relative;
     background:
     linear-gradient(
-    rgba(0,0,0,0.10),
-    rgba(0,0,0,0.18)
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.55)
     ),
-
-    url('images/smps-hero.png');
+    url('  ');
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 0 20px;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 10%;
+} 
 
     position: relative;
 }
