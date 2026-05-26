@@ -31,7 +31,13 @@ nav a {
     transition: 0.3s ease;
     font-size: 14px;
 }
-
+body{
+    margin:0;
+    padding:0;
+    background:#050505;
+    color:#d4d4d4;
+    font-family:Arial,sans-serif;
+}
 nav a:hover {
     color: #f5c542;
 }
