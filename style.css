@@ -43,7 +43,7 @@ nav a:hover {
 }
 
 .section {
-    padding: 80px 10%;
+    padding: 55px 10%;
 }
 
 h1 {
@@ -128,7 +128,7 @@ footer {
     align-items: center;
     justify-content: center;
 
-    padding: 80px 10%;
+    padding: 55px 10%;
 }
 
 .highlight {
@@ -458,7 +458,7 @@ align-items:center;
 justify-content:center;
 text-align:center;
 
-padding:120px 20px;
+padding:80px 20px;
 
 filter:brightness(1.12) contrast(1.05);
 }
@@ -787,7 +787,7 @@ section,
 
     border-radius: 18px;
 
-    padding: 40px;
+    padding: 25px;
 
     margin-bottom: 40px;
 
@@ -863,4 +863,20 @@ body::before {
     pointer-events: none;
 
     z-index: -1;
+}
+.contact-container {
+
+    background:
+        linear-gradient(
+            rgba(10,10,10,0.88),
+            rgba(10,10,10,0.92)
+        );
+
+    border: 1px solid rgba(245,197,66,0.18);
+
+    box-shadow:
+        0 0 45px rgba(245,197,66,0.08),
+        0 25px 60px rgba(0,0,0,0.55);
+
+    backdrop-filter: blur(6px);
 }
