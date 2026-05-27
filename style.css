@@ -108,16 +108,19 @@ footer {
 
    .hero {
     position: relative;
+
     background:
     linear-gradient(
-    rgba(0,0,0,0.18),
-    rgba(0,0,0,0.28)
+        rgba(0,0,0,0.18),
+        rgba(0,0,0,0.28)
     ),
-    url('access-portal.png");
+    url('access-portal.png');
 
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
+
+    filter: brightness(1.18) contrast(1.05);
 
     min-height: 100vh;
 
@@ -126,9 +129,6 @@ footer {
     justify-content: center;
 
     padding: 80px 10%;
-} 
-
-    position: relative;
 }
 
 .highlight {
