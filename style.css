@@ -883,3 +883,35 @@ body::before {
 
     backdrop-filter: blur(6px);
 }
+.access-card{
+    background:#0a0a0a;
+    border:1px solid rgba(245,197,66,0.15);
+    border-radius:18px;
+    padding:35px 25px;
+    margin-bottom:30px;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.45),
+    0 0 20px rgba(245,197,66,0.04);
+}
+
+.access-btn{
+    display:inline-block;
+    margin-top:15px;
+    margin-bottom:18px;
+    padding:14px 28px;
+    background:linear-gradient(
+        135deg,
+        #f5c542,
+        #d9a91f
+    );
+    color:black;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:12px;
+    transition:0.3s ease;
+}
+
+.access-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 20px rgba(245,197,66,0.35);
+}
