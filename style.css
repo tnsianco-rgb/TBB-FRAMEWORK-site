@@ -111,8 +111,8 @@ footer {
 
     background:
     linear-gradient(
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0.30)
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.18)
     ),
     url('how-it-works.png');
 
@@ -120,10 +120,10 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
 
-    filter:
-    brightness(1.16)
-    contrast(1.06)
-    saturate(1.08);
+        filter:
+brightness(1.32)
+contrast(1.10)
+saturate(1.12);
 
     min-height: 115vh;
 
@@ -141,12 +141,13 @@ footer {
     inset: 0;
 
     background:
-    radial-gradient(
-    circle at center,
-    rgba(255,215,120,0.08),
-    rgba(0,0,0,0.05) 45%,
-    rgba(0,0,0,0.28) 100%
-    );
+radial-gradient(
+circle at center,
+rgba(255,215,120,0.16),
+rgba(255,215,120,0.06) 38%,
+rgba(0,0,0,0.10) 68%,
+rgba(0,0,0,0.18) 100%
+);
 
     pointer-events: none;
 }.hero-content {
