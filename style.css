@@ -45,7 +45,11 @@ nav a:hover {
 .section {
     padding: 20px 6%;
 }
-
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 h1 {
     font-size: 48px;
     margin-bottom: 20px;
