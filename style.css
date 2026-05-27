@@ -133,9 +133,9 @@ footer {
     background-repeat: no-repeat;
 
     filter:
-    brightness(1.48)
-    contrast(1.12)
-    saturate(1.15);
+    brightness(1.22)
+    contrast(1.10)
+    saturate(1.08);
 
     min-height: 115vh;
 
@@ -147,6 +147,7 @@ footer {
 
     overflow: hidden;
 }
+
 .hero::before {
     content: "";
 
@@ -156,20 +157,20 @@ footer {
     background:
     radial-gradient(
     circle at center,
-    rgba(255,215,120,0.20),
-    rgba(255,215,120,0.08) 40%,
-    rgba(0,0,0,0.04) 75%,
-    rgba(0,0,0,0.08) 100%
+    rgba(255,215,120,0.16),
+    rgba(255,215,120,0.05) 40%,
+    rgba(0,0,0,0.03) 75%,
+    rgba(0,0,0,0.06) 100%
     );
 
     pointer-events: none;
 }
-}.hero-content {
+
+.hero-content {
     position: relative;
     z-index: 2;
 
     max-width: 1200px;
-    width: 100%;
 }
 
 .highlight {
