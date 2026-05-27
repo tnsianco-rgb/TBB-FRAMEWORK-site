@@ -111,8 +111,8 @@ footer {
 
     background:
     linear-gradient(
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.18)
+    rgba(0,0,0,0.02),
+    rgba(0,0,0,0.08)
     ),
     url('how-it-works.png');
 
@@ -120,10 +120,10 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
 
-        filter:
-brightness(1.32)
-contrast(1.10)
-saturate(1.12);
+    filter:
+    brightness(1.48)
+    contrast(1.12)
+    saturate(1.15);
 
     min-height: 115vh;
 
@@ -134,22 +134,24 @@ saturate(1.12);
     padding: 120px 8% 80px;
 
     overflow: hidden;
-}.hero::before {
+}
+.hero::before {
     content: "";
 
     position: absolute;
     inset: 0;
 
     background:
-radial-gradient(
-circle at center,
-rgba(255,215,120,0.16),
-rgba(255,215,120,0.06) 38%,
-rgba(0,0,0,0.10) 68%,
-rgba(0,0,0,0.18) 100%
-);
+    radial-gradient(
+    circle at center,
+    rgba(255,215,120,0.20),
+    rgba(255,215,120,0.08) 40%,
+    rgba(0,0,0,0.04) 75%,
+    rgba(0,0,0,0.08) 100%
+    );
 
     pointer-events: none;
+}
 }.hero-content {
     position: relative;
     z-index: 2;
