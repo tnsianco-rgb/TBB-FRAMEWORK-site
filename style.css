@@ -444,15 +444,18 @@ min-height:100vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,0.10),
-rgba(0,0,0,0.18)
+rgba(0,0,0,0.18),
+rgba(0,0,0,0.32)
 ),
 url("file_00000000514871f586a8ae1e27196cea.png");
 
 background-size:cover;
 background-position:center top;
 background-repeat:no-repeat;
-
+filter:
+    brightness(1.12)
+    contrast(1.05)
+    saturate(1.08);
 display:flex;
 align-items:center;
 justify-content:center;
