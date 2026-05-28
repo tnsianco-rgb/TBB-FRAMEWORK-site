@@ -1,4 +1,4 @@
-iybody {
+body {
     margin: 0;
     padding: 0;
     background: #050505;
@@ -118,26 +118,22 @@ footer {
 }
 
 
-   .hero {
+   
+}.hero {
     position: relative;
 
     background:
     linear-gradient(
-    rgba(0,0,0,0.02),
-    rgba(0,0,0,0.08)
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.82)
     ),
     url('how-it-works.png');
 
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
 
-    filter:
-    brightness(1.22)
-    contrast(1.10)
-    saturate(1.08);
-
-    min-height: 115vh;
+    min-height: 100vh;
 
     display: flex;
     align-items: center;
