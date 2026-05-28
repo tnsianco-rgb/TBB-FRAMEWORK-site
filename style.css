@@ -79,7 +79,7 @@ li {
 
 .btn {
 }
-    .dashboard-image {
+.dashboard-image {
 
     width: 65%;
     max-width: 700px;
@@ -265,7 +265,6 @@ line-height: 1.05;
     box-shadow:
         0 0 35px rgba(245,197,66,0.08),
         0 18px 45px rgba(0,0,0,0.55);
-}
 }
 
 .component-card h2 {
@@ -757,7 +756,6 @@ filter:brightness(1.12) contrast(1.05);
     line-height:2;
   }
 
-}
     .hero h1 {
         line-height: 1;
         letter-spacing: 1px;
@@ -777,7 +775,6 @@ filter:brightness(1.12) contrast(1.05);
         width: 100%;
         max-width: 320px;
     }
-}
      
 .section-block {
     background: rgba(15,15,15,0.92);
