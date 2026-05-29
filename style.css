@@ -1073,3 +1073,6 @@ body::before {
     letter-spacing:2px;
     font-size:14px;
     }
+.hero-section{
+    min-height:100vh;
+}
