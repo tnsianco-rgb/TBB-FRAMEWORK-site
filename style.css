@@ -1091,3 +1091,9 @@ body::before {
 .hero-section{
     min-height:100vh;
 }
+.core-text,
+.environment-text{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 30px;
+}
