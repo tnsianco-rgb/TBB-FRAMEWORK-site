@@ -1260,7 +1260,15 @@ font-size:42px;
 .founder-hero p{
 
 font-size:18px;
-
 }
+.founder-hero{
+    min-height:100vh;
 
+    background-color:#050505;
+
+    background-image:url('file_00000000bfb8720aa005a79b38797d63.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
