@@ -1234,3 +1234,22 @@ margin-bottom:20px;
     color:#dddddd;
     max-width:800px;
 }
+.founder-hero{
+    min-height:100vh;
+
+    background-image:url('https://tnsianco-rgb.github.io/TBB-FRAMEWORK-site/file_00000000bfb8720aa005a79b38797d63.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}body{
+    margin:0;
+    padding:0;
+    background:#050505;
+    color:white;
+}
+    
