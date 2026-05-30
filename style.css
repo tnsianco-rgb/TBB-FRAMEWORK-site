@@ -1102,7 +1102,7 @@ body::before {
 min-height:100vh;
 background-image:url("file_0000000034c07246907342a46380cdbe.png");
 background-color:black;
-background-size:cover;
+background-size:100% 100%;
 background-position:center;
 background-repeat:no-repeat;
 
