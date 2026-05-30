@@ -1146,3 +1146,48 @@ font-size:18px;
 }
 
     }
+.founder-story{
+padding:120px 25px;
+background:#050505;
+}
+
+.story-container{
+max-width:900px;
+margin:auto;
+}
+
+.section-label{
+text-align:center;
+color:#f5c542;
+letter-spacing:4px;
+margin-bottom:20px;
+}
+
+.story-title{
+text-align:center;
+font-size:clamp(2.5rem,5vw,4rem);
+margin-bottom:20px;
+}
+
+.story-intro{
+text-align:center;
+font-size:1.2rem;
+color:#bdbdbd;
+margin-bottom:80px;
+}
+
+.story-block{
+margin-bottom:80px;
+}
+
+.story-block h3{
+color:#f5c542;
+margin-bottom:25px;
+font-size:1.8rem;
+}
+
+.story-block p{
+color:#d0d0d0;
+line-height:2;
+margin-bottom:20px;
+}
