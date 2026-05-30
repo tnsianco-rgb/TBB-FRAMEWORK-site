@@ -1252,3 +1252,10 @@ margin-bottom:20px;
     text-align:center;
     padding:40px;
 }
+.founder-hero{
+    height:100vh !important;
+    background-image:url('file_00000000bfb8720aa005a79b38797d63.png') !important;
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+}
