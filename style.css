@@ -1100,7 +1100,7 @@ body::before {
 /* ACCESS HERO */
 
 .access-hero{
-height:100vh;
+min-height:100vh;
 
 background:
 linear-gradient(
