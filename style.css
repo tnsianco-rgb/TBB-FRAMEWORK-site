@@ -1097,3 +1097,39 @@ body::before {
     margin:0 auto;
     padding:0 30px;
 }
+/* ACCESS HERO */
+
+.access-hero{
+height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.75)
+),
+url("access-hero.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-overlay{
+padding:40px;
+max-width:900px;
+}
+
+.access-hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.access-hero p{
+font-size:22px;
+color:#cccccc;
+}
