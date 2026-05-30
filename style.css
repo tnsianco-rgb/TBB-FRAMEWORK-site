@@ -1100,14 +1100,7 @@ body::before {
 
 .access-hero{
 min-height:100vh;
-
-background:
-linear-gradient(
-rgba(0,0,0,0.55),
-rgba(0,0,0,0.80)
-),
-url("file_0000000034c07246907342a46380cdbe.png");
-
+background:url("file_0000000034c07246907342a46380cdbe.png");
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
