@@ -1093,7 +1093,10 @@ body::before {
 /* ACCESS HERO */
 
 .access-hero{
-
+.access-hero{
+    min-height:100vh;
+    background:red !important;
+}
 background-image:url('file_00000000bfb8720aa005a79b38797d63.png');;
 background-size:100% 100%;
 background-position:center;
