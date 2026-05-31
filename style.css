@@ -1325,4 +1325,17 @@ font-size:42px;
 font-size:18px;
 }
 
-    }
+.btn{
+display:inline-block;
+padding:18px 40px;
+background:#f5c542;
+color:#000;
+text-decoration:none;
+font-weight:700;
+border-radius:6px;
+margin-top:30px;
+}
+
+.btn:hover{
+background:#e4af37;
+}
