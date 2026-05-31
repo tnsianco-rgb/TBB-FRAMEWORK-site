@@ -2,15 +2,17 @@
 
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: rgba(0,0,0,0.92);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+padding:20px;
+background:rgba(0,0,0,0.92);
+border-bottom:1px solid rgba(255,255,255,0.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
  nav strong {
     font-size: 22px;
@@ -1276,4 +1278,51 @@ margin-bottom:20px;
 
 .access-hero-new .highlight{
     color:#f5c542;
+    }
+/* ACCESS PAGE */
+
+.access-hero-new{
+padding:120px 25px;
+text-align:center;
+background:#050505;
+}
+
+.access-hero-new h1{
+font-size:56px;
+margin-bottom:20px;
+text-transform:uppercase;
+}
+
+.access-hero-new p{
+max-width:700px;
+margin:auto;
+font-size:22px;
+color:#cccccc;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:30px;
+padding:18px 40px;
+background:#f5c542;
+color:#000;
+text-decoration:none;
+font-weight:700;
+border-radius:6px;
+}
+
+.hero-btn:hover{
+background:#e4af37;
+}
+
+@media(max-width:768px){
+
+.access-hero-new h1{
+font-size:42px;
+}
+
+.access-hero-new p{
+font-size:18px;
+}
+
     }
