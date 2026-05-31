@@ -1229,3 +1229,51 @@ margin-bottom:20px;
     max-width:700px;
 }
     
+/* NEW ACCESS HERO */
+
+.access-hero-new{
+    min-height:100vh;
+
+    background-image:url('file_00000000bfb8720aa005a79b38797d63.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+}
+
+.access-hero-new::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.access-hero-new .hero-overlay{
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+    max-width:900px;
+    padding:40px;
+}
+
+.access-hero-new h1{
+    font-size:clamp(3rem,8vw,6rem);
+    color:white;
+    margin-bottom:20px;
+}
+
+.access-hero-new p{
+    font-size:1.3rem;
+    color:#dddddd;
+}
+
+.access-hero-new .highlight{
+    color:#f5c542;
+    }
