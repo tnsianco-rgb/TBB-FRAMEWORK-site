@@ -1092,20 +1092,19 @@ body::before {
 }
 /* ACCESS HERO */
 
-.access-hero{
-.access-hero{
+    .access-hero{
     min-height:100vh;
-    background:red !important;
-}
-background-image:url("https://via.placeholder.com/1920x1080");
-background-size:100% 100%;
-background-position:center;
-background-repeat:no-repeat;
 
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+    background-image:url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
 }
 
 .hero-overlay{
