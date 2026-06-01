@@ -1395,3 +1395,11 @@ background:#e4af37;
     font-size:18px;
     margin:0;
 }
+.vault-image {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 40px auto;
+    border-radius: 18px;
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+}
