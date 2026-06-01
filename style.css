@@ -1339,3 +1339,15 @@ margin-top:30px;
 .btn:hover{
 background:#e4af37;
 }
+.framework-summary{
+    max-width:900px;
+    margin:30px auto 40px;
+    text-align:center;
+}
+
+.framework-summary p{
+    color:#d6d6d6;
+    font-size:18px;
+    line-height:1.8;
+    font-weight:400;
+ }
