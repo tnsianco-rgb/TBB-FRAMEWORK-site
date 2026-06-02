@@ -464,11 +464,7 @@ position:relative;
 min-height:100vh;
 
 background:
-linear-gradient(
-rgba(0,0,0,0.18),
-rgba(0,0,0,0.32)
-),
-url("file_00000000514871f586a8ae1e27196cea.png");
+url("...");
 
 background-size:cover;
 background-position:center top;
