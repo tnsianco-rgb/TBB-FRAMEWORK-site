@@ -1087,10 +1087,13 @@ body::before {
     .access-hero{
     min-height:100vh;
 
-    background-image:url("file_00000000279872439882a80f371f30bf.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    background:url("file_00000000279872439882a80f371f30bf.png") center center / cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
 
     display:flex;
     align-items:center;
