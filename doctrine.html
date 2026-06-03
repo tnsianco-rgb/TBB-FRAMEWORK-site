@@ -26,7 +26,7 @@ overflow-x:hidden;
 /* HERO SECTION */
 
 .doctrine-hero{
-    min-height:auto;
+    position:relative;
 
     background:
     linear-gradient(
@@ -35,14 +35,18 @@ overflow-x:hidden;
     ),
     url("file_00000000dd107246b22b447ae613ac3c.png");
 
-    background-size:100%;
-    background-position:center top;
+    background-size:cover;
+    background-position:center center;
     background-repeat:no-repeat;
+
+    min-height:100vh;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
+}
 
     padding:60px 20px;
 }
