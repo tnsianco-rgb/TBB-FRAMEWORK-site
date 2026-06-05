@@ -1246,13 +1246,6 @@ margin-bottom:20px;
     position:relative;
 }
 
-.access-hero-new::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.45);
-}
-
 .access-hero-new .hero-overlay{
     position:relative;
     z-index:2;
