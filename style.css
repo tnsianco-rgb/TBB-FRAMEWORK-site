@@ -1399,9 +1399,6 @@ background:#e4af37;
     border-radius: 18px;
     box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
 }
-.framework-hero{
-
-min-height:100vh;
 
 .framework-hero{
 
@@ -1425,8 +1422,8 @@ padding:120px 20px;
 
     background:
     linear-gradient(
-    rgba(0,0,0,0.20),
-    rgba(0,0,0,0.45)
+    rgba(0,0,0,0.01),
+    rgba(0,0,0,0.08)
     ),
     url("file_0000000094c071f4a38914b501dd5366.png");
 
