@@ -19,7 +19,7 @@ z-index:1000;
     letter-spacing: 2px;
     color: #f5c542;
 }
-
+7
 nav a {
     color: white;
     text-decoration: none;
@@ -1417,7 +1417,11 @@ background:#e4af37;
     padding:120px 20px;
 }
 
-    .dashboard-hero{
+    .framework-hero{
+    ...
+}
+
+.dashboard-hero{
 
     min-height:100vh;
 
