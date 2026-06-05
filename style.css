@@ -1418,14 +1418,13 @@ padding:120px 20px;
 }
 .dashboard-hero{
 
-    min-height:100vh;
-
-    background:
-    linear-gradient(
-    rgba(0,0,0,0.01),
-    rgba(0,0,0,0.08)
-    ),
-    url("file_0000000094c071f4a38914b501dd5366.png");
+ min-height:100vh;
+ background-image:
+linear-gradient(
+rgba(0,0,0,0.20),
+rgba(0,0,0,0.45)
+),
+url('./file_0000000094c071f4a38914b501dd5366.png');
 
     background-size:cover;
     background-position:center center;
