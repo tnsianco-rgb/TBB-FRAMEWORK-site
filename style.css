@@ -1232,14 +1232,15 @@ margin-bottom:20px;
 .access-hero-new{
     min-height:100vh;
 
-    background-image:url('file_00000000bfb8720aa005a79b38797d63.png');
-
-    background-size:cover;
-    background-position:center;
+    background-image:url('your-image.png');
+    background-size:contain;
+    background-position:center top;
     background-repeat:no-repeat;
 
+    background-color:#050505;
+
     display:flex;
-    align-items:center;
+    align-items:flex-end;
     justify-content:center;
 
     position:relative;
