@@ -1439,26 +1439,3 @@ background:#e4af37;
     text-align:center;
     padding:60px 20px;
 }
-
-}
-.dashboard-hero{
-
- min-height:100vh;
- background-image:
-linear-gradient(
-rgba(0,0,0,0.20),
-rgba(0,0,0,0.45)
-),
-url('./file_0000000094c071f4a38914b501dd5366.png');
-
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-    padding:60px 20px;
-}
