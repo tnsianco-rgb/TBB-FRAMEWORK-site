@@ -1174,14 +1174,16 @@ margin-bottom:20px;
     
 /* NEW ACCESS HERO */
 
-.access-hero-new{
-    min-height:100vh;
-
-    background-image:url('file_00000000cc7c71f494652ebe148ee910.png');
-    
-
-}  
-
+ .access-hero-new{
+    text-align:center;
+    padding:40px 25px;
+ } 
+.access-hero-image{
+    width:100%;
+    display:block;
+    border-radius:20px;
+    margin-bottom:30px;
+}
     display:flex;
     align-items:flex-end;
     justify-content:center;
@@ -1209,10 +1211,6 @@ margin-bottom:20px;
     color:#f5c542;
     }
 /* ACCESS PAGE */
-
-.access-hero-new{
-padding:120px 25px;
-text-align:center;
 }
 
 .access-hero-new p{
