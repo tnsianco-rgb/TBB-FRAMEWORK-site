@@ -1235,7 +1235,7 @@ margin-bottom:20px;
     background-image:url('file_00000000cc7c71f494652ebe148ee910.png');
     
 
-   
+}  
 
     display:flex;
     align-items:flex-end;
@@ -1270,12 +1270,6 @@ padding:120px 25px;
 text-align:center;
 }
 
-.access-hero-new h1{
-font-size:56px;
-margin-bottom:20px;
-text-transform:uppercase;
-}
-
 .access-hero-new p{
 max-width:700px;
 margin:auto;
@@ -1296,16 +1290,6 @@ border-radius:6px;
 
 .hero-btn:hover{
 background:#e4af37;
-}
-
-@media(max-width:768px){
-
-.access-hero-new h1{
-font-size:42px;
-}
-
-.access-hero-new p{
-font-size:18px;
 }
 
 .btn{
