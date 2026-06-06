@@ -171,8 +171,6 @@ footer {
         margin-right: 10px;
     }
 
-}
-
     h1 {
         font-size: 36px;
     }font-size: clamp(2.8rem, 8vw, 5rem);
@@ -298,8 +296,8 @@ img {
 .payment-list li {
     margin-bottom: 12px;
     color: #d0d0d0;
-    }
-a {
+}
+ 
     color: #f5c542;
     text-decoration: none;
 }
@@ -597,7 +595,8 @@ filter:brightness(1.12) contrast(1.05);
 
     .hero {
         padding: 100px 20px;
-    }
+   
+ }
 .doctrine-section,
 .principles-section,
 .environment-section,
@@ -835,8 +834,7 @@ img:hover {
 
 /* ===== TEXT DEPTH ===== */
 
-p,
-li {
+
     color: #d6d6d6;
 
     line-height: 1.9;
@@ -1245,10 +1243,6 @@ text-decoration:none;
 font-weight:700;
 border-radius:6px;
 margin-top:30px;
-}
-
-.btn:hover{
-background:#e4af37;
 }
 .framework-summary{
     max-width:900px;
