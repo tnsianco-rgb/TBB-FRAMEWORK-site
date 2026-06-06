@@ -19,7 +19,7 @@ z-index:1000;
     letter-spacing: 2px;
     color: #f5c542;
 }
-7
+
 nav a {
     color: white;
     text-decoration: none;
@@ -249,7 +249,6 @@ line-height: 1.05;
     color: #f5c542;
     margin-bottom: 20px;
 }
-img {
 
     width: 100%;
 
@@ -1346,8 +1345,4 @@ margin-top:30px;
 
     text-align:center;
     padding:60px 20px;
-}
-.hero-btn{
-    width:100%;
-    max-width:700px;
 }
