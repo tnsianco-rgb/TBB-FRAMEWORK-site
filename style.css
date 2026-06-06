@@ -1081,61 +1081,6 @@ body::before {
     max-width:900px;
     margin:0 auto;
     padding:0 30px;
-}
-/* ACCESS HERO */
-
-    .access-hero{
-    min-height:100vh;
-
-    background:
-    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
-    url("file_0000000041ec71f49badb30136814405.png")
-    center center / cover no-repeat;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-.hero-overlay{
-padding:40px;
-max-width:900px;
-}
-
-.access-hero h1{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.access-hero p{
-font-size:22px;
-color:#cccccc;
-}
-.access-hero h1{
-font-size:60px;
-font-weight:800;
-line-height:1.1;
-text-transform:uppercase;
-}
-
-.access-hero .highlight{
-color:#f5c542;
-}@media(max-width:768px){
-
-.access-hero h1{
-font-size:42px;
-}
-
-.access-hero p{
-font-size:18px;
-}
 
     }
 .founder-story{
