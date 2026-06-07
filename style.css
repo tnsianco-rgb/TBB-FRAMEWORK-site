@@ -1171,26 +1171,17 @@ margin-bottom:20px;
     
 /* NEW ACCESS HERO */
 
-   .access-hero-new{
+.access-hero-new{
     padding:40px 25px 80px;
+    text-align:center;
 }
+
 .access-hero-image{
     width:100%;
     max-width:1000px;
     display:block;
-    margin:0 auto 30px;
+    margin:0 auto 30px auto;
     border-radius:20px;
-}
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-
-    position:relative;
-}
-
-    text-align:center;
-    max-width:900px;
-    padding:40px;
 }
 
 .access-hero-new h1{
@@ -1199,34 +1190,16 @@ margin-bottom:20px;
     margin-bottom:20px;
 }
 
-.access-hero-new p{
-    font-size:1.3rem;
-    color:#dddddd;
-}
-
 .access-hero-new .highlight{
     color:#f5c542;
-    }
-/* ACCESS PAGE */
 }
 
 .access-hero-new p{
     max-width:800px;
-}
-margin:auto;
-font-size:22px;
-color:#cccccc;
-}
-
-.hero-btn{
-display:inline-block;
-margin-top:30px;
-padding:18px 40px;
-background:#f5c542;
-color:#000;
-text-decoration:none;
-font-weight:700;
-border-radius:6px;
+    margin:auto;
+    font-size:22px;
+    color:#cccccc;
+    line-height:1.8;
 }
 
 .hero-btn:hover{
