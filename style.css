@@ -1326,3 +1326,21 @@ margin-top:30px;
     text-align:center;
     padding:60px 20px;
 }
+.contact-box{
+    margin:30px auto;
+    max-width:600px;
+    padding:30px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(212,175,55,0.25);
+    border-radius:20px;
+}
+
+.contact-box p{
+    margin:8px 0;
+}
+
+.founder-contact-note{
+    max-width:700px;
+    margin:30px auto;
+    line-height:1.8;
+}
