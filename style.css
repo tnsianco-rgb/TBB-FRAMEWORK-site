@@ -1175,12 +1175,20 @@ margin-bottom:20px;
     padding:20px 25px 60px;
     text-align:center;
 }
-
- .access-hero-image{
-    width:100%;
+.access-hero-image{
+    width:100vw;
+    max-width:none;
     display:block;
     margin:0;
+    padding:0;
     border-radius:0;
+    object-fit:cover;
+}
+ .access-hero-image-section{
+    width:100%;
+    margin:0;
+    padding:0;
+    overflow:hidden;
 }
 
 .access-hero-new h1{
