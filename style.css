@@ -1365,3 +1365,19 @@ margin-top:30px;
     border-radius:20px;
     border:1px solid rgba(212,175,55,0.25);
 }
+.story-block p{
+    font-size:1.1rem;
+    line-height:1.9;
+    color:#d8d8d8;
+    margin-bottom:18px;
+}
+ @media (max-width:768px){
+
+.story-block p{
+    font-size:1.15rem;
+    line-height:2;
+}
+  .story-block{
+    max-width:800px;
+    margin:auto;
+}
