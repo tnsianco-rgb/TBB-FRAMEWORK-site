@@ -1355,15 +1355,18 @@ margin-top:30px;
     font-size:18px;
 }
 .application-preview{
-    margin:40px auto;
     max-width:650px;
+    margin:60px auto;
+    padding:20px;
+    background:#080808;
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:20px;
 }
 
 .application-preview-image{
     width:100%;
     display:block;
-    border-radius:20px;
-    border:1px solid rgba(212,175,55,0.25);
+    border-radius:12px;
 }
 .story-block p{
     font-size:1.1rem;
