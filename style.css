@@ -1306,10 +1306,12 @@ margin-top:30px;
 }
 
     .dashboard-hero{
+    min-height:100vh;
+
     background:
     linear-gradient(
-        rgba(0,0,0,0.10),
-        rgba(0,0,0,0.40)
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.55)
     ),
     url("file_00000000709c7243b276853dfcb66972.png");
 
@@ -1322,7 +1324,7 @@ margin-top:30px;
     justify-content:center;
 
     text-align:center;
-    padding:60px 20px;
+    padding:120px 20px;
 }
 .contact-box{
     margin:30px auto;
