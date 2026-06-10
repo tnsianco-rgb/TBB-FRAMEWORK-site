@@ -1300,15 +1300,12 @@ margin-top:30px;
     text-align:center;
     padding:120px 20px;
 }
-
-    .dashboard-hero{
-min-height:100vh;
-
 .dashboard-hero{
     min-height:100vh;
+
     background-image:url("file_00000000709c7243b276853dfcb66972.png");
     background-size:cover;
-    background-position:center;
+    background-position:center center;
     background-repeat:no-repeat;
 
     display:flex;
@@ -1316,7 +1313,7 @@ min-height:100vh;
     align-items:center;
 
     text-align:center;
-}
+  }
 
 .dashboard-overlay{
     width:100%;
