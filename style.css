@@ -457,27 +457,20 @@ display: block;
     color: white;
 }
 .results-hero{
-position:relative;
-min-height:100vh;
+    position:relative;
+    min-height:60vh;
 
-background:
-url("file_0000000098dc71f4983982334bee5b97.pngp");
+    background:url("file_0000000098dc71f4983982334bee5b97.png");
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 
-background-position:center top;
-background-repeat:no-repeat;
-filter:
-    brightness(1.12)
-    contrast(1.05)
-    saturate(1.08);
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-
-padding:80px 20px;
-
-filter:brightness(1.12) contrast(1.05);
+    padding:60px 20px;
 }
         
 
