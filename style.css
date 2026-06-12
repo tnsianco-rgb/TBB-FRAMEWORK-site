@@ -182,9 +182,8 @@ line-height: 1.05;
 
     p {
         font-size: 16px;
- }max-width: 850px;
     
-}.status-box {
+.status-box {
     margin-top: 40px;
     padding: 30px;
     border: 1px solid rgba(245,197,66,0.2);
