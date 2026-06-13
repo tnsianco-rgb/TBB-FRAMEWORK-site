@@ -59,20 +59,24 @@ h2 {
     color: #f5c542;
 }
 
-p {
- .section p{
-font-size:18px;
-line-height:1.8;
+h2 {
+    font-size: 32px;
+    margin-top: 50px;
+    color: #f5c542;
+}
+
+.section p {
+    font-size: 24px;
+    line-height: 1.8;
+}
+
+.section li {
+    font-size: 24px;
+    line-height: 1.8;
 }
 
 ul {
     margin-top: 20px;
-}
-
-li {
-    .section li{
-font-size:18px;
-line-height:1.8;
 }
 
 .btn {
