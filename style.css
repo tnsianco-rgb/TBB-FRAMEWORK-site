@@ -1167,17 +1167,17 @@ margin-bottom:20px;
 /* NEW ACCESS HERO */
 
 .access-hero-new{
-    padding:40px 30px;
-    max-width:1200px;
+    padding:20px 20px 60px;
+    max-width:1400px;
     margin:0 auto;
     text-align:left;
 }
 .access-hero-image{
     width:100%;
+    max-width:1200px;
     display:block;
-    border-radius:0;
-    margin:0;
-    padding:0;
+    margin:0 auto 40px auto;
+    border-radius:12px;
 }
  .access-hero-image-section{
     width:100vw;
@@ -1377,4 +1377,9 @@ margin-top:30px;
   .story-block{
     max-width:800px;
     margin:auto;
+}
+.access-hero-new h2{
+    font-size:48px;
+    margin-bottom:30px;
+    color:#f5c542;
 }
