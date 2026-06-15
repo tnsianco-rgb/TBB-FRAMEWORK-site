@@ -1173,13 +1173,14 @@ margin-bottom:20px;
 .access-hero-image{
     width:100%;
     display:block;
-    margin:0 auto 20px auto;
-    border-radius:16px;
+    margin:0;
+    border-radius:0;
 }
  .access-hero-image-section{
-    width:100%;
+    width:100vw;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
     padding:0;
-    margin:0 auto 30px auto;
 }
 
 .access-hero-new h1{
