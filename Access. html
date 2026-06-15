@@ -1,1 +1,144 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TBB Ecosystem | Access</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            TBB ECOSYSTEM
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="framework.html">Framework</a>
+            <a href="source.html">Source</a>
+            <a href="founder.html">Founder</a>
+            <a href="access2.html">Access</a>
+        </div>
+
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <img
+    src="file_00000000cc7c71f494652ebe148ee910.png"
+    alt="Access Hero"
+    class="hero-image">
+
+    <h1>ACCESS THE TBB FRAMEWORK</h1>
+
+    <p>
+        Observation created curiosity.
+        Participation creates understanding.
+    </p>
+
+</section>
+
+<section class="section">
+
+    <h2>WHAT YOU ARE ACCESSING</h2>
+
+    <div class="card">
+
+        <p>✓ TBB Execution Application</p>
+
+        <p>✓ Structured Deployment Environment</p>
+
+        <p>✓ Progression Management System</p>
+
+        <p>✓ Capital Management Framework</p>
+
+        <p>✓ Verification Engine</p>
+
+        <p>✓ Operational Dashboard</p>
+
+        <p>✓ Updates & Transmissions</p>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>THE THRESHOLD</h2>
+
+    <div class="card">
+
+        <p>Most people observe outcomes.</p>
+
+        <p>The TBB Framework observes structure.</p>
+
+        <p>Access transforms observation into participation.</p>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>EXECUTION BUNDLE</h2>
+
+    <img
+    src="file_000000000fc071f4b9c0c23394747627.jpg"
+    alt="Execution Bundle"
+    class="bundle-image">
+
+    <div class="card">
+
+        <p>✓ Application Access</p>
+
+        <p>✓ Activation Instructions</p>
+
+        <p>✓ Execution Environment</p>
+
+        <p>✓ Structured Framework</p>
+
+        <p>✓ Deployment Tools</p>
+
+        <p>✓ Progression System</p>
+
+        <p>✓ Ecosystem Entry</p>
+
+    </div>
+
+</section>
+
+<section class="section final-cta">
+
+    <h2>THE NEXT STEP IS YOURS</h2>
+
+    <p>You have seen the dashboards.</p>
+
+    <p>You have followed the transmissions.</p>
+
+    <p>You have watched the execution.</p>
+
+    <p>
+        Now decide whether you will remain an observer
+        or become a participant.
+    </p>
+
+    <a href="contact.html" class="btn">
+        ACCESS THE FRAMEWORK
+    </a>
+
+</section>
+
+</body>
+
+</html>
