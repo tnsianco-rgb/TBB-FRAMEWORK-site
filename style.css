@@ -1381,3 +1381,11 @@ background:#e4af37;
     margin-bottom:30px;
     color:#f5c542;
 }
+.bundle-image{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:30px auto;
+    border-radius:12px;
+}
