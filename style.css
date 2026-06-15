@@ -1167,23 +1167,22 @@ margin-bottom:20px;
 /* NEW ACCESS HERO */
 
 .access-hero-new{
-    padding:20px 20px 60px;
+    padding:0 20px 60px;
+}
     max-width:1400px;
     margin:0 auto;
     text-align:left;
 }
 .access-hero-image{
     width:100%;
-    max-width:1200px;
     display:block;
-    margin:0 auto 40px auto;
-    border-radius:12px;
+    margin:0 auto 20px auto;
+    border-radius:16px;
 }
  .access-hero-image-section{
-    width:100vw;
-    margin-left:calc(50% - 50vw);
+    width:100%;
     padding:0;
-    overflow:visible;
+    margin:0 auto 30px auto;
 }
 
 .access-hero-new h1{
@@ -1207,16 +1206,17 @@ margin-bottom:20px;
 .hero-btn:hover{
 background:#e4af37;
 }
-
 .btn{
-display:inline-block;
-padding:18px 40px;
-background:#f5c542;
-color:#000;
-text-decoration:none;
-font-weight:700;
-border-radius:6px;
-margin-top:30px;
+    display:block;
+    width:100%;
+    max-width:420px;
+    margin:30px auto;
+    padding:20px;
+    text-align:center;
+    font-size:20px;
+    font-weight:700;
+    border-radius:10px;
+
 }
 .framework-summary{
     max-width:900px;
