@@ -1273,11 +1273,10 @@ background:#e4af37;
     margin:0;
 }
 .vault-image{
-    width:1200%;
-    max-width:none;
-    display:block;
-    margin:50px auto;
-    border-radius:18px;
+    width:100%;
+    max-width:1200px;
+    height:auto;
+    object-fit:contain;
 }
 
    .framework-hero{
