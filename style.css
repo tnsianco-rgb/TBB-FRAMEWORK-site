@@ -1389,3 +1389,11 @@ background:#e4af37;
     margin:30px auto;
     border-radius:12px;
 }
+.hero-image-section{
+    margin-bottom:40px;
+}
+
+.hero{
+    background:none;
+    padding:0;
+}
