@@ -1418,3 +1418,16 @@ background:#e4af37;
     margin-bottom:20px;
     box-shadow:0 0 20px rgba(212,175,55,0.2);
 }
+.archive-philosophy{
+    background:#111;
+    border:1px solid #d4af37;
+    border-radius:15px;
+    padding:25px;
+    margin-top:20px;
+    box-shadow:0 0 20px rgba(212,175,55,0.2);
+}
+
+.archive-philosophy p{
+    margin-bottom:15px;
+    color:#ffffff;
+}
