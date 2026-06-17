@@ -1410,3 +1410,11 @@ background:#e4af37;
     box-shadow:none;
     padding:0 20px;
 }
+.archive-card{
+    background:#111;
+    border:1px solid #d4af37;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 0 20px rgba(212,175,55,0.2);
+}
