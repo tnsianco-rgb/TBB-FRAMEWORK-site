@@ -60,23 +60,22 @@ h1 {
 }
 h2 {
     font-size: 42px;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-bottom: 20px;
     color: #f5c542;
 }
    h3 {
-    margin-top: 50px;
-    color: #f5c542;
+    margin-top: 25px;
 }
 .section p {
-    font-size: 22px;
-    line-height: 1.8;
+    font-size: 18px;
+    line-height: 1.7;
 
 }
 
 .section li {
-    font-size: 22px;
-    line-height: 1.8;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 ul {
