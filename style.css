@@ -1472,3 +1472,79 @@ background:#e4af37;
     font-weight:700;
     line-height:1.4;
 }
+.execution-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:15px;
+}
+
+.execution-grid h3{
+    color:#ffffff;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+/* PREVIOUS DEPLOYMENT */
+
+.previous-deployment{
+    border:1px solid #4fc3ff;
+}
+
+.previous-deployment .number-grid{
+    color:#4fc3ff;
+    font-weight:700;
+}
+
+/* DRAWN BONUS BALL */
+
+.drawn-ball{
+    border:1px solid #f5c542;
+}
+
+.bonus-ball{
+    color:#f5c542;
+    font-size:48px;
+    font-weight:bold;
+}
+
+/* MATCH RESULT */
+
+.match-result{
+    border:1px solid #ff3030;
+}
+
+.no-match{
+    color:#ff3030;
+    font-weight:bold;
+}
+
+/* SYSTEM SUMMARY */
+
+.system-summary{
+    border:1px solid #f5c542;
+}
+
+.system-summary p{
+    color:#f5c542;
+}
+
+/* RESET PANEL */
+
+.cycle-reset{
+    border:1px solid #ffffff33;
+}
+
+.cycle-reset p{
+    color:#ffffff;
+}
+
+/* ACTIVE DEPLOYMENT */
+
+.active-deployment{
+    border:1px solid #39ff14;
+}
+
+.active-deployment .number-grid{
+    color:#39ff14;
+    font-weight:700;
+}
