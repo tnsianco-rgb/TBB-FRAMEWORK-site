@@ -1472,11 +1472,6 @@ background:#e4af37;
     font-weight:700;
     line-height:1.4;
 }
-.execution-grid{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:15px;
-}
 
 .execution-grid{
     display:grid;
@@ -1561,3 +1556,10 @@ background:#e4af37;
     border-radius:15px;
     padding:20px;
 }
+.number-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+    text-align:center;
+    font-size:24px;
+  }
