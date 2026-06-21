@@ -1478,10 +1478,12 @@ background:#e4af37;
     gap:15px;
 }
 
-.execution-grid h3{
-    color:#ffffff;
-    font-size:16px;
-    margin-bottom:15px;
+.execution-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    max-width:1400px;
+    margin:0 auto;
 }
 
 /* PREVIOUS DEPLOYMENT */
@@ -1547,4 +1549,15 @@ background:#e4af37;
 .active-deployment .number-grid{
     color:#39ff14;
     font-weight:700;
+}
+.previous-deployment,
+.drawn-ball,
+.match-result,
+.system-summary,
+.cycle-reset,
+.active-deployment{
+
+    background:#111;
+    border-radius:15px;
+    padding:20px;
 }
