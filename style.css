@@ -1556,12 +1556,20 @@ background:#e4af37;
     border-radius:15px;
     padding:20px;
 }
-.number-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:10px;
-    text-align:center;
-    font-size:24px;
+  .number-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+margin-top:20px;
+text-align:center;
+}
+
+.number-grid span{
+font-size:28px;
+font-weight:700;
+padding:10px;
+border-radius:8px;
+background:rgba(255,255,255,0.03);
   }
 .previous-deployment{
     border:1px solid #4fc3ff;
