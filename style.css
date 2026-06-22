@@ -1706,3 +1706,32 @@ width:100%;
 max-width:100%;
 box-sizing:border-box;
 }
+/* LANDSCAPE MOBILE FIX */
+
+@media screen and (orientation: landscape) {
+
+    .component-card,
+    .archive-card,
+    .archive-philosophy,
+    .final-section {
+
+        width: 90%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .section {
+
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+
+    }
+
+    .section-title {
+
+        text-align: center;
+
+    }
