@@ -1735,3 +1735,22 @@ box-sizing:border-box;
         text-align: center;
 
     }
+.archive-grid{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.archive-dashboard{
+    background:#0d0d0d;
+    border:1px solid #222;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.archive-dashboard img{
+    width:100%;
+    display:block;
+}
