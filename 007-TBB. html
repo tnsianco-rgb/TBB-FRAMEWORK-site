@@ -1,1 +1,157 @@
 
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>007-TBB Australia Arrival // Live Tactical Terminal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        tbbGold: '#F59E0B',
+                        tbbDark: '#0A0A0C',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0C;
+            color: #F3F4F6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.4));
+            background-size: 100% 4px;
+        }
+        .glow-gold {
+            text-shadow: 0 0 25px rgba(245, 158, 11, 0.7);
+        }
+        .glow-box {
+            box-shadow: 0 0 40px rgba(245, 158, 11, 0.2);
+        }
+        @keyframes pulseGlow {
+            0%, 100% { border-color: rgba(245, 158, 11, 0.4); box-shadow: 0 0 20px rgba(245, 158, 11, 0.2); }
+            50% { border-color: rgba(245, 158, 11, 0.9); box-shadow: 0 0 50px rgba(245, 158, 11, 0.5); }
+        }
+        .animated-frame {
+            animation: pulseGlow 4s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-between p-4 md:p-8 scanline">
+
+    <header class="w-full max-w-4xl text-center mb-4">
+        <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 px-4 py-1.5 rounded-full text-amber-400 font-mono text-xs uppercase tracking-widest mb-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            TBB Ecosystem // Global Intelligence Terminal Active
+        </div>
+        <h1 class="text-2xl md:text-3xl font-black text-amber-400 tracking-wider glow-gold">007-TBB AUSTRALIA ARRIVAL</h1>
+        <p class="text-xs font-mono text-gray-400 mt-1">SYSTEM EXECUTION // SYDNEY COMMAND CENTER</p>
+    </header>
+
+    <main class="w-full max-w-4xl bg-black border-2 border-amber-500/50 rounded-2xl overflow-hidden glow-box animated-frame relative flex flex-col">
+        
+        <!-- Video Simulation Screen -->
+        <div class="relative w-full aspect-[16/10] bg-zinc-950 flex items-center justify-center overflow-hidden group">
+            <!-- Background Artwork Image -->
+            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=1280&auto=format&fit=crop" alt="Sydney Australia Arrival" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000">
+            
+            <!-- Dark Gradient Overlay for Cinematic Feel -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60"></div>
+
+            <!-- HUD Overlay Elements -->
+            <div class="absolute top-4 left-4 right-4 flex justify-between items-center text-xs font-mono text-amber-400 z-10">
+                <div class="bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg border border-amber-500/30 flex items-center gap-2">
+                    <span class="text-emerald-400 font-bold">● LIVE</span>
+                    <span>FEED_ID: SYD-007</span>
+                </div>
+                <div id="videoClock" class="bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg border border-amber-500/30">
+                    11:42:53 SAST
+                </div>
+            </div>
+
+            <!-- Central Animated Focus Stamp -->
+            <div class="absolute z-10 text-center px-4">
+                <div class="inline-block bg-black/80 border-2 border-amber-500 px-6 py-3 rounded-xl backdrop-blur-md mb-3 glow-box">
+                    <h2 class="text-amber-400 font-black text-xl md:text-3xl tracking-widest glow-gold">GLOBAL EXPANSION</h2>
+                    <p class="text-xs font-mono text-gray-300 tracking-widest mt-1">SYDNEY, AUSTRALIA // TOUCHDOWN SUCCESSFUL</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2 font-mono text-[10px] md:text-xs">
+                    <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2.5 py-1 rounded">ARRIVED [✓]</span>
+                    <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2.5 py-1 rounded">SUITE 2607 [✓]</span>
+                    <span class="bg-blue-500/20 text-blue-300 border border-blue-500/40 px-2.5 py-1 rounded">MATRIX SYNCED [✓]</span>
+                </div>
+            </div>
+
+            <!-- Scanning Laser Line Effect -->
+            <div class="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-70 animate-bounce"></div>
+        </div>
+
+        <div class="bg-[#12131A] border-t border-amber-500/30 p-4 flex flex-col gap-3">
+            <!-- Progress Bar -->
+            <div class="w-full bg-black/60 h-2 rounded-full overflow-hidden border border-white/10 relative">
+                <div id="progressBar" class="bg-gradient-to-r from-amber-500 to-amber-300 h-full w-3/4 transition-all duration-300"></div>
+            </div>
+            
+            <!-- Controls & Stats -->
+            <div class="flex items-center justify-between text-xs font-mono">
+                <div class="flex items-center gap-3">
+                    <button onclick="togglePlayState()" id="playBtn" class="bg-amber-500 hover:bg-amber-400 text-black font-black px-4 py-1.5 rounded-lg transition-colors shadow-lg shadow-amber-500/30">
+                        ⏸ PAUSE
+                    </button>
+                    <span id="timeIndicator" class="text-gray-300">00:14 / 00:20</span>
+                </div>
+                <div class="text-amber-400 font-bold tracking-wider">
+                    007-TBB ECOSYSTEM™
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="w-full max-w-4xl text-center mt-4 text-xs font-mono text-gray-400">
+        <p>🌐 TBB Ecosystem™ // Structure. Strategy. Discipline. Execution.</p>
+    </footer>
+
+    <script>
+        // Live Clock Sync
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('videoClock').innerText = now.toTimeString().split(' ')[0] + ' SAST';
+        }, 1000);
+
+        // Play / Pause Simulation State
+        let isPlaying = true;
+        function togglePlayState() {
+            isPlaying = !isPlaying;
+            const btn = document.getElementById('playBtn');
+            btn.innerText = isPlaying ? '⏸ PAUSE' : '▶ PLAY';
+        }
+
+        // Animated Progress Bar Loop
+        let progress = 75;
+        setInterval(() => {
+            if (isPlaying) {
+                progress = (progress + 1) % 100;
+                document.getElementById('progressBar').style.width = progress + '%';
+                const seconds = Math.floor((progress / 100) * 20);
+                document.getElementById('timeIndicator').innerText = `00:${seconds < 10 ? '0' + seconds : seconds} / 00:20`;
+            }
+        }, 300);
+    </script>
+</body>
+</html>
